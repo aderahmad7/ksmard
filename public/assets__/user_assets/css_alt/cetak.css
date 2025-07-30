@@ -1,0 +1,54 @@
+
+body {
+	font-family: 'Roboto';font-size: 7px;
+}
+.info{
+	font-size:12px;
+}
+html {
+	font-family: verdana,arial,sans-serif;font-size:11px;
+}
+.gridtable {
+	font-size:11px;color:#333333;border-width: 1px;border-color: #666666;border-collapse: collapse;
+}
+.gridtable th, .gridtable tr {
+	border-width: 1px;padding: 15px;border-style: solid;border-color: #666666;background-color: #dedede;
+}
+.gridtable td, .gridtable th {
+	border-width: 1px;	padding: 10px;border-style: solid;border-color: #666666;background-color: #ffffff;
+}
+table.header {
+	font-size:11px;color:#333333;border-width: 0px;border-color: #666666;border-collapse: collapse;
+}
+table.header th {
+	border-width: 0px;padding: 8px;border-style: solid;border-color: #666666;background-color: #dedede;
+}
+table.header td {
+	border-width: 0px;padding: 8px;border-style: solid;border-color: #666666;background-color: #ffffff;
+}
+page[size='A4'] {
+
+	background: white;
+	width: 21cm;
+	height: 29.7cm;
+	display: block;
+	margin: 0 auto;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 25px;
+	margin-bottom: 0.5cm;
+	border:1px solid #dadada
+
+}
+media print {
+
+	body, page[size='A4'] {
+
+		margin: 0;
+		padding-left: 0px;
+		padding-right: 0px;
+		border:0px
+
+	}
+
+}

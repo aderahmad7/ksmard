@@ -1,0 +1,1322 @@
+INFO - 2025-07-18 00:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:48:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:49:50 --> superadmin
+INFO - 2025-07-18 00:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:50:37 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-18 00:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:50:55 --> abs
+INFO - 2025-07-18 00:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 00:51:04 --> 1
+DEBUG - 2025-07-18 00:51:04 --> 1
+INFO - 2025-07-18 00:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 00:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 01:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:09:56 --> abs
+INFO - 2025-07-18 02:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:12:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:12:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:12:01 --> KALSEL
+INFO - 2025-07-18 02:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:12:37 --> ABS
+INFO - 2025-07-18 02:12:46 --> 19
+INFO - 2025-07-18 02:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:12:46 --> 81.2
+INFO - 2025-07-18 02:13:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:16:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 02:17:08 --> 19
+DEBUG - 2025-07-18 02:17:08 --> 19
+INFO - 2025-07-18 02:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:19:43 --> ABS
+INFO - 2025-07-18 02:19:46 --> 19
+INFO - 2025-07-18 02:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:19:46 --> 81.2
+INFO - 2025-07-18 02:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:20:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:20:48 --> dinaskalsel
+INFO - 2025-07-18 02:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:20:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 02:20:49 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 1
+            [indkIndeksK] => 78.68
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 1
+        )
+
+)
+
+INFO - 2025-07-18 02:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 02:20:55 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 19
+            [indkIndeksK] => 81.2
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 19
+        )
+
+    [1] => Array
+        (
+            [kmtIndkKode] => 44
+            [indkIndeksK] => 80.95
+            [indkPksKode] => ATA
+            [pksNama] => Alam Tri Abadi
+            [indkKode] => 44
+        )
+
+    [2] => Array
+        (
+            [kmtIndkKode] => 45
+            [indkIndeksK] => 83.05
+            [indkPksKode] => AAS
+            [pksNama] => Argo Astra Lestari
+            [indkKode] => 45
+        )
+
+)
+
+INFO - 2025-07-18 02:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:21:09 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-18 02:21:09 --> Array
+(
+    [periode] => 19
+)
+
+DEBUG - 2025-07-18 02:21:09 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-18 02:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:21:09 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-18 02:21:17 --> Array
+(
+    [kodeKomen] => 61
+)
+
+INFO - 2025-07-18 02:21:17 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 61
+)
+
+INFO - 2025-07-18 02:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:21:46 --> KALSEL
+INFO - 2025-07-18 02:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 02:21:50 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 1
+            [indkIndeksK] => 78.68
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 1
+        )
+
+)
+
+INFO - 2025-07-18 02:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 02:21:53 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 19
+            [indkIndeksK] => 81.2
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 19
+        )
+
+    [1] => Array
+        (
+            [kmtIndkKode] => 44
+            [indkIndeksK] => 80.95
+            [indkPksKode] => ATA
+            [pksNama] => Alam Tri Abadi
+            [indkKode] => 44
+        )
+
+    [2] => Array
+        (
+            [kmtIndkKode] => 45
+            [indkIndeksK] => 83.05
+            [indkPksKode] => AAS
+            [pksNama] => Argo Astra Lestari
+            [indkKode] => 45
+        )
+
+)
+
+INFO - 2025-07-18 02:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:22:28 --> abs
+INFO - 2025-07-18 02:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:22:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:22:34 --> ABS
+INFO - 2025-07-18 02:22:38 --> 19
+INFO - 2025-07-18 02:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:22:39 --> 81.2
+INFO - 2025-07-18 02:25:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:32:19 --> ABS
+INFO - 2025-07-18 02:32:21 --> 19
+INFO - 2025-07-18 02:32:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 02:32:22 --> 81.2
+INFO - 2025-07-18 02:53:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:27 --> abs
+ERROR - 2025-07-18 06:12:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ksmard', 3306, '', 0)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ksmard\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ksmard\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ksmard\app\Controllers\Login.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Login->cek()
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ksmard\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ksmard\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ksmard\app\Controllers\Login.php(30): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Login->cek()
+#7 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-18 06:12:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login/cek]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_account`
+WHERE `accUsername` = :accUsername:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(30): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->cek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-18 06:12:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:39 --> abs
+ERROR - 2025-07-18 06:12:43 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ksmard', 3306, '', 0)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\ksmard\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ksmard\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\ksmard\app\Controllers\Login.php(30): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Login->cek()
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\ksmard\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\ksmard\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\ksmard\app\Controllers\Login.php(30): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Login->cek()
+#7 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-07-18 06:12:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: login/cek]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_account`
+WHERE `accUsername` = :accUsername:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(30): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->cek()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-18 06:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:54 --> abs
+INFO - 2025-07-18 06:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:06 --> dinaskalsel
+INFO - 2025-07-18 06:14:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:14:07 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 1
+            [indkIndeksK] => 78.68
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 1
+        )
+
+)
+
+INFO - 2025-07-18 06:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:09 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 1
+)
+
+INFO - 2025-07-18 06:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:10 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-18 06:14:10 --> Array
+(
+    [periode] => 1
+)
+
+DEBUG - 2025-07-18 06:14:10 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+)
+
+INFO - 2025-07-18 06:14:16 --> Array
+(
+    [kodeKomen] => 31
+)
+
+INFO - 2025-07-18 06:14:16 --> Array
+(
+    [kmtKomen] => -
+    [kmtStatus] => diterima
+    [kmtKode] => 31
+)
+
+INFO - 2025-07-18 06:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:14:29 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 1
+            [indkIndeksK] => 78.68
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 1
+        )
+
+)
+
+INFO - 2025-07-18 06:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:31 --> KALSEL
+INFO - 2025-07-18 06:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:14:36 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 1
+            [indkIndeksK] => 78.68
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 1
+        )
+
+)
+
+INFO - 2025-07-18 06:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:14:41 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 19
+            [indkIndeksK] => 81.2
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 19
+        )
+
+    [1] => Array
+        (
+            [kmtIndkKode] => 44
+            [indkIndeksK] => 80.95
+            [indkPksKode] => ATA
+            [pksNama] => Alam Tri Abadi
+            [indkKode] => 44
+        )
+
+    [2] => Array
+        (
+            [kmtIndkKode] => 45
+            [indkIndeksK] => 83.05
+            [indkPksKode] => AAS
+            [pksNama] => Argo Astra Lestari
+            [indkKode] => 45
+        )
+
+)
+
+INFO - 2025-07-18 06:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:14:44 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-18 06:14:45 --> Array
+(
+    [periode] => 19
+)
+
+DEBUG - 2025-07-18 06:14:45 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-18 06:15:47 --> Array
+(
+    [kodeKomen] => 61
+)
+
+INFO - 2025-07-18 06:15:47 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 61
+)
+
+INFO - 2025-07-18 06:15:50 --> Array
+(
+    [kodeKomen] => 62
+)
+
+INFO - 2025-07-18 06:15:50 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 62
+)
+
+INFO - 2025-07-18 06:15:52 --> Array
+(
+    [kodeKomen] => 61
+)
+
+INFO - 2025-07-18 06:15:53 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 61
+)
+
+INFO - 2025-07-18 06:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:17:22 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-18 06:17:23 --> Array
+(
+    [periode] => 19
+)
+
+DEBUG - 2025-07-18 06:17:23 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-18 06:17:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:17:41 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-18 06:17:41 --> Array
+(
+    [periode] => 19
+)
+
+DEBUG - 2025-07-18 06:17:42 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-18 06:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:18:09 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 1
+            [indkIndeksK] => 78.68
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 1
+        )
+
+)
+
+INFO - 2025-07-18 06:18:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:18:19 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 1
+)
+
+INFO - 2025-07-18 06:18:19 --> Array
+(
+    [periode] => 1
+)
+
+DEBUG - 2025-07-18 06:18:19 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+)
+
+INFO - 2025-07-18 06:19:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:26:55 --> abs
+INFO - 2025-07-18 06:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:27:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:29:23 --> ABS
+INFO - 2025-07-18 06:29:31 --> 19
+INFO - 2025-07-18 06:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:29:31 --> 81.2
+INFO - 2025-07-18 06:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:29:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:48:12 --> abs
+INFO - 2025-07-18 06:48:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:48:56 --> ABS
+INFO - 2025-07-18 06:49:02 --> 19
+INFO - 2025-07-18 06:49:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:49:02 --> 81.2
+INFO - 2025-07-18 06:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:51:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:53:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:53:06 --> 19
+DEBUG - 2025-07-18 06:53:06 --> 19
+INFO - 2025-07-18 06:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:53:29 --> ABS
+INFO - 2025-07-18 06:53:32 --> 19
+INFO - 2025-07-18 06:53:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:53:32 --> 81.2
+INFO - 2025-07-18 06:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:55:26 --> dinaskalsel
+INFO - 2025-07-18 06:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:55:28 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 1
+            [indkIndeksK] => 78.68
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 1
+        )
+
+)
+
+INFO - 2025-07-18 06:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:55:33 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 19
+            [indkIndeksK] => 81.2
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 19
+        )
+
+    [1] => Array
+        (
+            [kmtIndkKode] => 44
+            [indkIndeksK] => 80.95
+            [indkPksKode] => ATA
+            [pksNama] => Alam Tri Abadi
+            [indkKode] => 44
+        )
+
+    [2] => Array
+        (
+            [kmtIndkKode] => 45
+            [indkIndeksK] => 83.05
+            [indkPksKode] => AAS
+            [pksNama] => Argo Astra Lestari
+            [indkKode] => 45
+        )
+
+)
+
+INFO - 2025-07-18 06:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:55:56 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-18 06:55:56 --> Array
+(
+    [periode] => 19
+)
+
+DEBUG - 2025-07-18 06:55:56 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-18 06:56:04 --> Array
+(
+    [kodeKomen] => 61
+)
+
+INFO - 2025-07-18 06:56:04 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 61
+)
+
+INFO - 2025-07-18 06:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:56:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:56:23 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 1
+            [indkIndeksK] => 78.68
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 1
+        )
+
+)
+
+INFO - 2025-07-18 06:56:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 06:56:28 --> Array
+(
+    [0] => Array
+        (
+            [kmtIndkKode] => 19
+            [indkIndeksK] => 81.2
+            [indkPksKode] => ABS
+            [pksNama] => ABS Innovations
+            [indkKode] => 19
+        )
+
+    [1] => Array
+        (
+            [kmtIndkKode] => 44
+            [indkIndeksK] => 80.95
+            [indkPksKode] => ATA
+            [pksNama] => Alam Tri Abadi
+            [indkKode] => 44
+        )
+
+    [2] => Array
+        (
+            [kmtIndkKode] => 45
+            [indkIndeksK] => 83.05
+            [indkPksKode] => AAS
+            [pksNama] => Argo Astra Lestari
+            [indkKode] => 45
+        )
+
+)
+
+INFO - 2025-07-18 06:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:56:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:56:52 --> abs
+INFO - 2025-07-18 06:56:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:57:42 --> ABS
+INFO - 2025-07-18 06:57:46 --> 19
+INFO - 2025-07-18 06:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:57:46 --> 81.2
+INFO - 2025-07-18 06:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:59:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:59:26 --> KALSEL
+INFO - 2025-07-18 06:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:59:28 --> ABS
+INFO - 2025-07-18 06:59:30 --> 19
+INFO - 2025-07-18 06:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 06:59:31 --> 81.2
+INFO - 2025-07-18 07:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:03:19 --> ABS
+INFO - 2025-07-18 07:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 07:05:56 --> 19
+DEBUG - 2025-07-18 07:05:56 --> 19
+INFO - 2025-07-18 07:06:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:06:44 --> ABS
+INFO - 2025-07-18 07:06:47 --> 19
+INFO - 2025-07-18 07:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:06:47 --> 81.2
+INFO - 2025-07-18 07:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 07:07:10 --> 19
+DEBUG - 2025-07-18 07:07:10 --> 19
+INFO - 2025-07-18 07:13:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:13:01 --> ABS
+INFO - 2025-07-18 07:13:04 --> 19
+INFO - 2025-07-18 07:13:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:13:04 --> 81.2
+INFO - 2025-07-18 07:13:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:16:00 --> ABS
+INFO - 2025-07-18 07:16:03 --> 19
+INFO - 2025-07-18 07:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:16:03 --> 88.43
+INFO - 2025-07-18 07:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:16:28 --> ABS
+INFO - 2025-07-18 07:16:31 --> 19
+INFO - 2025-07-18 07:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 07:16:31 --> 88.65
+INFO - 2025-07-18 15:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 15:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 15:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 15:05:51 --> abs
+INFO - 2025-07-18 15:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 15:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 15:06:11 --> 1
+DEBUG - 2025-07-18 15:06:11 --> 1
+INFO - 2025-07-18 15:20:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 15:20:50 --> ABS
+INFO - 2025-07-18 15:20:54 --> 1
+INFO - 2025-07-18 15:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 15:20:55 --> 78.68
+INFO - 2025-07-18 15:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 15:26:46 --> 1
+DEBUG - 2025-07-18 15:26:46 --> 1
+INFO - 2025-07-18 21:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 21:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 21:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 21:04:51 --> abs
+INFO - 2025-07-18 21:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 21:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 21:04:56 --> ABS
+INFO - 2025-07-18 21:05:01 --> 1
+INFO - 2025-07-18 21:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-18 21:05:02 --> 78.68
+INFO - 2025-07-18 21:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-18 21:05:46 --> 1
+DEBUG - 2025-07-18 21:05:46 --> 1
+DEBUG - 2025-07-18 21:06:28 --> 18
+DEBUG - 2025-07-18 21:06:28 --> 18
+DEBUG - 2025-07-18 21:06:28 --> 18
+DEBUG - 2025-07-18 21:06:28 --> 18
+DEBUG - 2025-07-18 21:06:32 --> 1
+DEBUG - 2025-07-18 21:06:32 --> 1
+DEBUG - 2025-07-18 21:06:32 --> 1
+DEBUG - 2025-07-18 21:06:32 --> 1

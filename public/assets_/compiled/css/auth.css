@@ -1,0 +1,57 @@
+body {
+  background-color: var(--bs-body-bg);
+}
+#auth {
+  height: 100vh;
+  overflow-x: hidden;
+}
+#auth #auth-right {
+    height: 100%;
+    background: url(./png/4853433.png), linear-gradient(90deg, #00b140, #00a335, #008c2a, #00711e);
+  }  
+#auth #auth-left {
+  padding: 5rem;
+}
+#auth #auth-left .auth-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+#auth #auth-left .auth-subtitle {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #a8aebb;
+}
+#auth #auth-right .auth-logo {
+  margin-top: 0, 5rem;
+}
+.auth-logo {
+  transform: translate(17rem, 5rem);
+}
+#auth #auth-right .auth-logo img {
+  height: 5rem;
+  background-color: #02631c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#auth #auth-right .ilus{
+    height: fit-content;
+    transform: translate(20px,50px);
+}
+@media screen and (max-width: 1399.9px) {
+  #auth #auth-left {
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #auth #auth-left {
+    padding: 5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  #auth #auth-left {
+    padding: 5rem 3rem;
+  }
+}
+html[data-bs-theme="dark"] #auth-right {
+  background: url(../png/4853433.png), linear-gradient(90deg, #10ce23, #13bf24);
+}

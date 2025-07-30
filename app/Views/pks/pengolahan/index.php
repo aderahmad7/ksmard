@@ -1,0 +1,404 @@
+<?= $this->extend('template/body.php') ?>
+
+<?= $this->section('content') ?>
+<!-- Content -->
+<style>
+	th {
+		font-size: 11pt;
+	}
+
+	td {
+		font-size: 10pt;
+	}
+</style>
+<div class="page-content">
+	<div class="content-body">
+		<!-- row -->
+		<div class="container-fluid">
+			<div class="d-flex align-items-center justify-content-between mb-3">
+				<h4 class="card-title col-sm-6">Pengolahan</h4>
+				<div class="d-flex align-items-center mb-3 col-4 col-lg-3" style="gap: 5px;">
+					<?php echo form_dropdown('indkKode', $periode, (isset($_SESSION['periode_set']) ? $_SESSION['periode_set'] : ''), 'id="indkKode" class="form-select   form-control wide"'); ?>
+					<!-- <button class="btn btn-primary">
+						<i class="fa fa-filter"></i>
+					</button> -->
+					<button onclick="reloadDatatable()" class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i></button>
+				</div>
+			</div>
+			<div class="col-12">
+				<div class="card">
+					<div class="card-header">
+						<button onclick="return setModalSimpan();" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-form"><i class="fa fa-plus"></i> Buat Baru</button>
+						<div class="d-flex align-items-center col-lg-3" style="gap: 5px;">
+							<input type="text" class="form-control input-default" placeholder="Cari...">
+							<button class="btn btn-primary">
+								<i class="fa fa-search"></i>
+							</button>
+						</div>
+					</div>
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table" id="table-grid" style="width: 100%;">
+								<thead>
+									<tr>
+										<th width="1%">NO</th>
+										<th width="29%">Uraian Pengolahan</th>
+										<th width="20%">Kategori</th>
+										<th width="29%">Sub Kategori</th>
+										<th width="10%">Total</th>
+										<th width="10%">AKSI</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div>
+				<!-- /# card -->
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-form">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Modal title</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal">
+					</button>
+				</div>
+				<div class="modal-body">
+					<?php echo form_open(current_url(), array('id' => "form-simpan", 'class' => 'form-horizontal col-lg-12 col-md-12 col-xs-12')); ?>
+					<div class="row">
+						<input type="hidden" name="kode" id="kode">
+						<div class="form-group col-lg-12 col-md-6 mb-3">
+							<small class="fw-semibold">Uraian Pengolahan</small>
+							<span class="help"></span>
+							<div class="controls">
+								<?php echo form_input('olahUraian', '', 'id="olahUraian" class="form-control"'); ?>
+
+							</div>
+						</div>
+						<div class="form-group col-lg-12 col-md-12 mb-3">
+							<small class="fw-semibold">Kategori</small>
+							<span class="help"></span>
+							<div class="controls">
+								<?php echo form_dropdown('olahKatolahKode', $kategoriPengolahan, '', 'id="olahKatolahKode" class="form-select   form-control wide"'); ?>
+
+							</div>
+						</div>
+
+
+						<div class="form-group col-lg-12 col-md-6 mb-3">
+							<small class="fw-semibold">Total</small>
+							<span class="help"></span>
+							<div class="controls">
+								<?php echo form_input('olahTotal', '', 'id="olahTotal" style="text-align:right;" class="form-control"'); ?>
+
+							</div>
+						</div>
+
+					</div>
+					<?php echo form_close(); ?>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Batal</button>
+					<button type="button" id="btn-simpan" class="btn btn-primary simpan">Simpan</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-hapus">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">Hapus Pengguna</div>
+				<div class="modal-body">
+					Apakah anda yakin menghapus <span hidden="true" id="id-delete"></span>?
+				</div>
+				<div class="modal-footer">
+					<button id="btn-hapus" class="btn btn-primary" onclick="hapus();">
+						<span class="fa fa-spinner fa-spin"></span> <i class="fa fa-trash" aria-hidden="true"></i> Hapus
+					</button>
+					<button id="btn-batal" data-bs-dismiss="modal" class="btn">Batal</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<?= $this->endSection() ?>
+
+	<?= $this->section('scripts') ?>
+	<script>
+		var oTable;
+		var bulanArray = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+		$(document).ready(function() {
+			oTable = $('#table-grid').DataTable({
+				processing: true,
+				responsive: true,
+				serverSide: true,
+				pagingType: 'numbers',
+				ajax: {
+					url: '<?php echo site_url('pks/pengolahan/grid'); ?>',
+					data: function(d) {
+						d.periode = $('#indkKode').val();
+					}
+				},
+
+				lengthChange: false,
+				dom: '<"top">lrt<"bottom"p>',
+
+				columnDefs: [{
+					"className": "dt-tengah",
+					"targets": [1]
+				}, ],
+				columns: [
+
+					{
+						data: null,
+						render: function(data, type, full, meta) {
+							var length = meta.settings._iDisplayStart;
+							return meta.row + length + 1;
+						},
+						searchable: false,
+						orderable: false,
+						width: "17px"
+					},
+
+					{
+						data: 'olahUraian'
+					},
+					{
+						data: 'katolahNama',
+						render: function(data, type, row) {
+							return '<span style="word-break: break-word">' + data + "</span>";
+						}
+					},
+					{
+						data: 'katolahSubNama',
+						render: function(data, type, row) {
+							return '<span style="word-break: break-word">' + data + "</span>";
+						}
+					},
+
+					{
+						data: 'olahTotal',
+						render: function(data, type, row) {
+							return formatRupiahV3(data);
+						}
+					},
+
+					{
+						data: 'olahKode',
+						searchable: false,
+						orderable: false,
+						render: function(data, type, row) {
+							var edit = '<a data-id="' + data + '" style="margin :0px 1px 0px 0px ;" onclick="edit($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>';
+							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus" onclick="return setModalHapus($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
+							return edit + hapus;
+						}
+					},
+				]
+			});
+			// Add event listener for opening and closing details
+			oTable.on('click', 'td.dt-control', function(e) {
+				let tr = e.target.closest('tr');
+				let row = oTable.row(tr);
+
+				if (row.child.isShown()) {
+					// This row is already open - close it
+					row.child.hide();
+				} else {
+					// Open this row
+					row.child(format(row.data())).show();
+				}
+			});
+		});
+
+		// // Fungsi untuk format angka menjadi format Rupiah
+		function formatRupiahV3(angka) {
+			return new Intl.NumberFormat('id-ID', {
+				style: 'currency',
+				currency: 'IDR'
+			}).format(angka);
+		}
+
+		/* Dengan Rupiah */
+		var harga = document.getElementById('olahTotal');
+		harga.addEventListener('keyup', function(e) {
+			harga.value = formatRibuan(this.value, 'Rp. ');
+		});
+
+
+
+
+		// Formatting function for row details - modify as you need
+		function format(d) {
+			// `d` is the original data object for the row
+			return (
+				'<dl>' +
+				'<dt>No. Kontrak:</dt>' +
+				'<dd>' +
+				d.jualNoKontrak +
+				'</dd>' +
+				'<dt>Pembeli:</dt>' +
+				'<dd>' +
+				d.jualPembeli +
+				'</dd>' +
+				'<dt>File Kontrak:</dt>' +
+				'<dd>And any further details here (images etc)...</dd>' +
+				'</dl>'
+			);
+		}
+
+
+
+		$('#btn-filter-periode').click(function() {
+			reloadDatatable();
+		});
+
+		function reloadDatatable() {
+			oTable.ajax.reload(null, false);
+		}
+
+		function setModalHapus(dom, x) {
+			var id = dom.data('id');
+			id_delete = id;
+			$(".fa-spinner").hide();
+			$("#btn-hapus").show();
+			$("#btn-batal").html("Batal");
+			$("#modal-hapus .modal-header").html("Hapus");
+			$("#modal-hapus .modal-body").html("Anda yakin menghapus \"<span id='id-delete'></span>\"?");
+			$("#id-delete").html(x);
+		}
+
+		function hapus() {
+			var id = id_delete;
+			$.ajax({
+				url: "<?php echo base_url('pks/pengolahan/hapus'); ?>",
+				data: {
+					'id': id
+				},
+				type: "POST",
+				dataType: 'JSON',
+				beforeSend: function() {
+					$(".fa-spinner").show();
+					$("#btn-hapus").attr("disabled", true);
+					$("#btn-batal").attr("disabled", true);
+				},
+				success: function(data) {
+					$(".fa-spinner").hide();
+					$("#btn-hapus").removeAttr("disabled");
+					$("#btn-batal").removeAttr("disabled");
+					$("#modal-hapus").modal('hide');
+					if (data.hapus) {
+						reloadDatatable();
+						msg("success", data.pesan);
+					} else {
+						msg("error", data.pesan);
+					}
+				},
+			});
+		}
+
+		function edit(obj) {
+			var id = obj.data('id');
+
+			$.ajax({
+				url: "<?php echo base_url('pks/pengolahan/edit'); ?>",
+				data: {
+					olahKode: id
+				},
+				type: "POST",
+				dataType: 'JSON',
+				beforeSend: function() {
+					$("#modal-form").modal('show');
+					$("#modal-form .modal-body").show();
+					$("#btn-simpan").show();
+					$("#btn-batal-simpan").html("Tutup");
+					$(".box-msg").hide();
+					$("#modal-form #modal-title").html("Edit");
+					$(".fa-spinner").show();
+					$("#btn-simpan").attr("disabled", true);
+				},
+				success: function(response) {
+					if (response.edit) {
+						$('#olahKatolahKode [value="' + response.data.olahKatolahKode + '"]').prop("selected", true);
+						$("#olahUraian").val(response.data.olahUraian);
+						$("#olahTotal").val(formatRupiahV3(response.data.olahTotal));
+
+						$("#kode").val(response.data.olahKode);
+						$(".fa-spinner").hide();
+						$("#btn-simpan").removeAttr("disabled");
+					} else {
+						$("#modal-form .form-body").html(response.pesan);
+					}
+				}
+			});
+		}
+
+		$("#field-cari").on('keyup', function(e) {
+			var code = e.which;
+			if (code == 13) e.preventDefault();
+			if (code == 32 || code == 13 || code == 188 || code == 186) {
+				oTable.fnFilter($("#field-cari").val());
+			}
+		});
+		$("#btn-cari").click(function() {
+			oTable.fnFilter($("#field-cari").val());
+		});
+
+		function setModalSimpan() {
+			$("#kode").val('');
+			$("#form-simpan input").val('');
+			$("#modal-form").modal('show');
+			$("#modal-form .modal-body").show();
+			$("#btn-simpan").show();
+			$("#modal-form #modal-title").html("Biaya Pengolahan");
+		}
+
+		$(document).delegate('.simpan', 'click', function(e) {
+			e.preventDefault();
+			var data = $("#form-simpan").serializeArray();
+			data.push({
+				name: "olahIndkKode",
+				value: $("#indkKode").val()
+			});
+			$(".form-control").removeClass("invalid")
+			$("#kode").val('');
+			$.ajax({
+				url: "<?php echo site_url("pks/pengolahan/simpan"); ?>",
+				data: data,
+				type: "POST",
+				dataType: "JSON",
+				beforeSend: function() {
+					$(".fa-spinner").show();
+					$(".error").remove();
+					$("#btn-simpan").attr("disabled", true);
+					$("#btn-batal").attr("disabled", true);
+				},
+				success: function(data) {
+					$(".fa-spinner").hide();
+					$("#btn-simpan").removeAttr("disabled");
+					$("#btn-batal").removeAttr("disabled");
+
+					if (data.simpan) {
+						reloadDatatable();
+						msg("success", data.pesan);
+						$("#modal-form").modal("hide");
+					} else {
+						if (!data.validasi) {
+							$("#pesan-error").show();
+							$.each(data.pesan, function(index, value) {
+								$('#' + index).after('<div class="error" style="color:red">' + value + '</div>');
+								$('#' + index).addClass('invalid');
+								console.log('My array has at position ' + index + ', this value: ' + value);
+							});
+						} else {
+							msg("error", data.pesan);
+						}
+
+
+					}
+				}
+			});
+		});
+	</script>
+	<?= $this->endSection() ?>

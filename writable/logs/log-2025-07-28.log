@@ -1,0 +1,336 @@
+INFO - 2025-07-28 02:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:31:41 --> superadmin
+INFO - 2025-07-28 02:31:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:31:46 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-28 02:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:38:45 --> abs
+INFO - 2025-07-28 02:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 02:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 03:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 03:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 03:51:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 03:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 03:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 03:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 03:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:38:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:38:44 --> abs
+INFO - 2025-07-28 22:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:39:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 22:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:11:21 --> dinas
+INFO - 2025-07-28 23:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:12:04 --> dinas
+INFO - 2025-07-28 23:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:12:57 --> superadmin
+INFO - 2025-07-28 23:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:13:00 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-28 23:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:20:39 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-28 23:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:24:23 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-28 23:27:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:27:13 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-28 23:39:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-28 23:39:27 --> mysqli_sql_exception: Unknown column 'ksmard_r_dinas_setting.dinKode' in 'on clause' in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ksmard_...', 0)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_...')
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_...')
+#3 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_...', Array, false)
+#4 C:\xampp\htdocs\ksmard\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ksmard\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ksmard\app\Controllers\superadmin\DinasSetting.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+#9 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-28 23:39:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'ksmard_r_dinas_setting.dinKode' in 'on clause'
+[Method: GET, Route: superadmin/dinassetting]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_m_dinas`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinKode` = `ksmard_m_dinas`.`dinKode`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\superadmin\DinasSetting.php(23): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-28 23:39:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'ksmard_r_dinas_setting.dinKode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_m_dinas`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinKode` = `ksmard_m_dinas`.`dinKode`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_m_dinas`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinKode` = `ksmard_m_dinas`.`dinKode`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_m_dinas`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinKode` = `ksmard_m_dinas`.`dinKode`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\superadmin\DinasSetting.php(23): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-28 23:39:27 --> [Caused by] mysqli_sql_exception: Unknown column 'ksmard_r_dinas_setting.dinKode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_m_dinas`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinKode` = `ksmard_m_dinas`.`dinKode`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_m_dinas`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinKode` = `ksmard_m_dinas`.`dinKode`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_m_dinas`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinKode` = `ksmard_m_dinas`.`dinKode`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_m_dinas`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinKode` = `ksmard_m_dinas`.`dinKode`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\superadmin\DinasSetting.php(23): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-28 23:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-28 23:43:10 --> mysqli_sql_exception: Not unique table/alias: 'ksmard_r_dinas_setting' in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ksmard_...', 0)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_...')
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_...')
+#3 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_...', Array, false)
+#4 C:\xampp\htdocs\ksmard\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ksmard\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\ksmard\app\Controllers\superadmin\DinasSetting.php(23): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+#9 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-28 23:43:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'ksmard_r_dinas_setting'
+[Method: GET, Route: superadmin/dinassetting]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinsetDinKode` = `ksmard_m_dinas`.`dinKode`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\superadmin\DinasSetting.php(23): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-28 23:43:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Not unique table/alias: 'ksmard_r_dinas_setting'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinsetDinKode` = `ksmard_m_dinas`.`dinKode`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinsetDinKode` = `ksmard_m_dinas`.`dinKode`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinsetDinKode` = `ksmard_m_dinas`.`dinKode`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Controllers\superadmin\DinasSetting.php(23): CodeIgniter\BaseModel->findAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-28 23:43:10 --> [Caused by] mysqli_sql_exception: Not unique table/alias: 'ksmard_r_dinas_setting'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinsetDinKode` = `ksmard_m_dinas`.`dinKode`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinsetDinKode` = `ksmard_m_dinas`.`dinKode`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinsetDinKode` = `ksmard_m_dinas`.`dinKode`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.*
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_r_dinas_setting` ON `ksmard_r_dinas_setting`.`dinsetDinKode` = `ksmard_m_dinas`.`dinKode`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\superadmin\DinasSetting.php(23): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-28 23:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:49:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 23:49:47 --> ErrorException: Undefined variable $provinsi
+[Method: GET, Route: superadmin/dinassetting]
+in APPPATH\Views\superadmin\dinas_setting\index.php on line 70.
+ 1 APPPATH\Views\superadmin\dinas_setting\index.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $provinsi', 'C:\\xampp\\htdocs\\ksmard\\app\\Views\\superadmin\\dinas_setting\\index.php', 70)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ksmard\\app\\Views\\superadmin\\dinas_setting\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('superadmin/dinas_setting/index', [], true)
+ 5 APPPATH\Controllers\superadmin\DinasSetting.php(28): view('superadmin/dinas_setting/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-28 23:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:50:10 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-28 23:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 23:50:58 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/dinassetting/grid]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-28 23:52:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-28 23:52:03 --> Array
+(
+)
+
+CRITICAL - 2025-07-28 23:52:03 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/dinassetting/grid]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-28 23:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 23:56:08 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/dinassetting/grid]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-28 23:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 23:56:26 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/dinassetting/grid]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-28 23:58:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 23:58:30 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/dinassetting/grid]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-28 23:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-28 23:59:12 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/dinassetting/grid]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

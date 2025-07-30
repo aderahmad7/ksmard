@@ -1,0 +1,106 @@
+INFO - 2025-05-26 22:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 22:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 22:37:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 22:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 22:59:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:20:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:36:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:37:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-26 23:46:22 --> Error: Undefined constant "App\Controllers\Pks\getKategoriTbs"
+[Method: GET, Route: pks/hasil/grid]
+in APPPATH\Controllers\pks\Hasil.php on line 46.
+ 1 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(99): App\Controllers\Pks\Hasil->App\Controllers\Pks\{closure}(Object(stdClass), [...])
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 3 APPPATH\Controllers\pks\Hasil.php(53): Hermawan\DataTables\DataTable->toJson(true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Hasil->grid()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Hasil))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-26 23:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-26 23:46:31 --> Error: Undefined constant "App\Controllers\Pks\getKategoriTbs"
+[Method: GET, Route: pks/hasil/grid]
+in APPPATH\Controllers\pks\Hasil.php on line 46.
+ 1 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(99): App\Controllers\Pks\Hasil->App\Controllers\Pks\{closure}(Object(stdClass), [...])
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 3 APPPATH\Controllers\pks\Hasil.php(53): Hermawan\DataTables\DataTable->toJson(true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Hasil->grid()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Hasil))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-26 23:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-26 23:47:09 --> ErrorException: Undefined property: App\Controllers\Pks\Hasil::$getKategoriTbs
+[Method: GET, Route: pks/hasil/grid]
+in APPPATH\Controllers\pks\Hasil.php on line 46.
+ 1 APPPATH\Controllers\pks\Hasil.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Pks\\Hasil::$getKategoriTbs', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Hasil.php', 46)
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(99): App\Controllers\Pks\Hasil->App\Controllers\Pks\{closure}(Object(stdClass), [...])
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 4 APPPATH\Controllers\pks\Hasil.php(53): Hermawan\DataTables\DataTable->toJson(true)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Hasil->grid()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Hasil))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-26 23:49:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-26 23:49:18 --> ErrorException: Undefined property: App\Controllers\Pks\Hasil::$getKategoriTbs
+[Method: GET, Route: pks/hasil/grid]
+in APPPATH\Controllers\pks\Hasil.php on line 46.
+ 1 APPPATH\Controllers\pks\Hasil.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Pks\\Hasil::$getKategoriTbs', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Hasil.php', 46)
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(99): App\Controllers\Pks\Hasil->App\Controllers\Pks\{closure}(Object(stdClass), [...])
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 4 APPPATH\Controllers\pks\Hasil.php(53): Hermawan\DataTables\DataTable->toJson(true)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Hasil->grid()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Hasil))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-26 23:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-26 23:49:53 --> Error: Undefined constant "App\Controllers\Pks\getKategoriTbs"
+[Method: GET, Route: pks/hasil/grid]
+in APPPATH\Controllers\pks\Hasil.php on line 46.
+ 1 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(99): App\Controllers\Pks\Hasil->App\Controllers\Pks\{closure}(Object(stdClass), [...])
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 3 APPPATH\Controllers\pks\Hasil.php(53): Hermawan\DataTables\DataTable->toJson(true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Hasil->grid()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Hasil))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-26 23:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-26 23:50:14 --> Error: Call to undefined method App\Controllers\Pks\Hasil::getKategoriTbs()
+[Method: GET, Route: pks/hasil/grid]
+in APPPATH\Controllers\pks\Hasil.php on line 46.
+ 1 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(99): App\Controllers\Pks\Hasil->App\Controllers\Pks\{closure}(Object(stdClass), [...])
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 3 APPPATH\Controllers\pks\Hasil.php(53): Hermawan\DataTables\DataTable->toJson(true)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Hasil->grid()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Hasil))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-05-26 23:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-05-26 23:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

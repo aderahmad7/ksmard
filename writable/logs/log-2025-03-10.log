@@ -1,0 +1,203 @@
+INFO - 2025-03-10 14:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 14:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 14:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-10 15:11:10 --> ErrorException: Undefined property: CodeIgniter\View\View::$session
+[Method: GET, Route: perusahaan/validasi]
+in APPPATH\Views\template\header.php on line 26.
+ 1 APPPATH\Views\template\header.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\header.php', 26)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/header', null, true)
+ 5 APPPATH\Views\template\body.php(3): CodeIgniter\View\View->include('template/header')
+ 6 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\body.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/body.php', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('perusahaan/pengembangan', [], true)
+10 APPPATH\Controllers\Perusahaan.php(55): view('perusahaan/pengembangan', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Perusahaan->validasi()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perusahaan))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-10 15:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-10 15:11:53 --> Error: Call to undefined function form_open()
+[Method: GET, Route: perusahaan/validasi]
+in APPPATH\Views\template\footer.php on line 69.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/footer', null, true)
+ 4 APPPATH\Views\template\body.php(8): CodeIgniter\View\View->include('template/footer')
+ 5 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\body.php')
+ 6 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/body.php', [], true)
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('perusahaan/pengembangan', [], true)
+ 9 APPPATH\Controllers\Perusahaan.php(55): view('perusahaan/pengembangan', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Perusahaan->validasi()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perusahaan))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-10 15:12:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-10 15:12:11 --> Error: Call to undefined function set_value()
+[Method: GET, Route: perusahaan/validasi]
+in APPPATH\Views\template\footer.php on line 73.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/footer', null, true)
+ 4 APPPATH\Views\template\body.php(8): CodeIgniter\View\View->include('template/footer')
+ 5 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\body.php')
+ 6 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/body.php', [], true)
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('perusahaan/pengembangan', [], true)
+ 9 APPPATH\Controllers\Perusahaan.php(55): view('perusahaan/pengembangan', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Perusahaan->validasi()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perusahaan))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-10 15:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-10 15:12:35 --> Error: Call to undefined function form_close()
+[Method: GET, Route: perusahaan/validasi]
+in APPPATH\Views\template\footer.php on line 87.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/footer', null, true)
+ 4 APPPATH\Views\template\body.php(8): CodeIgniter\View\View->include('template/footer')
+ 5 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\body.php')
+ 6 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/body.php', [], true)
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('perusahaan/pengembangan', [], true)
+ 9 APPPATH\Controllers\Perusahaan.php(55): view('perusahaan/pengembangan', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Perusahaan->validasi()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perusahaan))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-10 15:13:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-10 15:13:07 --> Error: Call to undefined function form_open()
+[Method: GET, Route: perusahaan/validasi]
+in APPPATH\Views\template\footer.php on line 104.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/footer', null, true)
+ 4 APPPATH\Views\template\body.php(8): CodeIgniter\View\View->include('template/footer')
+ 5 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\body.php')
+ 6 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/body.php', [], true)
+ 8 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('perusahaan/pengembangan', [], true)
+ 9 APPPATH\Controllers\Perusahaan.php(55): view('perusahaan/pengembangan', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Perusahaan->validasi()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perusahaan))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-10 15:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-10 15:22:33 --> ErrorException: Undefined property: CodeIgniter\View\View::$uri
+[Method: GET, Route: perusahaan/validasi]
+in APPPATH\Views\template\sidebar.php on line 16.
+ 1 APPPATH\Views\template\sidebar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$uri', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\sidebar.php', 16)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/sidebar', null, true)
+ 5 APPPATH\Views\template\body.php(67): CodeIgniter\View\View->include('template/sidebar')
+ 6 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\body.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/body.php', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('perusahaan/pengembangan', [], true)
+10 APPPATH\Controllers\Perusahaan.php(55): view('perusahaan/pengembangan', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Perusahaan->validasi()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perusahaan))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-10 15:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-10 15:22:56 --> ErrorException: Undefined property: CodeIgniter\View\View::$uri
+[Method: GET, Route: perusahaan/validasi]
+in APPPATH\Views\template\sidebar.php on line 16.
+ 1 APPPATH\Views\template\sidebar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$uri', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\sidebar.php', 16)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/sidebar.php', null, true)
+ 5 APPPATH\Views\template\body.php(67): CodeIgniter\View\View->include('template/sidebar.php')
+ 6 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\body.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/body.php', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('perusahaan/pengembangan', [], true)
+10 APPPATH\Controllers\Perusahaan.php(55): view('perusahaan/pengembangan', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Perusahaan->validasi()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perusahaan))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-10 15:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-10 15:24:55 --> ErrorException: Undefined property: CodeIgniter\View\View::$uri
+[Method: GET, Route: perusahaan/validasi]
+in APPPATH\Views\template\sidebar.php on line 16.
+ 1 APPPATH\Views\template\sidebar.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$uri', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\sidebar.php', 16)
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(487): CodeIgniter\View\View->render('template/sidebar', null, true)
+ 5 APPPATH\Views\template\body.php(57): CodeIgniter\View\View->include('template/sidebar')
+ 6 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\template\\body.php')
+ 7 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(250): CodeIgniter\View\View->render('template/body.php', [], true)
+ 9 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('perusahaan/pengembangan', [], true)
+10 APPPATH\Controllers\Perusahaan.php(55): view('perusahaan/pengembangan', [...])
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Perusahaan->validasi()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Perusahaan))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-10 15:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:35:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:35:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:51:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:53:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 15:53:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-10 16:07:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

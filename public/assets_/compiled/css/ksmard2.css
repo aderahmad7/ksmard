@@ -1,0 +1,198 @@
+* {
+  font-family: "Roboto" !important;
+}
+
+
+
+#main {
+  background-color: #f5f7fa;
+}
+
+/* 32 24 */
+
+.ksmard-active {
+  color: #0eac1d !important;
+}
+
+.ksmard-active-secondary {
+    color: #10ce23;
+}
+
+.ksmard-nactive {
+  color: #9b9595 !important;
+}
+
+.bg-ksmard-active {
+  background-color: #0eac1d;
+}
+
+.bg-ksmard-active-secondary {
+  background: #10ce23;
+}
+
+.btn:hover {
+  background-color: #0eac1d !important;
+}
+
+.sidebar-link:hover {
+  background-color: rgba(73, 252, 124, 0.4) !important;
+}
+
+.sidebar-link:hover span,
+.sidebar-link:hover svg {
+  color: #0eac1d !important;
+}
+
+header {
+  height: 70px;
+  margin-left: 300px;
+  padding: 20px;
+}
+
+.header-logo {
+  display: none;
+}
+
+.sidebar-wrapper {
+  border: solid 1px #e9f1f6;
+}
+
+.field-search {
+  border-radius: 10px;
+  height: 40px;
+  border: none;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.field-search::placeholder {
+  color: #bcbcbc;
+}
+
+.card-index-top {
+  height: 120px;
+  /* width: 300px; */
+  padding: 20px 32px 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #13bf24 !important;
+}
+
+.card-index-bottom {
+  margin-bottom: 1rem;
+  height: 60px;
+  /* width: 300px; */
+  padding: 0 32px;
+  background-color: #10ce23;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card-biaya {
+    height: 180px;
+    /* width: 300px; */
+    padding: 20px 32px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.card-biaya {
+    border: 1px solid #F5F7FA;
+}
+
+.card-biaya-content h6 {
+    font-size: 14px;
+}
+
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #0eac1d;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  color: #0eac1d;
+  background-color: #f0fff0;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  /* display: none; */
+  -webkit-appearance: none;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px #0eac1d;
+}
+
+.index-title {
+  padding: 16px 32px;
+  background-color: #0eac1d;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 40px;
+}
+
+.index-value {
+  height: 110px;
+  background-color: #10ce23;
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.icon-edit {
+  width: 20px;
+  height: 25px;
+  stroke: #fff;
+}
+
+@media (max-width: 1200px) {
+  header {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-100 {
+    width: 100%;
+  }
+
+  .field-search {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .header-content {
+    flex-direction: column;
+  }
+
+  .header-logo {
+    display: block;
+  }
+
+  .container-biaya {
+    flex-direction: column;
+  }
+
+  .card-biaya-container {
+    width: 100%;
+    order: -1;
+    margin-bottom: 2rem;
+  }
+
+  .container-table {
+    width: 100%;
+  }
+
+  .tabel-title {
+    gap: 2rem;
+  }
+
+  .select-Date {
+    gap: 1rem !important;
+  }
+}

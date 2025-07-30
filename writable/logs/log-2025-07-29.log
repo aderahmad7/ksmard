@@ -1,0 +1,598 @@
+CRITICAL - 2025-07-29 00:00:15 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/dinassetting/grid]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 00:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-29 00:01:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas...' at line 2 in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ksmard_...', 0)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_...')
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_...')
+#3 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_...', Array, false)
+#4 C:\xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\ksmard\app\Controllers\superadmin\DinasSetting.php(52): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+#9 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+#10 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-29 00:01:03 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas...' at line 2
+[Method: GET, Route: superadmin/dinassetting/grid]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10', [], false)
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\superadmin\DinasSetting.php(52): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-29 00:01:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10', [], false)
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\superadmin\DinasSetting.php(52): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-29 00:01:03 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10', [], false)
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\superadmin\DinasSetting.php(52): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 00:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-29 00:01:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas...' at line 2 in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ksmard_...', 0)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_...')
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_...')
+#3 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_...', Array, false)
+#4 C:\xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+#6 C:\xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+#7 C:\xampp\htdocs\ksmard\app\Controllers\superadmin\DinasSetting.php(52): Hermawan\DataTables\DataTable->toJson(true)
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+#9 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+#10 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-07-29 00:01:10 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas...' at line 2
+[Method: GET, Route: superadmin/dinassetting/grid]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10', [], false)
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 5 APPPATH\Controllers\superadmin\DinasSetting.php(52): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-29 00:01:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10', [], false)
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 6 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 7 APPPATH\Controllers\superadmin\DinasSetting.php(52): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-29 00:01:10 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas...' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT `ksmard_r_dinas_setting`.`dinsetKode`, `ksmard_m_dinas`.`dinNama`, `ksmard_r_dinas_setting`.`dinsetPersenBotl`, `ksmard_r_dinas_setting`.`dinsetPersenJual`, ksmard_r_dinas_setting.dinsetDinKode
+        )
+FROM `ksmard_r_dinas_setting`
+LEFT JOIN `ksmard_m_dinas` ON `ksmard_m_dinas`.`dinKode` = `ksmard_r_dinas_setting`.`dinsetDinKode`
+ LIMIT 10', [], false)
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(234): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(74): Hermawan\DataTables\DataTableQuery->queryResult()
+ 7 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(187): Hermawan\DataTables\DataTableQuery->getDataResult()
+ 8 APPPATH\Controllers\superadmin\DinasSetting.php(52): Hermawan\DataTables\DataTable->toJson(true)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->grid()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 00:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:05:40 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-29 00:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:26:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:53:20 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-29 00:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:55:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:55:48 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-29 00:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 00:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 01:04:46 --> ErrorException: Undefined array key "accUsername"
+[Method: POST, Route: superadmin/dinassetting/edit]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 108.
+ 1 APPPATH\Controllers\superadmin\DinasSetting.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "accUsername"', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\DinasSetting.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 01:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 01:04:53 --> ErrorException: Undefined array key "accUsername"
+[Method: POST, Route: superadmin/dinassetting/edit]
+in APPPATH\Controllers\superadmin\DinasSetting.php on line 108.
+ 1 APPPATH\Controllers\superadmin\DinasSetting.php(108): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "accUsername"', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\DinasSetting.php', 108)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\DinasSetting->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\DinasSetting))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 01:05:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:05:05 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-29 01:07:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:32:05 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-29 01:32:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 01:35:03 --> ErrorException: Undefined variable $options
+[Method: GET, Route: superadmin/produksi]
+in APPPATH\Views\superadmin\produksi\index.php on line 69.
+ 1 APPPATH\Views\superadmin\produksi\index.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $options', 'C:\\xampp\\htdocs\\ksmard\\app\\Views\\superadmin\\produksi\\index.php', 69)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\ksmard\\app\\Views\\superadmin\\produksi\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('superadmin/produksi/index', [], true)
+ 5 APPPATH\Controllers\superadmin\Produksi.php(24): view('superadmin/produksi/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 01:35:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:38:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 01:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-29 01:39:16 --> mysqli_sql_exception: Table 'ksmard.ksmard_r_produksi' doesn't exist in C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 C:\xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 C:\xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 C:\xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#6 C:\xampp\htdocs\ksmard\app\Controllers\superadmin\Produksi.php(34): Hermawan\DataTables\DataTable->toJson(true)
+#7 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->grid()
+#8 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+#9 C:\xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-07-29 01:39:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ksmard.ksmard_r_produksi' doesn't exist
+[Method: GET, Route: superadmin/produksi/grid]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_r_produksi`', [], false)
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 4 APPPATH\Controllers\superadmin\Produksi.php(34): Hermawan\DataTables\DataTable->toJson(true)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->grid()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-29 01:39:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ksmard.ksmard_r_produksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_r_produksi`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_r_produksi`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_r_produksi`', [], false)
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 6 APPPATH\Controllers\superadmin\Produksi.php(34): Hermawan\DataTables\DataTable->toJson(true)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->grid()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-29 01:39:16 --> [Caused by] mysqli_sql_exception: Table 'ksmard.ksmard_r_produksi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_r_produksi`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_r_produksi`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_r_produksi`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_r_produksi`', [], false)
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 7 APPPATH\Controllers\superadmin\Produksi.php(34): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->grid()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 01:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 02:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 02:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 02:45:19 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: superadmin/produksi/simpan]
+in APPPATH\Controllers\superadmin\Produksi.php on line 55.
+ 1 APPPATH\Controllers\superadmin\Produksi.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\Produksi.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->simpan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 02:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 02:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 02:46:06 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: superadmin/produksi/simpan]
+in APPPATH\Controllers\superadmin\Produksi.php on line 55.
+ 1 APPPATH\Controllers\superadmin\Produksi.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\Produksi.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->simpan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 02:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 02:58:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 02:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 02:58:23 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: superadmin/produksi/simpan]
+in APPPATH\Controllers\superadmin\Produksi.php on line 55.
+ 1 APPPATH\Controllers\superadmin\Produksi.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\Produksi.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->simpan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 03:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 03:11:39 --> ErrorException: Undefined array key "katproKode"
+[Method: POST, Route: superadmin/produksi/edit]
+in APPPATH\Controllers\superadmin\Produksi.php on line 89.
+ 1 APPPATH\Controllers\superadmin\Produksi.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "katproKode"', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\Produksi.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 03:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 03:14:00 --> ErrorException: Undefined array key "katproKode"
+[Method: POST, Route: superadmin/produksi/edit]
+in APPPATH\Controllers\superadmin\Produksi.php on line 89.
+ 1 APPPATH\Controllers\superadmin\Produksi.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "katproKode"', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\Produksi.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-29 03:14:31 --> ErrorException: Undefined array key "katproKode"
+[Method: POST, Route: superadmin/produksi/edit]
+in APPPATH\Controllers\superadmin\Produksi.php on line 89.
+ 1 APPPATH\Controllers\superadmin\Produksi.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "katproKode"', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\Produksi.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 03:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 03:15:02 --> ErrorException: Undefined array key "katproKode"
+[Method: POST, Route: superadmin/produksi/edit]
+in APPPATH\Controllers\superadmin\Produksi.php on line 89.
+ 1 APPPATH\Controllers\superadmin\Produksi.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "katproKode"', 'C:\\xampp\\htdocs\\ksmard\\app\\Controllers\\superadmin\\Produksi.php', 89)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Produksi->edit()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Produksi))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 03:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:19:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:19:34 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-29 03:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:47:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:47:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:52:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:57:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 03:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 04:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 04:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 04:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 04:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 04:39:40 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/biayatl/grid]
+in APPPATH\Controllers\superadmin\BiayaTl.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\BiayaTl->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\BiayaTl))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-07-29 04:40:57 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/biayatl/grid]
+in APPPATH\Controllers\superadmin\BiayaTl.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\BiayaTl->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\BiayaTl))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\ksmard\\public\\index.php')
+INFO - 2025-07-29 04:41:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 04:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 04:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 05:52:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 05:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 05:52:43 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/penyusutan/grid]
+in APPPATH\Controllers\superadmin\Penyusutan.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Penyusutan->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Penyusutan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 05:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 05:52:57 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/penyusutan/grid]
+in APPPATH\Controllers\superadmin\Penyusutan.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Penyusutan->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Penyusutan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 05:54:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 05:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 05:54:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:17:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:41:09 --> abs
+INFO - 2025-07-29 06:41:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:41:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 06:42:09 --> superadmin
+INFO - 2025-07-29 06:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 07:18:31 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/pengolahan/grid]
+in APPPATH\Controllers\superadmin\Pengolahan.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Pengolahan->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Pengolahan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 07:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-29 07:19:38 --> Error: Class "App\Controllers\Superadmin\DataTable" not found
+[Method: GET, Route: superadmin/pengolahan/grid]
+in APPPATH\Controllers\superadmin\Pengolahan.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Superadmin\Pengolahan->grid()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Superadmin\Pengolahan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-29 07:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:30:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 07:40:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 11:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 11:04:04 --> superadmin
+INFO - 2025-07-29 11:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-29 11:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

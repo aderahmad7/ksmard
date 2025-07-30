@@ -1,0 +1,1971 @@
+INFO - 2025-07-15 18:17:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:17:51 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:18:37 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:18:41 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:18:42 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:18:42 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:18:44 --> Array
+(
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:18:44 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:18:48 --> Array
+(
+    [kodeKomen] => 61
+)
+
+INFO - 2025-07-15 18:18:48 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 61
+)
+
+INFO - 2025-07-15 18:18:54 --> Array
+(
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:18:58 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:18:58 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:18:58 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:19:02 --> KALTIM
+INFO - 2025-07-15 18:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:19:10 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:19:10 --> Array
+(
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:19:13 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:19:15 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:19:16 --> Array
+(
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:19:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:19:16 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:21:10 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:21:12 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:21:13 --> Array
+(
+    [periode] => 19
+)
+
+INFO - 2025-07-15 18:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:21:13 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:21:19 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:22:56 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:22:58 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:22:59 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:22:59 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:01 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 18:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:04 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:04 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:23:04 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:36 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:23:36 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:36 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:23:39 --> Array
+(
+    [kodeKomen] => 76
+)
+
+INFO - 2025-07-15 18:23:39 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 76
+)
+
+INFO - 2025-07-15 18:23:45 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:48 --> KALTIM
+INFO - 2025-07-15 18:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:54 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:23:54 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:23:54 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:23:58 --> Array
+(
+    [kodeKomen] => 77
+)
+
+INFO - 2025-07-15 18:23:58 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 77
+)
+
+INFO - 2025-07-15 18:24:09 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:24:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:24:11 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:24:11 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 18:24:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:24:11 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 18:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 18:24:15 --> KALTIM
+INFO - 2025-07-15 19:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:27:16 --> superadmin
+INFO - 2025-07-15 19:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:27:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:27:19 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+DEBUG - 2025-07-15 19:27:26 --> {"kode":"dinas","kodedinas":"KALTIM","dinKode":"{\"dinKode\":\"KALSEL\",\"dinProvinsi\":\"Kalimantan Selatan\"}","accNama":"Dinas Kaltim","accUsername":"dinas","accPassword":"dinas"}
+DEBUG - 2025-07-15 19:27:26 --> {"accUsername":"dinas","accPassword":"dinas","accNama":"Dinas Kaltim","accEmail":null,"accNoWhatsapp":null,"accCreatedAt":null,"accUpdateAt":null}
+INFO - 2025-07-15 19:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:29:06 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+DEBUG - 2025-07-15 19:29:13 --> {"kode":"dinas","kodedinas":"KALTIM","dinKode":"{\"dinKode\":\"KALSEL\",\"dinProvinsi\":\"Kalimantan Selatan\"}","accNama":"Dinas Kaltim","accUsername":"dinas","accPassword":"dinas"}
+DEBUG - 2025-07-15 19:29:13 --> {"accUsername":"dinas","accPassword":"dinas","accNama":"Dinas Kaltim","accEmail":null,"accNoWhatsapp":null,"accCreatedAt":null,"accUpdateAt":null}
+DEBUG - 2025-07-15 19:29:42 --> {"kode":"dinas","kodedinas":"KALSEL","dinKode":"{\"dinKode\":\"KALTIM\",\"dinProvinsi\":\"Kalimantan Timur\"}","accNama":"Dinas Kaltim","accUsername":"dinas","accPassword":"dinas"}
+DEBUG - 2025-07-15 19:29:42 --> {"accUsername":"dinas","accPassword":"dinas","accNama":"Dinas Kaltim","accEmail":null,"accNoWhatsapp":null,"accCreatedAt":null,"accUpdateAt":null}
+INFO - 2025-07-15 19:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:31:40 --> Array
+(
+    [{"dinKode":"KALSEL","dinProvinsi":"Kalimantan Selatan"}] => Kalimantan Selatan
+    [{"dinKode":"KALUT","dinProvinsi":"Kalimantan Utara"}] => Kalimantan Utara
+    [{"dinKode":"KALBAR","dinProvinsi":"Kalimantan Barat"}] => Kalimantan Barat
+    [{"dinKode":"KALTIM","dinProvinsi":"Kalimantan Timur"}] => Kalimantan Timur
+    [{"dinKode":"KALTENG","dinProvinsi":"Kalimantan Tengah"}] => Kalimantan Tengah
+)
+
+INFO - 2025-07-15 19:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:31:55 --> dinaskalsel
+INFO - 2025-07-15 19:31:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:31:56 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+)
+
+INFO - 2025-07-15 19:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:03 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 19:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:05 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+)
+
+INFO - 2025-07-15 19:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:05 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 1
+)
+
+INFO - 2025-07-15 19:32:06 --> Array
+(
+    [periode] => 1
+)
+
+INFO - 2025-07-15 19:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:06 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 19:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:22 --> dinaskalsel
+INFO - 2025-07-15 19:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:32:22 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+)
+
+INFO - 2025-07-15 19:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:33:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:07 --> dinaskalsel
+INFO - 2025-07-15 19:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:07 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+)
+
+INFO - 2025-07-15 19:34:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:09 --> KALSEL
+INFO - 2025-07-15 19:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:19 --> abs
+INFO - 2025-07-15 19:34:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:23 --> KALSEL
+INFO - 2025-07-15 19:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:26 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 1
+)
+
+INFO - 2025-07-15 19:34:27 --> Array
+(
+    [periode] => 1
+)
+
+INFO - 2025-07-15 19:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 19:34:27 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 19:34:31 --> Array
+(
+    [kodeKomen] => 31
+)
+
+INFO - 2025-07-15 19:34:31 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 31
+)
+
+INFO - 2025-07-15 19:34:36 --> Array
+(
+    [kodeKomen] => 32
+)
+
+INFO - 2025-07-15 19:34:36 --> Array
+(
+    [kmtKomen] => -
+    [kmtStatus] => diterima
+    [kmtKode] => 32
+)
+
+INFO - 2025-07-15 20:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:40:14 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 38
+)
+
+INFO - 2025-07-15 20:40:15 --> Array
+(
+    [periode] => 38
+)
+
+INFO - 2025-07-15 20:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:40:16 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 20:40:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:40:40 --> dinaskalsel
+INFO - 2025-07-15 20:40:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:40:43 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+)
+
+INFO - 2025-07-15 20:40:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:40:46 --> KALSEL
+INFO - 2025-07-15 20:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-15 20:43:26 --> masuk else
+INFO - 2025-07-15 20:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:43:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:43:37 --> alamtriabadi
+INFO - 2025-07-15 20:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:43:45 --> KALSEL
+INFO - 2025-07-15 20:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:45:18 --> KALSEL
+INFO - 2025-07-15 20:45:39 --> Array
+(
+    [indkPksKode] => ATA
+    [indkDinasKode] => KALSEL
+    [indkPeriodeBulan] => 1
+    [indkPeriodeTahun] => 2025
+)
+
+INFO - 2025-07-15 20:45:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:45:39 --> KALSEL
+INFO - 2025-07-15 20:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-15 20:45:49 --> 44
+DEBUG - 2025-07-15 20:45:49 --> 44
+DEBUG - 2025-07-15 20:47:23 --> 44
+DEBUG - 2025-07-15 20:47:23 --> 44
+INFO - 2025-07-15 20:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:52:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:56:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 20:59:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:01:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:01:26 --> ATA
+INFO - 2025-07-15 21:01:31 --> 44
+INFO - 2025-07-15 21:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:01:32 --> 80.95
+INFO - 2025-07-15 21:01:41 --> Array
+(
+    [indeks_k] => 44
+    [indeks_k_percentage] => 80,95
+)
+
+INFO - 2025-07-15 21:01:41 --> 44
+INFO - 2025-07-15 21:01:41 --> 80,95
+CRITICAL - 2025-07-15 21:01:41 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: pks/pelaporan/kirim]
+in SYSTEMPATH\BaseModel.php on line 1833.
+ 1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(997): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\pks\Pelaporan.php(135): CodeIgniter\Model->update([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->kirim()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-07-15 21:01:46 --> Array
+(
+    [indeks_k] => 44
+    [indeks_k_percentage] => 80,95
+)
+
+INFO - 2025-07-15 21:01:46 --> 44
+INFO - 2025-07-15 21:01:46 --> 80,95
+INFO - 2025-07-15 21:01:46 --> 44
+INFO - 2025-07-15 21:01:46 --> aman
+INFO - 2025-07-15 21:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:01:55 --> KALSEL
+INFO - 2025-07-15 21:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:00 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 44
+)
+
+INFO - 2025-07-15 21:02:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:01 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 21:02:01 --> Array
+(
+    [periode] => 44
+)
+
+INFO - 2025-07-15 21:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:25 --> dinaskalsel
+INFO - 2025-07-15 21:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:26 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => diterima
+        )
+
+)
+
+INFO - 2025-07-15 21:02:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:33 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 21:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:34 --> Array
+(
+    [0] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [1] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [2] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [3] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [4] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [5] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [6] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [7] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [8] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [9] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [10] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [11] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [12] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [13] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+    [14] => Array
+        (
+            [kmtStatus] => pending
+        )
+
+)
+
+INFO - 2025-07-15 21:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:40 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => 44
+)
+
+INFO - 2025-07-15 21:02:41 --> Array
+(
+    [periode] => 44
+)
+
+INFO - 2025-07-15 21:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-15 21:02:41 --> Array
+(
+    [title] => PERUSAHAAN
+    [periode] => images
+)
+
+INFO - 2025-07-15 21:02:50 --> Array
+(
+    [kodeKomen] => 91
+)
+
+INFO - 2025-07-15 21:02:50 --> Array
+(
+    [kmtKomen] => 
+    [kmtStatus] => pending
+    [kmtKode] => 91
+)
+

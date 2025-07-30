@@ -1,0 +1,59 @@
+INFO - 2025-04-23 01:29:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 01:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 01:30:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 01:30:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 01:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-04-23 01:30:21 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ksmard', 3306, '', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Apps\Xampp\htdocs\ksmard\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(27): CodeIgniter\BaseModel->findAll()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->index()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Apps\Xampp\htdocs\ksmard\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(27): CodeIgniter\BaseModel->findAll()
+#6 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->index()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-04-23 01:30:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: pks/pelaporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `indkPksKode` = :indkPksKode:', [...], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\pks\Pelaporan.php(27): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-04-23 01:30:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 01:30:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 01:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 06:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-04-23 06:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

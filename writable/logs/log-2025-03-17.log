@@ -1,0 +1,1149 @@
+INFO - 2025-03-17 00:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 00:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 04:21:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 04:21:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 04:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-17 04:21:27 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ksmard' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ksmard', 3306, '', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ksmard' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+#6 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-03-17 04:21:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ksmard'
+[Method: GET, Route: pks/pelaporan/grid]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_indeks_k_pks`', [], false)
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 5 APPPATH\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 04:21:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-17 04:21:34 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ksmard' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ksmard', 3306, '', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ksmard' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+#6 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-03-17 04:21:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ksmard'
+[Method: GET, Route: pks/pelaporan/grid]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_indeks_k_pks`', [], false)
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 5 APPPATH\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 04:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-17 04:22:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ksmard' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ksmard', 3306, '', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ksmard' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+#6 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-03-17 04:22:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ksmard'
+[Method: GET, Route: pks/pelaporan/grid]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_indeks_k_pks`', [], false)
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 5 APPPATH\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 04:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-17 04:22:10 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ksmard' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ksmard', 3306, '', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ksmard' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+#6 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2025-03-17 04:22:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ksmard'
+[Method: GET, Route: pks/pelaporan/grid]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_indeks_k_pks`', [], false)
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(57): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(185): Hermawan\DataTables\DataTableQuery->countAll()
+ 5 APPPATH\Controllers\pks\Pelaporan.php(31): Hermawan\DataTables\DataTable->toJson(true)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->grid()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 04:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 04:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 04:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 05:06:06 --> TypeError: form_input(): Argument #2 ($value) must be of type string, array given, called in D:\Apps\Xampp\htdocs\ksmard\app\Views\pks\pelaporan\index.php on line 79
+[Method: GET, Route: pks/pelaporan]
+in SYSTEMPATH\Helpers\form_helper.php on line 146.
+ 1 APPPATH\Views\pks\pelaporan\index.php(79): form_input('indkPeriodeBulan', [...], '', 'class="form-select"')
+ 2 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\pks\\pelaporan\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pks/pelaporan/index', [], true)
+ 5 APPPATH\Controllers\pks\Pelaporan.php(24): view('pks/pelaporan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 05:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 05:12:38 --> ErrorException: Undefined variable $year
+[Method: GET, Route: pks/pelaporan]
+in APPPATH\Helpers\datetime_helper.php on line 201.
+ 1 APPPATH\Helpers\datetime_helper.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $year', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Helpers\\datetime_helper.php', 201)
+ 2 APPPATH\Views\pks\pelaporan\index.php(76): getYear()
+ 3 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\pks\\pelaporan\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pks/pelaporan/index', [], true)
+ 6 APPPATH\Controllers\pks\Pelaporan.php(24): view('pks/pelaporan/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 05:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 05:12:51 --> ErrorException: Undefined variable $year
+[Method: GET, Route: pks/pelaporan]
+in APPPATH\Helpers\datetime_helper.php on line 201.
+ 1 APPPATH\Helpers\datetime_helper.php(201): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $year', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Helpers\\datetime_helper.php', 201)
+ 2 APPPATH\Views\pks\pelaporan\index.php(76): getYear()
+ 3 SYSTEMPATH\View\View.php(234): include('D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Views\\pks\\pelaporan\\index.php')
+ 4 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pks/pelaporan/index', [], true)
+ 6 APPPATH\Controllers\pks\Pelaporan.php(24): view('pks/pelaporan/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 05:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:59:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 05:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:00:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:02:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:02:47 --> Error: Call to undefined function App\Controllers\Pks\validation_list_errors()
+[Method: GET, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:08:30 --> Error: Call to undefined function App\Controllers\Pks\validation_list_errors()
+[Method: GET, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:13:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:17:24 --> Error: Call to undefined function App\Controllers\Pks\validation_list_errors()
+[Method: GET, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:20:04 --> Error: Call to undefined function App\Controllers\Pks\validation_list_errors()
+[Method: GET, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:20:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:21:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:21:30 --> Error: Call to undefined function App\Controllers\Pks\validation_list_errors()
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:21:55 --> Error: Call to undefined function App\Controllers\Pks\validation_list_errors()
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:22:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:22:20 --> Error: Call to undefined function App\Controllers\Pks\validation_errors()
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 45.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:25:05 --> Error: Class "App\Controllers\Pks\ConfigServices" not found
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:30:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:42:25 --> Error: Class "App\Models\Periode_m" not found
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 06:42:46 --> CodeIgniter\Database\Exceptions\DataException: There is no data to insert.
+[Method: POST, Route: pks/pelaporan/simpan]
+in SYSTEMPATH\BaseModel.php on line 826.
+ 1 SYSTEMPATH\BaseModel.php(826): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([], false)
+ 3 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert(Object(CodeIgniter\HTTP\IncomingRequest), false)
+ 4 APPPATH\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->save(Object(CodeIgniter\HTTP\IncomingRequest))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 06:44:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:53:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 06:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:15:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-17 07:15:30 --> mysqli_sql_exception: Unknown column 'kode' in 'where clause' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Apps\Xampp\htdocs\ksmard\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->first()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-03-17 07:15:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode' in 'where clause'
+[Method: POST, Route: pks/pelaporan/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = :kode:
+AND `indkPeriodeBulan` = :indkPeriodeBulan:
+AND `indkPeriodeTahun` = :indkPeriodeTahun:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 07:15:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = :kode:
+AND `indkPeriodeBulan` = :indkPeriodeBulan:
+AND `indkPeriodeTahun` = :indkPeriodeTahun:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 07:15:30 --> [Caused by] mysqli_sql_exception: Unknown column 'kode' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = :kode:
+AND `indkPeriodeBulan` = :indkPeriodeBulan:
+AND `indkPeriodeTahun` = :indkPeriodeTahun:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 07:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-17 07:15:38 --> mysqli_sql_exception: Unknown column 'kode' in 'where clause' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Apps\Xampp\htdocs\ksmard\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->first()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-03-17 07:15:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode' in 'where clause'
+[Method: POST, Route: pks/pelaporan/simpan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = :kode:
+AND `indkPeriodeBulan` = :indkPeriodeBulan:
+AND `indkPeriodeTahun` = :indkPeriodeTahun:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 07:15:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'kode' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = :kode:
+AND `indkPeriodeBulan` = :indkPeriodeBulan:
+AND `indkPeriodeTahun` = :indkPeriodeTahun:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 07:15:38 --> [Caused by] mysqli_sql_exception: Unknown column 'kode' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = \'\'
+AND `indkPeriodeBulan` = \'1\'
+AND `indkPeriodeTahun` = \'2025\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `kode` = :kode:
+AND `indkPeriodeBulan` = :indkPeriodeBulan:
+AND `indkPeriodeTahun` = :indkPeriodeTahun:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\pks\Pelaporan.php(53): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 07:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 07:16:27 --> Error: Call to undefined function App\Controllers\Pks\unser()
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 07:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:24:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:39:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:42:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:46:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 07:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 07:55:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Deletes are not allowed unless they contain a "where" or "like" clause.
+[Method: GET, Route: pks/pelaporan/hapus]
+in SYSTEMPATH\Database\BaseBuilder.php on line 2806.
+ 1 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete(null, false)
+ 3 APPPATH\Controllers\pks\Pelaporan.php(78): CodeIgniter\BaseModel->delete(null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 07:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 07:55:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Deletes are not allowed unless they contain a "where" or "like" clause.
+[Method: GET, Route: pks/pelaporan/hapus]
+in SYSTEMPATH\Database\BaseBuilder.php on line 2806.
+ 1 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 2 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete(null, false)
+ 3 APPPATH\Controllers\pks\Pelaporan.php(78): CodeIgniter\BaseModel->delete(null)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 07:56:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 07:56:16 --> Error: Call to a member function delete() on array
+[Method: GET, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 07:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 07:58:57 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 87.
+ 1 APPPATH\Controllers\pks\Pelaporan.php(87): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Pelaporan.php', 87)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 07:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 07:59:50 --> Error: Call to a member function delete() on array
+[Method: GET, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 88.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:00:31 --> Error: Call to a member function delete() on array
+[Method: GET, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 89.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 08:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 08:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 08:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 08:02:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 08:02:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:02:48 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 91.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:03:08 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 91.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:03:46 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 90.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:04:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:04:12 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 90.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 08:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 08:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:06:26 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 90.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:06:38 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 90.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:08:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:08:28 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 91.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 08:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 08:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 08:09:19 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 91.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 14:43:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 14:43:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 14:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 14:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 14:44:15 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 91.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 14:44:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 14:48:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 14:48:13 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 89.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 14:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 14:50:51 --> Error: Call to a member function delete() on array
+[Method: POST, Route: pks/pelaporan/hapus]
+in APPPATH\Controllers\pks\Pelaporan.php on line 92.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->hapus()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 14:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 14:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 14:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 14:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 14:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-17 15:15:52 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Apps\Xampp\htdocs\ksmard\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Pelaporan.php(95): CodeIgniter\BaseModel->first()
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->edit()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-03-17 15:15:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: pks/pelaporan/edit]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\pks\Pelaporan.php(95): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->edit()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 15:15:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `id` = \'5\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `id` = \'5\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\pks\Pelaporan.php(95): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->edit()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 15:15:52 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `id` = \'5\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `id` = \'5\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `id` = \'5\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `ksmard_t_indeks_k_pks`
+WHERE `id` = :id:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\pks\Pelaporan.php(95): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->edit()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 15:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 15:44:01 --> TypeError: str_contains(): Argument #1 ($haystack) must be of type string, int given
+[Method: POST, Route: pks/pelaporan/simpan]
+in SYSTEMPATH\Validation\Validation.php on line 172.
+ 1 SYSTEMPATH\Validation\Validation.php(172): str_contains(0, '*')
+ 2 APPPATH\Controllers\pks\Pelaporan.php(47): CodeIgniter\Validation\Validation->run()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 15:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:46:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 15:49:58 --> ErrorException: Attempt to read property "indkKode" on array
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 64.
+ 1 APPPATH\Controllers\pks\Pelaporan.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "indkKode" on array', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Pelaporan.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 15:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 15:52:08 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 64.
+ 1 APPPATH\Controllers\pks\Pelaporan.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Pelaporan.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 15:53:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 15:53:42 --> ErrorException: Trying to access array offset on value of type null
+[Method: POST, Route: pks/pelaporan/simpan]
+in APPPATH\Controllers\pks\Pelaporan.php on line 64.
+ 1 APPPATH\Controllers\pks\Pelaporan.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Pelaporan.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Pelaporan->simpan()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Pelaporan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 15:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 15:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:32:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:36:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 16:36:03 --> ErrorException: Attempt to read property "indkKode" on array
+[Method: GET, Route: pks/penjualan]
+in APPPATH\Controllers\pks\Penjualan.php on line 24.
+ 1 APPPATH\Controllers\pks\Penjualan.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "indkKode" on array', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Penjualan.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 16:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 16:36:25 --> ErrorException: Attempt to read property "indkKode" on array
+[Method: GET, Route: pks/penjualan]
+in APPPATH\Controllers\pks\Penjualan.php on line 24.
+ 1 APPPATH\Controllers\pks\Penjualan.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "indkKode" on array', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Penjualan.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 16:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 16:37:00 --> ErrorException: Attempt to read property "indkKode" on array
+[Method: GET, Route: pks/penjualan]
+in APPPATH\Controllers\pks\Penjualan.php on line 24.
+ 1 APPPATH\Controllers\pks\Penjualan.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "indkKode" on array', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Penjualan.php', 24)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 16:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:38:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 16:38:20 --> ErrorException: Array to string conversion
+[Method: GET, Route: pks/penjualan]
+in APPPATH\Controllers\pks\Penjualan.php on line 25.
+ 1 APPPATH\Controllers\pks\Penjualan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Penjualan.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 16:38:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 16:46:37 --> ErrorException: Undefined property: stdClass::$country
+[Method: GET, Route: pks/penjualan/grid]
+in APPPATH\Controllers\pks\Penjualan.php on line 51.
+ 1 APPPATH\Controllers\pks\Penjualan.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$country', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Penjualan.php', 51)
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(210): App\Controllers\Pks\Penjualan->App\Controllers\Pks\{closure}(Object(CodeIgniter\Database\MySQLi\Builder), Object(stdClass))
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(200): Hermawan\DataTables\DataTableQuery->queryFilter(Object(CodeIgniter\Database\MySQLi\Builder))
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(65): Hermawan\DataTables\DataTableQuery->queryFilterSearch(Object(CodeIgniter\Database\MySQLi\Builder))
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(186): Hermawan\DataTables\DataTableQuery->countFiltered()
+ 6 APPPATH\Controllers\pks\Penjualan.php(54): Hermawan\DataTables\DataTable->toJson(true)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->grid()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 16:46:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-03-17 16:46:49 --> ErrorException: Undefined property: stdClass::$country
+[Method: GET, Route: pks/penjualan/grid]
+in APPPATH\Controllers\pks\Penjualan.php on line 51.
+ 1 APPPATH\Controllers\pks\Penjualan.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$country', 'D:\\Apps\\Xampp\\htdocs\\ksmard\\app\\Controllers\\pks\\Penjualan.php', 51)
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(210): App\Controllers\Pks\Penjualan->App\Controllers\Pks\{closure}(Object(CodeIgniter\Database\MySQLi\Builder), Object(stdClass))
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(200): Hermawan\DataTables\DataTableQuery->queryFilter(Object(CodeIgniter\Database\MySQLi\Builder))
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(65): Hermawan\DataTables\DataTableQuery->queryFilterSearch(Object(CodeIgniter\Database\MySQLi\Builder))
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(186): Hermawan\DataTables\DataTableQuery->countFiltered()
+ 6 APPPATH\Controllers\pks\Penjualan.php(54): Hermawan\DataTables\DataTable->toJson(true)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->grid()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 16:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-03-17 16:47:07 --> mysqli_sql_exception: Unknown column 'jualIndkPeriode' in 'where clause' in D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 D:\Apps\Xampp\htdocs\ksmard\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\Apps\Xampp\htdocs\ksmard\system\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(67): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\Apps\Xampp\htdocs\ksmard\app\ThirdParty\codeigniter4-datatables\src\DataTable.php(186): Hermawan\DataTables\DataTableQuery->countFiltered()
+#6 D:\Apps\Xampp\htdocs\ksmard\app\Controllers\pks\Penjualan.php(54): Hermawan\DataTables\DataTable->toJson(true)
+#7 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->grid()
+#8 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+#9 D:\Apps\Xampp\htdocs\ksmard\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 D:\Apps\Xampp\htdocs\ksmard\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 D:\Apps\Xampp\htdocs\ksmard\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-03-17 16:47:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jualIndkPeriode' in 'where clause'
+[Method: GET, Route: pks/penjualan/grid]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_penjualan_pks`
+WHERE `jualIndkPeriode` = :jualIndkPeriode:', [...], false)
+ 2 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(67): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 3 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(186): Hermawan\DataTables\DataTableQuery->countFiltered()
+ 4 APPPATH\Controllers\pks\Penjualan.php(54): Hermawan\DataTables\DataTable->toJson(true)
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->grid()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 16:47:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jualIndkPeriode' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_penjualan_pks`
+WHERE `jualIndkPeriode` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_penjualan_pks`
+WHERE `jualIndkPeriode` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_penjualan_pks`
+WHERE `jualIndkPeriode` = :jualIndkPeriode:', [...], false)
+ 4 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(67): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(186): Hermawan\DataTables\DataTableQuery->countFiltered()
+ 6 APPPATH\Controllers\pks\Penjualan.php(54): Hermawan\DataTables\DataTable->toJson(true)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->grid()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-03-17 16:47:07 --> [Caused by] mysqli_sql_exception: Unknown column 'jualIndkPeriode' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_penjualan_pks`
+WHERE `jualIndkPeriode` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_penjualan_pks`
+WHERE `jualIndkPeriode` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_penjualan_pks`
+WHERE `jualIndkPeriode` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1720): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `ksmard_t_penjualan_pks`
+WHERE `jualIndkPeriode` = :jualIndkPeriode:', [...], false)
+ 5 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTableQuery.php(67): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 APPPATH\ThirdParty\codeigniter4-datatables\src\DataTable.php(186): Hermawan\DataTables\DataTableQuery->countFiltered()
+ 7 APPPATH\Controllers\pks\Penjualan.php(54): Hermawan\DataTables\DataTable->toJson(true)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pks\Penjualan->grid()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pks\Penjualan))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-03-17 16:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 16:58:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:06:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:07:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:08:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:09:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:09:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:10:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:11:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:19:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:23:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:25:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:26:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-03-17 17:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

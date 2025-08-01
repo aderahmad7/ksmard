@@ -15,9 +15,7 @@
 	<div class="content-body">
 		<!-- row -->
 		<div class="container-fluid">
-			<div class="mb-3">
-				<h4 class="card-title col-sm-6">Periode</h4>
-			</div>
+			
 			<div class="col-12">
 				<div class="card">
 					<div class="card-header">
@@ -74,7 +72,7 @@
 							<small class="fw-semibold">Periode Bulan</small>
 							<span class="help"></span>
 							<div class="controls">
-								<?php echo form_dropdown('indkPeriodeBulan', $bulan, '', 'id="indkPeriodeBulan" class="  form-control wide"'); ?>
+								<?php echo form_dropdown('indkPeriodeBulan', $bulan, '', 'id="indkPeriodeBulan" class="nice-select default-select form-control wide"'); ?>
 
 							</div>
 						</div>
@@ -82,7 +80,7 @@
 							<small class="fw-semibold">Periode Tahun</small>
 							<span class="help"></span>
 							<div class="controls">
-								<?php echo form_dropdown('indkPeriodeTahun', $tahun, '', 'id="indkPeriodeTahun" class="  form-control wide"'); ?>
+								<?php echo form_dropdown('indkPeriodeTahun', $tahun, '', 'id="indkPeriodeTahun" class="nice-select default-select form-control wide"'); ?>
 
 							</div>
 						</div>
@@ -189,7 +187,7 @@
 						render: function(data, type, row) {
 							console.log(row);
 							var edit = '<a data-id="' + data + '" style="margin :0px 1px 0px 0px ;" onclick="edit($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>';
-							var lihat = `<a style="margin :0px 1px 0px 0px ;" href="<?php echo site_url('pks/periode/detail_periode/'); ?>/${data}" target="_blank" title="Lihat" class="btn btn-dark shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></a>`;
+							var lihat = `<a style="margin :0px 1px 0px 0px ;" href="<?php echo site_url('pks/pelaporan/index'); ?>/${data}" target="_blank" title="Lihat" class="btn btn-dark shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></a>`;
 							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus" onclick="return setModalHapus($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
 							if (row['indkStatus'] == 'draft') {
 								return edit + hapus;

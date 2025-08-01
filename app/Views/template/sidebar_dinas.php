@@ -52,9 +52,14 @@ $sg2 = $uri->getSegment(2);
                             <span class="nav-text">Dashboard</span>
                         </a>
                     </li>
-                    <li class="<?= (current_url() == base_url("dinas/tbs") ? "mm-active" : "") ?>"><a href="<?= base_url("dinas/tbs") ?>" aria-expanded="false">
+                    <li class="<?= (current_url() == base_url("dinas/periode") ? "mm-active" : "") ?>"><a href="<?= base_url("dinas/periode") ?>" aria-expanded="false">
                             <i class="fas fa-file-alt"></i>
-                            <span class="nav-text">TBS</span>
+                            <span class="nav-text">Periode</span>
+                        </a>
+                    </li>
+                    <li class="<?= (current_url() == base_url("dinas/validasi") ? "mm-active" : "") ?>"><a href="<?= base_url("dinas/validasi") ?>" aria-expanded="false">
+                            <i class="fas fa-check"></i>
+                            <span class="nav-text">Validasi</span>
                         </a>
                     </li>
                     <li class="<?= (current_url() == base_url("dinas/pks") ? "mm-active" : "") ?>"><a href="<?= base_url("dinas/pks") ?>" aria-expanded="false">

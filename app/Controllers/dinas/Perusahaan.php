@@ -19,8 +19,6 @@ class Perusahaan extends BaseController
 
         $session->set('kodePks', $kodePks);
 
-        log_message('info', print_r($session->get('kodePks'), true));
-
         $data = [
             'title' => 'PERUSAHAAN'
         ];

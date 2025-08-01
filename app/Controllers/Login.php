@@ -19,10 +19,29 @@ class Login extends BaseController
     {
         $session = session();
 
-        $username = $this->request->getPost('username');
-        $password = $this->request->getPost('password');
+        $rules = [
+            'username' => [
+                'label' => 'Username',
+                'rules' => 'required'
+            ],
+            'password' => [
+                'label' => 'Password',
+                'rules' => 'required'
+            ]
+        ];
 
-        log_message('info', print_r($username, true));
+        $validation = service('validation');
+        $validation->setRules($rules);
+
+        if (!$validation->withRequest($this->request)->run()) {
+            return redirect()->to('/login')
+                ->withInput()
+                ->with('validation', $validation);
+        }
+
+
+        $username = esc($this->request->getPost('username'));
+        $password = esc($this->request->getPost('password'));
 
         $roleModel = new \App\Models\Superadmin\Role_m();
         $userModel = new \App\Models\User_m();
@@ -30,12 +49,13 @@ class Login extends BaseController
         $akun = $userModel->where('accUsername', $username)->first();
         $role = $roleModel->where('roleAccUsername', $username)->first();
 
-        if (!$akun || $akun['accPassword'] != $password) {
-            return redirect()->back()->with('error', 'Invalid username or password');
+        if (!$akun || !password_verify($password, $akun['accPassword'])) {
+            return redirect()->to('/login')->with('error', 'Username atau Password salah!');
         }
 
         $session->set([
             'username' => $username,
+            'nama' => $akun['accNama'], 
             'role' => $role['roleRole'],
             'cekLogin' => true
         ]);

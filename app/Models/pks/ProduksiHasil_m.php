@@ -12,6 +12,7 @@ class ProduksiHasil_m extends Model
         'hasilJenisHasil',
         'hasilVolume',
         'hasilIndkKode',
+        'hasilKomentar',
     ];
 
     public function getRekap($periode)

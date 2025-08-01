@@ -15,6 +15,7 @@ class BiayaTL_m extends Model
         'biaytlVolume',
         'biaytlKatbiayKode',
         'biaytlIndkKode',
+        'biaytlKomentar',
     ];
 
     public function getRekap($periode)

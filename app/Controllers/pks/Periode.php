@@ -19,7 +19,7 @@ class Periode extends BaseController
         }
 
         $data = [
-            'title' => 'BERANDA',
+            'title' => 'Periode',
             'kodePKS' => session()->get('kodePKS'),
             'kodeDinas' => session()->get('kodeDinas')
         ];

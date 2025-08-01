@@ -13,6 +13,7 @@ class Penyusutan_m extends Model
         'usutTotal',
         'usutKatusutKode',
         'usutIndkKode',
+        'usutKomentar',
     ];
 
     public function getRekap($periode)

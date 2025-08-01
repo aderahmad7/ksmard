@@ -195,10 +195,64 @@ if (!function_exists('getMonth')) {
 if (!function_exists('getYear')) {
     function getYear()
     {
-        $year[""]=2000;
+        //$year[""]=;
         for ($a=date("Y");$a>=2024;$a--)
             $year[$a] = $a; 
 
         return $year;
+    }
+}
+
+if (!function_exists('to_mysql_date')) {
+    /**
+     * Konversi tanggal lokal (dd/mm/yyyy atau yyyy-mm-dd) ke format MySQL DATE (Y-m-d).
+     *
+     * @param string|null $input
+     * @return string|null
+     */
+    function to_mysql_date(?string $input): ?string
+    {
+        if (!$input || !is_string($input)) {
+            return null;
+        }
+
+        // Coba parsing dd/mm/yyyy
+        if (preg_match('/^(\d{2})\/(\d{2})\/(\d{4})$/', $input, $matches)) {
+            [$full, $day, $month, $year] = $matches;
+            if (checkdate((int)$month, (int)$day, (int)$year)) {
+                return (new \DateTime("$year-$month-$day"))->format('Y-m-d');
+            } else {
+                return null;
+            }
+        }
+
+        // Coba parsing yyyy-mm-dd atau format umum lain
+        if (strtotime($input)) {
+            return (new \DateTime($input))->format('Y-m-d');
+        }
+
+        return null;
+    }
+}
+
+if (!function_exists('to_local_date')) {
+    /**
+     * Konversi dari format MySQL DATE (Y-m-d) ke format lokal (d/m/Y).
+     *
+     * @param string|null $input
+     * @return string|null
+     */
+    function to_local_date(?string $input): ?string
+    {
+        if (!$input || !is_string($input)) {
+            return null;
+        }
+
+        try {
+            $date = new \DateTime($input);
+            return $date->format('d/m/Y'); // Format lokal Indonesia
+        } catch (\Exception $e) {
+            return null;
+        }
     }
 }

@@ -16,27 +16,37 @@
 		<!-- row -->
 		<div class="container-fluid">
 			<div class="d-flex align-items-center justify-content-between mb-3">
-				<h4 class="card-title col-sm-6">Penjualan</h4>
+				<h4 class="card-title col-sm-6">
+					<div class="input-group">
+						<button onclick="return setModalSimpan();" type="button" class="btn btn-outline-primary btn-add" data-bs-toggle="modal" data-bs-target="#modal-form"><i class="fa fa-plus"></i> Buat Baru</button>
+						<button onclick="return setModalSalesReport();" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-sales-report"><i class="fa fa-file"></i> Sales Report</button>
+					</div>
+				</h4>
 				<div class="d-flex align-items-center mb-3 col-4 col-lg-3" style="gap: 5px;">
-					<?php echo form_dropdown('indkKode', $periode, (isset($_SESSION['periode_set']) ? $_SESSION['periode_set'] : ''), 'id="indkKode" class="form-select   form-control wide"'); ?>
+					<?php echo form_dropdown('indkKode', $periode, (isset($_SESSION['periode_set']) ? $_SESSION['periode_set'] : ''), 'id="indkKode" class="nice-select default-select form-control wide"'); ?>
 					<!-- <button class="btn btn-primary">
 						<i class="fa fa-filter"></i>
 					</button> -->
-					<button onclick="reloadDatatable()" class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i></button>
+					<button  class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i></button>
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="card">
 					<div class="card-header">
-						<button onclick="return setModalSimpan();" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-form"><i class="fa fa-plus"></i> Buat Baru</button>
+						<div id="divStatusLapor">
+							
+						</div>
 						<div class="d-flex align-items-center col-lg-3" style="gap: 5px;">
-							<input type="text" class="form-control input-default" placeholder="Cari...">
-							<button class="btn btn-primary">
-								<i class="fa fa-search"></i>
-							</button>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control input-default" placeholder="Cari...">
+								<button class="btn btn-primary">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="card-body">
+						
 						<div class="table-responsive">
 							<table class="table" id="table-grid" style="width: 100%;">
 								<thead>
@@ -49,8 +59,6 @@
 										<th width="5%">Harga</th>
 										<th width="5%">Volume</th>
 										<th width="10%">Total</th>
-										<th width="0%">No. Kontrak</th>
-										<th width="0%">Pembeli</th>
 										<th width="10%">AKSI</th>
 									</tr>
 								</thead>
@@ -63,10 +71,10 @@
 		</div>
 	</div>
 	<div class="modal fade" id="modal-form">
-		<div class="modal-dialog" role="document">
+		<div class="modal-dialog modal-lg" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Modal title</h5>
+					<h5 class="modal-title">Input Penjualan</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal">
 					</button>
 				</div>
@@ -74,48 +82,93 @@
 					<?php
 					$katJual = getKategoriPenjualan();
 					$katTbs = getKategoriTbs();
+					$katFileJual = getTipeFileJual();
 					?>
 					<?php echo form_open(current_url(), array('id' => "form-simpan", 'class' => 'form-horizontal col-lg-12 col-md-12 col-xs-12')); ?>
 					<div class="row">
 						<input type="hidden" name="kode" id="kode">
-						<div class="form-group col-lg-12 col-md-6 mb-3">
-							<small class="fw-semibold">Uraian Penjualan</small>
-							<span class="help"></span>
-							<div class="controls">
-								<?php echo form_input('jualUraian', '', 'id="jualUraian" class="form-control"'); ?>
+						<div class="form-group col-lg-6 col-md-12 mb-3">
+							<div class="form-group col-lg-12 col-md-12 mb-3">
+								<small class="fw-semibold">Uraian Penjualan</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_input('jualUraian', '', 'id="jualUraian" class="form-control"'); ?>
 
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12">
+								<small class="fw-semibold">Jenis Penjualan</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_dropdown('jualIsEkspor', $katJual, '', 'id="jualIsEkspor" class="nice-select default-select form-control wide mb-3"'); ?>
+
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12">
+								<small class="fw-semibold">Jenis TBS</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_dropdown('jualTbsKode', $katTbs, '', 'id="jualTbsKode" class="nice-select default-select form-control wide mb-3"'); ?>
+
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 mb-3">
+								<small class="fw-semibold">Harga Satuan</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_input('jualHarga', '', 'id="jualHarga" style="text-align:right;" class="form-control"'); ?>
+
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 mb-3">
+								<small class="fw-semibold">Volume (kg)</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_input('jualVolume', '', 'id="jualVolume" style="text-align:right;" class="form-control"'); ?>
+
+								</div>
 							</div>
 						</div>
-						<div class="form-group col-lg-6 col-md-6 mb-3">
-							<small class="fw-semibold">Jenis Penjualan</small>
-							<span class="help"></span>
-							<div class="controls">
-								<?php echo form_dropdown('jualIsEkspor', $katJual, '', 'id="jualIsEkspor" class="form-select   form-control wide"'); ?>
+						<div class="form-group col-lg-6 col-md-12 mb-3">
+							<div class="form-group col-lg-12 col-md-12 mb-3">
+								<small class="fw-semibold">Tipe Penjualan</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_dropdown('jualFileTipe', $katFileJual, '', 'id="jualFileTipe" class="nice-select default-select form-control wide mb-3"'); ?>
 
+								</div>
 							</div>
-						</div>
-						<div class="form-group col-lg-6 col-md-6 mb-3">
-							<small class="fw-semibold">Jenis TBS</small>
-							<span class="help"></span>
-							<div class="controls">
-								<?php echo form_dropdown('jualTbsKode', $katTbs, '', 'id="jualTbsKode" class="form-select   form-control wide"'); ?>
+							<div class="form-group col-lg-12 col-md-12 mb-3">
+								<small class="fw-semibold">Nomor Kontrak/Dokumen</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_input('jualNoDokumen', '', 'id="jualNoDokumen" style="" class="form-control"'); ?>
 
+								</div>
 							</div>
-						</div>
-						<div class="form-group col-lg-12 col-md-6 mb-3">
-							<small class="fw-semibold">Harga Satuan</small>
-							<span class="help"></span>
-							<div class="controls">
-								<?php echo form_input('jualHarga', '', 'id="jualHarga" style="text-align:right;" class="form-control"'); ?>
+							<div class="form-group col-lg-12 col-md-12 mb-3">
+								<small class="fw-semibold">Tanggal Pengiriman</small>
+								<span class="help"></span>
+								<div class="controls">
+									<input type="date" name="jualTanggal" id="jualTanggal" class="form-control"/>
 
+								</div>
 							</div>
-						</div>
-						<div class="form-group col-lg-12 col-md-6 mb-3">
-							<small class="fw-semibold">Volume</small>
-							<span class="help"></span>
-							<div class="controls">
-								<?php echo form_input('jualVolume', '', 'id="jualVolume" style="text-align:right;" class="form-control"'); ?>
+							<div class="form-group col-lg-12 col-md-12 mb-3">
+								<small class="fw-semibold">Nama Pembeli</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_input('jualPembeli', '', 'id="jualPembeli" style="" class="form-control"'); ?>
 
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 mb-3">
+								<small class="fw-semibold">File (pdf/image)</small>
+								<span class="help"></span>
+								<div class="controls">
+									<?php echo form_upload('jualFile', '', 'id="jualFile" style="text-align:right;" class="form-control"'); ?>
+
+								</div>
 							</div>
 						</div>
 					</div>
@@ -144,26 +197,126 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal fade" id="modal-upload">
+	<div class="modal fade" id="modal-sales-report">
 		<div class="modal-dialog" role="document">
-			<div class="modal-header">
-				<h5 id="modal-title">
-					Upload Kontrak
-				</h5>
-			</div>
-			<div class="modal-body">
-				<input type="hidden" name="pindokKode" id="pindokKode">
-				<div class="mb-3">
-					<label class="form-label" for="formFile">File upload</label>
-					<input class="form-control" type="file" id="file" name="file">
+			<div class="modal-content">
+				<div class="modal-header">Laporan Penjualan</div>
+				<div class="modal-body">
+					<h4>Laporan Penjualan CPO Lokal</h4>
+					<ul class="list-group mb-3">
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">Total Penjualan CPO</h6>
+								<small class="text-muted" >Jumlah (Rp) dari seluruh penjualan CPO</small>
+							</div>
+							<span class="text-muted" id="rekap-cpo-lokal-total">0</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">FOB CPO</h6>
+								<small class="text-muted">Harga Rp/Kg dari rerata penjualan CPO</small>
+							</div>
+							<span class="text-muted" id="rekap-cpo-lokal-fob">0</span>
+						</li>
+                                            
+                    </ul>
+					<h4>Laporan Penjualan KERNEL Lokal</h4>
+					<ul class="list-group mb-3">
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">Total Penjualan KERNEL</h6>
+								<small class="text-muted">Jumlah (Rp) dari seluruh penjualan KERNEL</small>
+							</div>
+							<span class="text-muted" id="rekap-inti-lokal-total">0</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">FOB KERNEL</h6>
+								<small class="text-muted">Harga Rp/Kg dari rerata penjualan KERNEL</small>
+							</div>
+							<span class="text-muted" id="rekap-inti-lokal-fob">0</span>
+						</li>
+                                            
+                    </ul>
+					<h4>Laporan Penjualan CPO Ekspor</h4>
+					<ul class="list-group mb-3">
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">Total Penjualan CPO</h6>
+								<small class="text-muted">Jumlah (Rp) dari seluruh penjualan CPO</small>
+							</div>
+							<span class="text-muted" id="rekap-cpo-ekspor-total">0</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">FOB CPO</h6>
+								<small class="text-muted">Harga Rp/Kg dari rerata penjualan CPO</small>
+							</div>
+							<span class="text-muted" id="rekap-cpo-ekspor-fob">0</span>
+						</li>
+                                            
+                    </ul>
+					<h4>Laporan Penjualan KERNEL Ekspor</h4>
+					<ul class="list-group mb-3">
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">Total Penjualan KERNEL</h6>
+								<small class="text-muted">Jumlah (Rp) dari seluruh penjualan KERNEL</small>
+							</div>
+							<span class="text-muted" id="rekap-inti-ekspor-total">0</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">FOB KERNEL</h6>
+								<small class="text-muted">Harga Rp/Kg dari rerata penjualan KERNEL</small>
+							</div>
+							<span class="text-muted" id="rekap-inti-ekspor-fob">0</span>
+						</li>
+                                            
+                    </ul>
+				</div>
+				<div class="modal-footer">
+					
+					<button id="btn-batal" data-bs-dismiss="modal" class="btn">Batal</button>
 				</div>
 			</div>
-			<div class="modal-footer">
-				<button id="btn-simpan-dokumen" class="btn btn-primary modalbtn" onclick="simpanDokumen();">
-					Upload
-				</button>
-				<button id="btn-batal-dokumen" data-bs-dismiss="modal" class="btn modalbtn">Batal</button>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-viewer-file">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">File</div>
+				<div class="modal-body">
+					<div id="fileViewerContent" class="text-center">
+					<!-- Preview file akan ditampilkan di sini -->
+					</div>
+				</div>
+				<div class="modal-footer">
+					
+					<button id="btn-batal" data-bs-dismiss="modal" class="btn">Batal</button>
+				</div>
 			</div>
+			
+			
+		</div>
+	</div>
+	<div class="modal fade" id="modal-komentar">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">Komentar</div>
+				<div class="modal-body">
+					Komentar :
+					<div id="divKomentar">
+					<!-- Preview file akan ditampilkan di sini -->
+					</div>
+				</div>
+				<div class="modal-footer">
+					
+					<button id="btn-batal" data-bs-dismiss="modal" class="btn">Batal</button>
+				</div>
+			</div>
+			
+			
 		</div>
 	</div>
 
@@ -198,7 +351,7 @@
 						"targets": [6, 7, 5]
 					},
 					{
-						targets: [8, 9],
+						targets: [],
 						visible: false
 					}
 				],
@@ -249,20 +402,29 @@
 							return formatRupiahV3(data);
 						}
 					},
-					{
-						data: 'jualNoKontrak'
-					},
-					{
-						data: 'jualPembeli'
-					},
+					
 					{
 						data: 'jualKode',
 						searchable: false,
 						orderable: false,
 						render: function(data, type, row) {
-							var edit = '<a data-id="' + data + '" style="margin :0px 1px 0px 0px ;" onclick="edit($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>';
-							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus" onclick="return setModalHapus($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
-							return edit + hapus;
+							var edit = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" onclick="edit($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp"><i class="fas fa-pencil-alt"></i></a>';
+							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus" onclick="return setModalHapus($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-primary shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
+							if (row.indkStatus=="draft")
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							else if (row.indkStatus=="revisi"){
+								if (row.jualKomentar!=null){
+									var komen = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-komentar" onclick="return setModalKomentar($(this),\'' + row.jualKomentar + '\');" href="#" title="Komentar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-comment"></i></a> ';
+									return "<div class='d-flex'>"+komen + edit + hapus+"</div>";
+								} else 
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							} else if (row.indkStatus=="divalidasi"){
+								var valid = '<i class="fa fa-check" style="color:green"></i> ';
+								return valid; 
+								
+							} else
+								return "";
+							
 						}
 					},
 				]
@@ -313,39 +475,59 @@
 		function format(d) {
 			// `d` is the original data object for the row
 			return (`
-      <div class="p-3 border bg-light rounded">
+      <div class="p-3 border  rounded">
           <div class="row align-items-center">
-            <div class="col-md-9 col-sm-12">
-              <table width="100%">
-			  	<tr>
-					<td  width="20%"><b>Nomor Kontrak</b></td>
-					<td width="70%"><b>Pembeli</b></td>
-					<td width="10%"><b>File Kontrak</b></td>
-				</tr>
-				<tr>
-					<td>` + d.jualNoKontrak + `</td>
-					<td>` + d.jualPembeli + `</td>
-					<td><a href="" class="btn btn-sm btn-outline-primary" target="_blank">Unduh</a></td>
-				</tr>
-			  </table>
+            <div class="col-md-8 col-sm-8">
+              	<ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed"><div>Jenis Penjualan:</div><div>`+d.jualFileTipe+`</div></li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed"><div>No. Kontrak/Dokumen:</div><div>`+d.jualNoDokumen+`</div></li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed"><div>Tanggal:</div><div>`+d.jualTanggal+`</div></li>
+                    <li class="list-group-item d-flex justify-content-between lh-condensed"><div>Pembeli:</div><div>`+d.jualPembeli+`</div></li>
+            	</ul>
             </div>
 			
             <div class="col-md-3 col-sm-12 text-md-end text-sm-start mt-2 mt-md-0">
-              <button class="btn btn-primary btn-sm" onclick="setModalUpload();">Upload Kontrak</button>
+              <button class="btn btn-primary btn-sm" onclick="openViewer(this.dataset.file);" data-file="`+d.jualFile+`">Lihat Kontrak/Dokumen</button>
             </div>
           </div>
         </div>
     `);
 		}
 
+		function openViewer(filename) {
+    const ext = filename.split('.').pop().toLowerCase();
+    const basePath = '<?=base_url();?>/uploads/'; // Ganti path sesuai folder penyimpanan
+    const fullUrl = basePath + filename;
+
+    let content = '';
+
+    if (ext === 'pdf') {
+      content = `<iframe src="${fullUrl}" width="100%" height="500px" style="border:none;"></iframe>`;
+    } else if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) {
+      content = `<img src="${fullUrl}" style="max-width:100%; max-height:500px;" alt="Gambar">`;
+    } else {
+      content = `<p class="text-danger">Format file tidak didukung untuk ditampilkan langsung.</p>`;
+    }
+
+    document.getElementById('fileViewerContent').innerHTML = content;
+
+    // Tampilkan modal
+    const modal = new bootstrap.Modal(document.getElementById('modal-viewer-file'));
+    modal.show();
+  }
 
 
-		$('#btn-filter-periode').click(function() {
+
+		$('#btn-filter-periode').on('click', function () {
 			reloadDatatable();
+			getPeriode();
 		});
+		getPeriode();
 
 		function reloadDatatable() {
+			console.log("Reloading DataTable");
 			oTable.ajax.reload(null, false);
+			
 		}
 
 		function setModalHapus(dom, x) {
@@ -357,6 +539,9 @@
 			$("#modal-hapus .modal-header").html("Hapus");
 			$("#modal-hapus .modal-body").html("Anda yakin menghapus \"<span id='id-delete'></span>\"?");
 			$("#id-delete").html(x);
+		}
+		function setModalKomentar(dom, x) {
+			$("#divKomentar").html(x);
 		}
 
 
@@ -417,12 +602,64 @@
 						$("#jualUraian").val(response.data.jualUraian);
 						$("#jualHarga").val(formatRupiahV3(response.data.jualHarga));
 						$("#jualVolume").val(formatRibuan(response.data.jualVolume));
-
+						$("#jualPembeli").val(response.data.jualPembeli);
+						$("#jualNoDokumen").val(response.data.jualNoDokumen);
+						$("#jualTanggal").val(response.data.jualTanggal);
+						$('#jualFileTipe [value="' + response.data.jualFileTipe + '"]').prop("selected", true);
 						$("#kode").val(response.data.jualKode);
 						$(".fa-spinner").hide();
 						$("#btn-simpan").removeAttr("disabled");
 					} else {
 						$("#modal-form .form-body").html(response.pesan);
+					}
+				}
+			});
+		}
+
+		function setModalSalesReport() {
+
+			$.ajax({
+				url: "<?php echo base_url('pks/penjualan/rekap'); ?>",
+				data: {
+					periode: $("#indkKode").val()
+				},
+				type: "POST",
+				dataType: 'JSON',
+				beforeSend: function() {
+					$("#modal-sales-report").modal('show');
+					
+				},
+				success: function(response) {
+					if (response.rekap) {
+						$("#rekap-cpo-lokal-total").html(formatRibuan(response.data.cpo_lokal_total));
+						$("#rekap-cpo-lokal-fob").html(formatRibuan(response.data.cpo_lokal_fob));
+						$("#rekap-inti-lokal-total").html(formatRibuan(response.data.inti_lokal_total));
+						$("#rekap-inti-lokal-fob").html(formatRibuan(response.data.inti_lokal_fob));
+
+						$("#rekap-cpo-ekspor-total").html(formatRibuan(response.data.cpo_ekspor_total));
+						$("#rekap-cpo-ekspor-fob").html(formatRibuan(response.data.cpo_ekspor_fob));
+						$("#rekap-inti-ekspor-total").html(formatRibuan(response.data.inti_ekspor_total));
+						$("#rekap-inti-ekspor-fob").html(formatRibuan(response.data.inti_ekspor_fob));
+					}
+				}
+			});
+		}
+		function getPeriode() {
+
+			$.ajax({
+				url: "<?php echo base_url('pks/penjualan/periode'); ?>",
+				data: {
+					periode: $("#indkKode").val()
+				},
+				type: "POST",
+				dataType: 'JSON',
+				success: function(response) {
+					console.log(response)
+					if (response.status) {
+						if (response.input)
+							$(".btn-add").show(); else
+							$(".btn-add").hide();
+						$("#divStatusLapor").html('Status Pelaporan : <b>'+response.data.indkStatus+'</b>');
 					}
 				}
 			});
@@ -457,18 +694,27 @@
 
 		$(document).delegate('.simpan', 'click', function(e) {
 			e.preventDefault();
-			var data = $("#form-simpan").serializeArray();
-			data.push({
-				name: "jualIndkKode",
-				value: $("#indkKode").val()
+			var dataSerial = $("#form-simpan").serializeArray();
+			
+			var form_data = new FormData();
+			form_data.append("jualIndkKode", $("#indkKode").val());
+			form_data.append("jualFile", $('#jualFile')[0].files[0]);
+			dataSerial.forEach((item, index) => {
+				form_data.append(item['name'], item['value']);
 			});
-			$(".form-control").removeClass("invalid")
+			//console.log(dataSerial);
+			// for (var pair of form_data.entries()){
+			// console.log(pair[0]+' : '+pair[1]);
+			// }
+			$(".form-control").removeClass("invalid");
 			$("#kode").val('');
 			$.ajax({
 				url: "<?php echo site_url("pks/penjualan/simpan"); ?>",
-				data: data,
-				type: "POST",
-				dataType: "JSON",
+				type : 'POST',
+				processData: false,
+				contentType: false,
+				data : form_data,
+				dataType:'json',
 				beforeSend: function() {
 					$(".fa-spinner").show();
 					$(".error").remove();

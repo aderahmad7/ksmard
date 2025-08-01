@@ -12,6 +12,8 @@ class Produksi_m extends Model
         'prodJenisProduksi',
         'prodVolume',
         'prodIndkKode',
+        'prodKatproKode',
+        'prodKomentar',
     ];
 
     public function getRekap($periode)

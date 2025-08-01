@@ -16,8 +16,6 @@ class Tbs extends BaseController
             return redirect()->to('/login');
         }
 
-        log_message('info', print_r($session->get('kodeDinas'), true));
-
         $data = [
             'title' => 'TBS'
         ];

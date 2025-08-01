@@ -7,6 +7,9 @@ class User_m extends Model
 {
     protected $table = 'ksmard_t_account';
     protected $primaryKey = 'accUsername';
-    protected $allowedFields = ['accUsername', 'accPassword', 'accNama'];
+    protected $allowedFields = ['accUsername', 'accPassword', 'accNama', 'accEmail', 'accNoWhatsapp'];
+    protected $useTimestamps = true;
+    protected $createdField = 'accCreatedAt';
+    protected $updatedField = 'accUpdateAt';
 }
 ?>

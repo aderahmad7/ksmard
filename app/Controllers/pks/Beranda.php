@@ -5,23 +5,84 @@ namespace App\Controllers\Pks;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
+use App\Models\Pks\Periode_m;
+use App\Models\Pks\Rekap_m;
+use App\Models\IndeksKProvinsi_m;
 
 class Beranda extends BaseController
 {
-    public function index()
-    {
-        $session = session();
+    public function __construct(){
         helper('form');
         helper("datetime_helper");
-        if (!$session->get('cekLogin')) {
+        helper("dropdown_helper");
+        helper("currency_helper");
+        $this->periodeModel = new Periode_m();
+        $this->model = new Rekap_m();
+        $this->indeksKProvinsiModel = new IndeksKProvinsi_m();
+        $this->session = session();
+        $this->session_kode_dinas = $this->session->get('kodeDinas');
+        $this->session_kode_pks = $this->session->get('kodePKS');
+        
+        if (!$this->session->get('cekLogin')) {
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }
+    }
+    public function index()
+    {
+       
+        $indeksKProv = $this->indeksKProvinsiModel
+            ->where("kprovDinKode",$this->session_kode_dinas)
+            ->where("kprovIsPublish",1)
+            ->first();
+        $indKProv["indeks_k_provinsi"] = 0;
+        $indKProv["indeks_k_provinsi_label"] = "Belum Ditetapkan";
+        $indKProv["indeks_k_provinsi_tanggal"] = "";
+        $indKProv["indeks_k_provinsi_bulan"] = "";
+        $indKProv["indeks_k_provinsi_tahun"] = "";
+        //echo $this->indeksKProvinsiModel->getLastQuery();
+        //print_r($indeksKProv);exit;
+        if ($indeksKProv){
+            $indKProv["indeks_k_provinsi"] = $indeksKProv["kprovIndeksK"];
+            $indKProv["indeks_k_provinsi_label"] = "";
+            $indKProv["indeks_k_provinsi_tanggal"] = $indeksKProv["kprovTanggalPenetapan"];
+            $indKProv["indeks_k_provinsi_bulan"] = $indeksKProv["kprovPeriodeBulan"];
+            $indKProv["indeks_k_provinsi_tahun"] = $indeksKProv["kprovPeriodeTahun"];
+        }
 
         $data = [
-            'title' => 'BERANDA'
+            'title' => 'Dashboard',
+            'k_prov' =>$indKProv,
+            'rekap_indeks_k'=>$this->model->getDashboardRekap(date('Y'),$this->session_kode_dinas,$this->session_kode_pks),
+            'tahun'=>$this->periodeModel->getTahunArr($this->session_kode_pks)
         ];
         return view('pks/beranda/index', $data);
+    }
+
+    public function getIndeksK()
+    {
+        $rules = [
+            'indeks_k_tahun' => ['label' => 'Tahun', 'rules' => 'required|is_natural']
+        ];
+        $validation = service('validation');
+        $validation->setRules($rules);
+        if (!$validation->withRequest($this->request)->run()) {
+            return $this->response->setJSON([
+                'rekap' => false,
+                'pesan' => $validation->getErrors()
+            ]);
+            return;
+        }
+
+        $tahun = $this->request->getPost('indeks_k_tahun');
+       
+       
+        $data = $this->model->getDashboardRekap($tahun,$this->session_kode_dinas,$this->session_kode_pks);
+        return $this->response->setJSON([
+                'rekap' => true,
+                'data' => $data,
+            ]);
+            return;
     }
 
     public function grid($menu=null)

@@ -16,24 +16,33 @@
 		<!-- row -->
 		<div class="container-fluid">
 			<div class="d-flex align-items-center justify-content-between mb-3">
-				<h4 class="card-title col-sm-6">Pajak</h4>
+				<h4 class="card-title col-sm-6">
+					<div class="input-group">
+						<button onclick="return setModalSimpan();" type="button" class="btn btn-outline-primary btn-add" data-bs-toggle="modal" data-bs-target="#modal-form"><i class="fa fa-plus"></i> Buat Baru</button>
+						<button onclick="return setModalSalesReport();" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-sales-report"><i class="fa fa-file"></i> Ringkasan</button>
+					</div>
+				</h4>
 				<div class="d-flex align-items-center mb-3 col-4 col-lg-3" style="gap: 5px;">
-					<?php echo form_dropdown('indkKode', $periode, (isset($_SESSION['periode_set']) ? $_SESSION['periode_set'] : ''), 'id="indkKode" class="form-select   form-control wide"'); ?>
+					<?php echo form_dropdown('indkKode', $periode, (isset($_SESSION['periode_set']) ? $_SESSION['periode_set'] : ''), 'id="indkKode" class="nice-select default-select form-control wide"'); ?>
 					<!-- <button class="btn btn-primary">
 						<i class="fa fa-filter"></i>
 					</button> -->
-					<button onclick="reloadDatatable()" class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i></button>
+					<button class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i></button>
 				</div>
 			</div>
 			<div class="col-12">
 				<div class="card">
 					<div class="card-header">
-						<button onclick="return setModalSimpan();" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-form"><i class="fa fa-plus"></i> Buat Baru</button>
+						<div id="divStatusLapor">
+							
+						</div>
 						<div class="d-flex align-items-center col-lg-3" style="gap: 5px;">
-							<input type="text" class="form-control input-default" placeholder="Cari...">
-							<button class="btn btn-primary">
-								<i class="fa fa-search"></i>
-							</button>
+							<div class="input-group mb-3">
+								<input type="text" class="form-control input-default" placeholder="Cari...">
+								<button class="btn btn-primary">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
 						</div>
 					</div>
 					<div class="card-body">
@@ -62,7 +71,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Modal title</h5>
+					<h5 class="modal-title">Input Pajak</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal">
 					</button>
 				</div>
@@ -86,7 +95,7 @@
 							<small class="fw-semibold">Jenis Penjualan</small>
 							<span class="help"></span>
 							<div class="controls">
-								<?php echo form_dropdown('pjkIsEkspor', $katJual, '', 'id="pjkIsEkspor" class="form-select   form-control wide"'); ?>
+								<?php echo form_dropdown('pjkIsEkspor', $katJual, '', 'id="pjkIsEkspor" class="nice-select default-select form-control wide"'); ?>
 
 							</div>
 						</div>
@@ -94,7 +103,7 @@
 							<small class="fw-semibold">Jenis TBS</small>
 							<span class="help"></span>
 							<div class="controls">
-								<?php echo form_dropdown('pjkTbsKode', $katTbs, '', 'id="pjkTbsKode" class="form-select   form-control wide"'); ?>
+								<?php echo form_dropdown('pjkTbsKode', $katTbs, '', 'id="pjkTbsKode" class="nice-select default-select form-control wide"'); ?>
 
 							</div>
 						</div>
@@ -125,6 +134,77 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="modal-sales-report">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">Laporan Pajak</div>
+				<div class="modal-body">
+					<h4>Laporan Pajak CPO</h4>
+					<ul class="list-group mb-3">
+						
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">Pajak Lokal (Rp/Kg)</h6>
+								<small class="text-muted">Biaya pajak CPO</small>
+							</div>
+							<span class="text-muted" id="rekap-cpo-lokal">0</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">Pajak Ekspor (Rp/Kg)</h6>
+								<small class="text-muted">Biaya pajak CPO</small>
+							</div>
+							<span class="text-muted" id="rekap-cpo-ekspor">0</span>
+						</li>
+                                            
+                    </ul>
+					<h4>Laporan Pajak KERNEL</h4>
+					<ul class="list-group mb-3">
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">Pajak Lokal (Rp/Kg)</h6>
+								<small class="text-muted">Biaya pajak Kernel</small>
+							</div>
+							<span class="text-muted" id="rekap-inti-lokal">0</span>
+						</li>
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+								<h6 class="my-0">Pajak Ekspor (Rp/Kg)</h6>
+								<small class="text-muted">Biaya pajak Kernel</small>
+							</div>
+							<span class="text-muted" id="rekap-inti-ekspor">0</span>
+						</li>
+                                            
+                    </ul>
+					
+				</div>
+				<div class="modal-footer">
+					
+					<button id="btn-batal" data-bs-dismiss="modal" class="btn">Batal</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-komentar">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">Komentar</div>
+				<div class="modal-body">
+					Komentar :
+					<div id="divKomentar">
+					<!-- Preview file akan ditampilkan di sini -->
+					</div>
+				</div>
+				<div class="modal-footer">
+					
+					<button id="btn-batal" data-bs-dismiss="modal" class="btn">Batal</button>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
+
 	<div class="modal fade" id="modal-hapus">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -216,9 +296,22 @@
 						searchable: false,
 						orderable: false,
 						render: function(data, type, row) {
-							var edit = '<a data-id="' + data + '" style="margin :0px 1px 0px 0px ;" onclick="edit($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>';
-							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus" onclick="return setModalHapus($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
-							return edit + hapus;
+							var edit = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" onclick="edit($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp"><i class="fas fa-pencil-alt"></i></a>';
+							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus" onclick="return setModalHapus($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-primary shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
+							if (row.indkStatus=="draft")
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							else if (row.indkStatus=="revisi"){
+								if (row.pjkKomentar!=null){
+									var komen = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-komentar" onclick="return setModalKomentar($(this),\'' + row.pjkKomentar + '\');" href="#" title="Komentar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-comment"></i></a> ';
+									return "<div class='d-flex'>"+komen + edit + hapus+"</div>";
+								} else 
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							} else if (row.indkStatus=="divalidasi"){
+								var valid = '<i class="fa fa-check" style="color:green"></i> ';
+								return valid; 
+								
+							} else
+								return "";
 						}
 					},
 				]
@@ -279,12 +372,18 @@
 
 
 
-		$('#btn-filter-periode').click(function() {
+		$('#btn-filter-periode').on('click', function () {
 			reloadDatatable();
+			getPeriode();
 		});
+		getPeriode();
 
 		function reloadDatatable() {
 			oTable.ajax.reload(null, false);
+		}
+
+		function setModalKomentar(dom, x) {
+			$("#divKomentar").html(x);
 		}
 
 		function setModalHapus(dom, x) {
@@ -296,6 +395,51 @@
 			$("#modal-hapus .modal-header").html("Hapus");
 			$("#modal-hapus .modal-body").html("Anda yakin menghapus \"<span id='id-delete'></span>\"?");
 			$("#id-delete").html(x);
+		}
+
+		function setModalSalesReport() {
+
+			$.ajax({
+				url: "<?php echo base_url('pks/pajak/rekap'); ?>",
+				data: {
+					periode: $("#indkKode").val()
+				},
+				type: "POST",
+				dataType: 'JSON',
+				beforeSend: function() {
+					$("#modal-sales-report").modal('show');
+					
+				},
+				success: function(response) {
+					if (response.rekap) {
+						$("#rekap-cpo-ekspor").html(formatRibuan(response.data.cpo_ekspor));
+						$("#rekap-cpo-lokal").html(formatRibuan(response.data.cpo_lokal));
+						$("#rekap-inti-ekspor").html(formatRibuan(response.data.inti_ekspor));
+						$("#rekap-inti-lokal").html(formatRibuan(response.data.inti_lokal));
+						
+					}
+				}
+			});
+		}
+		function getPeriode() {
+
+			$.ajax({
+				url: "<?php echo base_url('pks/pajak/periode'); ?>",
+				data: {
+					periode: $("#indkKode").val()
+				},
+				type: "POST",
+				dataType: 'JSON',
+				success: function(response) {
+					console.log(response)
+					if (response.status) {
+						if (response.input)
+							$(".btn-add").show(); else
+							$(".btn-add").hide();
+						$("#divStatusLapor").html('Status Pelaporan : <b>'+response.data.indkStatus+'</b>');
+					}
+				}
+			});
 		}
 
 		function hapus() {

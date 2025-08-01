@@ -16,28 +16,30 @@
 		<!-- row -->
 		<div class="container-fluid">
 			<div class="d-flex align-items-center justify-content-between mb-3">
-				<h4 class="card-title col-sm-6">Produksi</h4>
+				<div id="divStatusLapor">
+							
+				</div>
 				<div class="d-flex align-items-center mb-3 col-4 col-lg-3" style="gap: 5px;">
-					<?php echo form_dropdown('indkKode', $periode, (isset($_SESSION['periode_set']) ? $_SESSION['periode_set'] : ''), 'id="indkKode" class="form-select   form-control wide"'); ?>
+					<?php echo form_dropdown('indkKode', $periode, (isset($_SESSION['periode_set']) ? $_SESSION['periode_set'] : ''), 'id="indkKode" class="nice-select default-select form-control wide"'); ?>
 					<!-- <button class="btn btn-primary">
 						<i class="fa fa-filter"></i>
 					</button> -->
-					<button onclick="reloadDatatable()" class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i></button>
+					<button  class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i></button>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 grid-margin stretch-card">
+				<div class="col-md-12 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="text-muted float-start">
 									<div class="input-group w-px-350">
-										<h4>Jenis Produksi</h4>
+										<h4>TBS Masuk</h4>
 									</div>
 								</div>
 								<div class="text-muted float-end">
 									<div class="input-group w-px-350">
-										<button class="btn btn-outline-primary" onclick="return setModalSimpan();" type="button" id="btn-add"><i class="bx bx-plus"></i> Buat Baru</button>
+										<!-- <button class="btn btn-outline-primary" onclick="return setModalSimpan();" type="button" id="btn-add"><i class="bx bx-plus"></i> Buat Baru</button> -->
 									</div>
 								</div>
 							</div>
@@ -45,8 +47,8 @@
 								<thead>
 									<tr>
 										<th width="1%">NO</th>
-										<th width="64%">Jenis Produksi</th>
-										<th width="20%">Volume</th>
+										<th width="64%">Jenis TBS Masuk</th>
+										<th width="20%">Volume (Kg)</th>
 										<th width="15%">AKSI</th>
 									</tr>
 								</thead>
@@ -54,7 +56,34 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-6 grid-margin stretch-card">
+				<div class="col-lg-6 col-md-6 grid-margin stretch-card">
+					<div class="card">
+						<div class="card-body">
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="text-muted float-start">
+									<div class="input-group w-px-350">
+										<h4>TBS Diolah</h4>
+									</div>
+								</div>
+								<div class="text-muted float-end">
+									<div class="input-group w-px-350">
+										<button class="btn btn-outline-primary" onclick="return setModalSimpanDiolah();" type="button" id="btn-add"><i class="bx bx-plus"></i> Buat Baru</button>
+									</div>
+								</div>
+							</div>
+							<table class="table " id="table-grid-diolah">
+								<thead>
+									<tr>
+										<th width="1%">NO</th>
+										<th width="55%">Volume (Kg)</th>
+										<th width="25%">AKSI</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
 
@@ -74,9 +103,9 @@
 								<thead>
 									<tr>
 										<th width="1%">NO</th>
-										<th width="64%">Hasil Produksi</th>
-										<th width="20%">Volume</th>
-										<th width="15%">AKSI</th>
+										<th width="54%">Hasil Produksi</th>
+										<th width="20%">Volume (Kg)</th>
+										<th width="25%">AKSI</th>
 									</tr>
 								</thead>
 							</table>
@@ -90,28 +119,29 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Modal title</h5>
+					<h5 class="modal-title">Input TBS Masuk</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal">
 					</button>
 				</div>
 				<div class="modal-body">
 					<?php
-					$katProduksi = getKategoriProduksi();
+					
 					?>
 					<?php echo form_open(current_url(), array('id' => "form-simpan", 'class' => 'form-horizontal col-lg-12 col-md-12 col-xs-12')); ?>
 					<div class="row">
 						<input type="hidden" name="kode" id="kode">
+						<input type="hidden" name="prodKatproKode" id="prodKatproKode">
 
 						<div class="form-group col-lg-12 col-md-12 mb-3">
-							<small class="fw-semibold">Jenis Produksi</small>
+							<small class="fw-semibold">Jenis TBS</small>
 							<span class="help"></span>
 							<div class="controls">
-								<?php echo form_dropdown('prodJenisProduksi', $katProduksi, '', 'id="prodJenisProduksi" class="form-select   form-control wide"'); ?>
+								<?php echo form_input('prodJenisProduksi', '', 'id="prodJenisProduksi" class="form-control"'); ?>
 							</div>
 						</div>
 
 						<div class="form-group col-lg-12 col-md-6 mb-3">
-							<small class="fw-semibold">Volume</small>
+							<small class="fw-semibold">Volume (Kg)</small>
 							<span class="help"></span>
 							<div class="controls">
 								<?php echo form_input('prodVolume', '', 'id="prodVolume" style="text-align:right;" class="form-control"'); ?>
@@ -123,6 +153,39 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Batal</button>
 					<button type="button" id="btn-simpan" class="btn btn-primary simpan">Simpan</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-form-diolah">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">TBS Diolah</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal">
+					</button>
+				</div>
+				<div class="modal-body">
+					
+					<?php echo form_open(current_url(), array('id' => "form-simpan-diolah", 'class' => 'form-horizontal col-lg-12 col-md-12 col-xs-12')); ?>
+					<div class="row">
+						<input type="hidden" name="kodeolah" id="kodeolah">
+
+						
+
+						<div class="form-group col-lg-12 col-md-6 mb-3">
+							<small class="fw-semibold">Volume (Kg)</small>
+							<span class="help"></span>
+							<div class="controls">
+								<?php echo form_input('olahVolume', '', 'id="olahVolume" style="text-align:right;" class="form-control"'); ?>
+							</div>
+						</div>
+					</div>
+					<?php echo form_close(); ?>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Batal</button>
+					<button type="button" id="btn-simpan" class="btn btn-primary simpan-diolah">Simpan</button>
 				</div>
 			</div>
 		</div>
@@ -150,7 +213,7 @@
 						</div>
 
 						<div class="form-group col-lg-12 col-md-6 mb-3">
-							<small class="fw-semibold">Volume</small>
+							<small class="fw-semibold">Volume (Kg)</small>
 							<span class="help"></span>
 							<div class="controls">
 								<?php echo form_input('hasilVolume', '', 'id="hasilVolume" style="text-align:right;" class="form-control"'); ?>
@@ -198,12 +261,48 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade" id="modal-hapus-diolah">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">Hapus Pengguna</div>
+				<div class="modal-body">
+					Apakah anda yakin menghapus <span hidden="true" id="id-delete"></span>?
+				</div>
+				<div class="modal-footer">
+					<button id="btn-hapus-hasil" class="btn btn-primary" onclick="hapus_diolah();">
+						<span class="fa fa-spinner fa-spin"></span> <i class="fa fa-trash" aria-hidden="true"></i> Hapus
+					</button>
+					<button id="btn-batal-hasil" data-bs-dismiss="modal" class="btn">Batal</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-komentar">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">Komentar</div>
+				<div class="modal-body">
+					Komentar :
+					<div id="divKomentar">
+					<!-- Preview file akan ditampilkan di sini -->
+					</div>
+				</div>
+				<div class="modal-footer">
+					
+					<button id="btn-batal" data-bs-dismiss="modal" class="btn">Batal</button>
+				</div>
+			</div>
+			
+			
+		</div>
+	</div>
 
 	<?= $this->endSection() ?>
 
 	<?= $this->section('scripts') ?>
 	<script>
 		var oTable;
+		var oTable1;
 		var oTable2;
 		var bulanArray = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 		$(document).ready(function() {
@@ -244,13 +343,13 @@
 						width: "17px"
 					},
 					{
-						data: 'prodJenisProduksi'
+						data: 'katproNama'
 					},
 
 					{
 						data: 'prodVolume',
 						render: function(data, type, row) {
-							return formatRibuan(data);
+							return (data!=null?formatRibuan(data):0);
 						}
 					},
 
@@ -259,9 +358,88 @@
 						searchable: false,
 						orderable: false,
 						render: function(data, type, row) {
-							var edit = '<a data-id="' + data + '" style="margin :0px 1px 0px 0px ;" onclick="edit($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>';
-							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus" onclick="return setModalHapus($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
-							return edit + hapus;
+							var edit = '<a data-id="' + data + '" data-id2="' + row.katproKode + '" data-value="' + row.katproNama + '" style="margin :0px 0px 0px 0px ;" onclick="edit($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp"><i class="fas fa-pencil-alt"></i></a>';
+							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus" onclick="return setModalHapus($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-primary shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
+							if (row.indkStatus=="draft")
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							else if (row.indkStatus=="revisi"){
+								if (row.prodKomentar!=null){
+									var komen = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-komentar" onclick="return setModalKomentar($(this),\'' + row.prodKomentar + '\');" href="#" title="Komentar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-comment"></i></a> ';
+									return "<div class='d-flex'>"+komen + edit + hapus+"</div>";
+								} else 
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							} else if (row.indkStatus=="divalidasi"){
+								var valid = '<i class="fa fa-check" style="color:green"></i> ';
+								return valid; 
+								
+							} else
+								return "";
+						}
+					},
+				]
+			});
+			oTable1 = $('#table-grid-diolah').DataTable({
+				processing: true,
+				responsive: true,
+				serverSide: true,
+				pagingType: 'numbers',
+				ajax: {
+					url: '<?php echo site_url('pks/TbsDiolah/grid'); ?>',
+					data: function(d) {
+						d.periode = $('#indkKode').val();
+					}
+				},
+
+				lengthChange: false,
+				dom: '<"top">lrt<"bottom"p>',
+
+				columnDefs: [
+					{
+						"className": "dt-right",
+						"targets": [1]
+					}
+				],
+				columns: [
+
+					{
+						data: null,
+						render: function(data, type, full, meta) {
+							var length = meta.settings._iDisplayStart;
+							return meta.row + length + 1;
+						},
+						searchable: false,
+						orderable: false,
+						width: "17px"
+					},
+					
+					{
+						data: 'olahVolume',
+						render: function(data, type, row) {
+							return formatRibuan(data);
+						}
+					},
+
+					{
+						data: 'olahKode',
+						searchable: false,
+						orderable: false,
+						render: function(data, type, row) {
+							var edit = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" onclick="edit_diolah($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp"><i class="fas fa-pencil-alt"></i></a>';
+							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus-diolah" onclick="return setModalHapusDiolah($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-primary shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
+							if (row.indkStatus=="draft")
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							else if (row.indkStatus=="revisi"){
+								if (row.olahKomentar!=null){
+									var komen = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-komentar" onclick="return setModalKomentar($(this),\'' + row.olahKomentar + '\');" href="#" title="Komentar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-comment"></i></a> ';
+									return "<div class='d-flex'>"+komen + edit + hapus+"</div>";
+								} else 
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							} else if (row.indkStatus=="divalidasi"){
+								var valid = '<i class="fa fa-check" style="color:green"></i> ';
+								return valid; 
+								
+							} else
+								return "";
 						}
 					},
 				]
@@ -318,9 +496,22 @@
 						searchable: false,
 						orderable: false,
 						render: function(data, type, row) {
-							var edit = '<a data-id="' + data + '" style="margin :0px 1px 0px 0px ;" onclick="edit_hasil($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>';
-							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus-hasil" onclick="return setModalHapusHasil($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
-							return edit + hapus;
+							var edit = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" onclick="edit_hasil($(this));return false;" href="#" title="Ubah" class="btn btn-primary shadow btn-xs sharp"><i class="fas fa-pencil-alt"></i></a>';
+							var hapus = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-hapus-hasil" onclick="return setModalHapusHasil($(this),\'' + data + '\');" href="#" title="Hapus" class="btn btn-primary shadow btn-xs sharp"><i class="fa fa-trash"></i></a> ';
+							if (row.indkStatus=="draft")
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							else if (row.indkStatus=="revisi"){
+								if (row.hasilKomentar!=null){
+									var komen = '<a data-id="' + data + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-komentar" onclick="return setModalKomentar($(this),\'' + row.hasilKomentar + '\');" href="#" title="Komentar" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-comment"></i></a> ';
+									return "<div class='d-flex'>"+komen + edit + hapus+"</div>";
+								} else 
+								return "<div class='d-flex'>"+edit + hapus+"</div>";
+							} else if (row.indkStatus=="divalidasi"){
+								var valid = '<i class="fa fa-check" style="color:green"></i> ';
+								return valid; 
+								
+							} else
+								return "";
 						}
 					},
 				]
@@ -361,39 +552,59 @@
 			volume_hasil.value = formatRibuan(this.value);
 		});
 
+		var volume_diolah = document.getElementById('olahVolume');
+		volume_diolah.addEventListener('keyup', function(e) {
+			volume_diolah.value = formatRibuan(this.value);
+		});
 
-		// Formatting function for row details - modify as you need
-		function format(d) {
-			// `d` is the original data object for the row
-			return (
-				'<dl>' +
-				'<dt>No. Kontrak:</dt>' +
-				'<dd>' +
-				d.jualNoKontrak +
-				'</dd>' +
-				'<dt>Pembeli:</dt>' +
-				'<dd>' +
-				d.jualPembeli +
-				'</dd>' +
-				'<dt>File Kontrak:</dt>' +
-				'<dd>And any further details here (images etc)...</dd>' +
-				'</dl>'
-			);
+
+		
+
+		function setModalKomentar(dom, x) {
+			$("#divKomentar").html(x);
 		}
 
 
 
 		$('#btn-filter-periode').click(function() {
 			reloadDatatable();
+			reloadDatatableDiolah();
 			reloadDatatableHasil();
+			getPeriode();
 		});
+		getPeriode();
 
 		function reloadDatatable() {
 			oTable.ajax.reload(null, false);
 		}
 
+		function reloadDatatableDiolah() {
+			oTable1.ajax.reload(null, false);
+		}
+
 		function reloadDatatableHasil() {
 			oTable2.ajax.reload(null, false);
+		}
+
+		function getPeriode() {
+
+			$.ajax({
+				url: "<?php echo base_url('pks/produksi/periode'); ?>",
+				data: {
+					periode: $("#indkKode").val()
+				},
+				type: "POST",
+				dataType: 'JSON',
+				success: function(response) {
+					console.log(response)
+					if (response.status) {
+						if (response.input)
+							$(".btn-add").show(); else
+							$(".btn-add").hide();
+						$("#divStatusLapor").html('Status Pelaporan : <b>'+response.data.indkStatus+'</b>');
+					}
+				}
+			});
 		}
 
 		function setModalHapus(dom, x) {
@@ -405,6 +616,20 @@
 			$("#modal-hapus .modal-header").html("Hapus");
 			$("#modal-hapus .modal-body").html("Anda yakin menghapus \"<span id='id-delete'></span>\"?");
 			$("#id-delete").html(x);
+		}
+
+		function setModalHapusDiolah(dom, x) {
+			console.log('x' + x)
+			var id = dom.data('id');
+			console.log(id);
+			id_delete_hasil = id;
+			console.log(id_delete_hasil);
+			$(".fa-spinner").hide();
+			$("#btn-hapus-diolah").show();
+			$("#btn-batal-diolah").html("Batal");
+			$("#modal-hapus-diolah .modal-header").html("Hapus");
+			$("#modal-hapus-diolah .modal-body").html("Anda yakin menghapus \"<span id='id_delete_hasil'></span>\"?");
+			$("#id_delete_diolah").html(x);
 		}
 
 		function setModalHapusHasil(dom, x) {
@@ -480,8 +705,41 @@
 			});
 		}
 
+		function hapus_diolah() {
+			var id = id_delete_hasil;
+			console.log(id)
+			$.ajax({
+				url: "<?php echo base_url('pks/tbsdiolah/hapus'); ?>",
+				data: {
+					'id': id
+				},
+				type: "POST",
+				dataType: 'JSON',
+				beforeSend: function() {
+					$(".fa-spinner").show();
+					$("#btn-hapus").attr("disabled", true);
+					$("#btn-batal").attr("disabled", true);
+				},
+				success: function(data) {
+					$(".fa-spinner").hide();
+					$("#btn-hapus").removeAttr("disabled");
+					$("#btn-batal").removeAttr("disabled");
+					$("#modal-hapus").modal('hide');
+					if (data.hapus) {
+						reloadDatatableDiolah();
+						msg("success", data.pesan);
+					} else {
+						msg("error", data.pesan);
+					}
+				},
+			});
+		}
+
 		function edit(obj) {
 			var id = obj.data('id');
+			var id2 = obj.data('id2');
+			var tbs = obj.data('value');
+			console.log(tbs);
 
 			$.ajax({
 				url: "<?php echo base_url('pks/produksi/edit'); ?>",
@@ -492,26 +750,24 @@
 				dataType: 'JSON',
 				beforeSend: function() {
 					$("#modal-form").modal('show');
-					$("#modal-form .modal-body").show();
-					$("#btn-simpan").show();
-					$("#btn-batal-simpan").html("Tutup");
-					$(".box-msg").hide();
-					$("#modal-form #modal-title").html("Edit");
-					$(".fa-spinner").show();
-					$("#btn-simpan").attr("disabled", true);
+					
+					$("#modal-form input").val('');
 				},
 				success: function(response) {
 					if (response.edit) {
 						console.log(response.data);
-						$('#prodJenisProduksi [value="' + response.data.prodJenisProduksi + '"]').prop("selected", true);
-
-						$("#prodVolume").val(formatRibuan(response.data.prodVolume));
+						
+						$("#prodVolume").val(formatRibuan(response.data.prodVolume!=null?response.data.prodVolume:0));
+						$("#prodJenisProduksi").val(tbs);
 
 						$("#kode").val(response.data.prodKode);
 						$(".fa-spinner").hide();
 						$("#btn-simpan").removeAttr("disabled");
 					} else {
-						$("#modal-form .form-body").html(response.pesan);
+						$("#prodJenisProduksi").prop("disabled",false);
+						$("#prodKatproKode").val(id2);
+						$("#prodJenisProduksi").val(tbs);
+						$("#prodJenisProduksi").prop("disabled",true);
 					}
 				}
 			});
@@ -553,6 +809,41 @@
 			});
 		}
 
+		function edit_diolah(obj) {
+			var id = obj.data('id');
+
+			$.ajax({
+				url: "<?php echo base_url('pks/tbsdiolah/edit'); ?>",
+				data: {
+					olahKode: id
+				},
+				type: "POST",
+				dataType: 'JSON',
+				beforeSend: function() {
+					$("#modal-form-diolah").modal('show');
+					$("#modal-form-diolah .modal-body").show();
+					$("#btn-simpan-diolah").show();
+					$("#btn-batal-simpan-diolah").html("Tutup");
+					$(".box-msg").hide();
+					$("#modal-form-diolah #modal-title").html("Edit");
+					$(".fa-spinner").show();
+					$("#btn-simpan-diolah").attr("disabled", true);
+				},
+				success: function(response) {
+					if (response.edit) {
+						
+						$("#olahVolume").val(formatRibuan(response.data.olahVolume));
+
+						$("#kodeolah").val(response.data.olahKode);
+						$(".fa-spinner").hide();
+						$("#btn-simpan-hasil").removeAttr("disabled");
+					} else {
+						$("#modal-form-hasil .form-body").html(response.pesan);
+					}
+				}
+			});
+		}
+
 		$("#field-cari").on('keyup', function(e) {
 			var code = e.which;
 			if (code == 13) e.preventDefault();
@@ -570,7 +861,16 @@
 			$("#modal-form").modal('show');
 			$("#modal-form .modal-body").show();
 			$("#btn-simpan").show();
-			$("#modal-form #modal-title").html("Jenis Produksi");
+			$("#modal-form #modal-title").html("TBS Masuk");
+		}
+
+		function setModalSimpanDiolah() {
+			$("#kode").val('');
+			$("#form-simpan-diolah input").val('');
+			$("#modal-form-diolah").modal('show');
+			$("#modal-form-diolah .modal-body").show();
+			$("#btn-simpan-diolah").show();
+			$("#modal-form-diolah #modal-title").html("TBS Diolah");
 		}
 
 		function setModalSimpanHasil() {
@@ -656,6 +956,52 @@
 
 					if (data.simpan) {
 						reloadDatatableHasil();
+						msg("success", data.pesan);
+						$("#modal-form-hasil").modal('hide');
+					} else {
+						if (!data.validasi) {
+							$("#pesan-error").show();
+							$.each(data.pesan, function(index, value) {
+								$('#' + index).after('<div class="error" style="color:red">' + value + '</div>');
+								$('#' + index).addClass('invalid');
+								console.log('My array has at position ' + index + ', this value: ' + value);
+							});
+						} else {
+							msg("error", data.pesan);
+						}
+
+
+					}
+				}
+			});
+		});
+		$(document).delegate('.simpan-diolah', 'click', function(e) {
+			e.preventDefault();
+			var data = $("#form-simpan-diolah").serializeArray();
+			data.push({
+				name: "olahIndkKode",
+				value: $("#indkKode").val()
+			});
+			$(".form-control").removeClass("invalid")
+			$("#kode").val('');
+			$.ajax({
+				url: "<?php echo site_url("pks/tbsdiolah/simpan"); ?>",
+				data: data,
+				type: "POST",
+				dataType: "JSON",
+				beforeSend: function() {
+					$(".fa-spinner").show();
+					$(".error").remove();
+					$("#btn-simpan-hasil").attr("disabled", true);
+					$("#btn-batal-hasil").attr("disabled", true);
+				},
+				success: function(data) {
+					$(".fa-spinner").hide();
+					$("#btn-simpan-hasil").removeAttr("disabled");
+					$("#btn-batal-hasil").removeAttr("disabled");
+
+					if (data.simpan) {
+						reloadDatatableDiolah();
 						msg("success", data.pesan);
 						$("#modal-form-hasil").modal('hide');
 					} else {

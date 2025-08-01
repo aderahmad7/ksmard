@@ -89,7 +89,7 @@
                         </div>
 
                         <div class="form-group col-lg-12 col-md-12 mb-3">
-                            <small class="fw-semibold">Password</small>
+                            <small class="fw-semibold password-title">Password</small>
                             <span class="help"></span>
                             <div class="controls">
                                 <?php echo form_input('accPassword', '', 'id="accPassword" class="form-control"'); ?>
@@ -203,6 +203,8 @@
             $("#modal-form").modal('show');
             $("#modal-form .modal-body").show();
             $("#btn-simpan").show();
+            $("#accPassword").show();
+            $(".password-title").show();
             $("#modal-form #modal-title").html("PKS");
         }
 
@@ -234,9 +236,11 @@
                         $("#kode").val(response.data.accUsername);
                         $("#pks").val(response.data.pksKode);
                         $("#accUsername").val(response.data.accUsername);
-                        $("#accPassword").val(response.data.accPassword);
                         $("#accNama").val(response.data.accNama);
+                        $("#accPassword").hide();
+                        $(".password-title").hide();
                         $(".fa-spinner").hide();
+                        $(".error").hide();
                         $("#btn-simpan").removeAttr("disabled");
                     } else {
                         $("#modal-form .form-body").html(response.pesan);

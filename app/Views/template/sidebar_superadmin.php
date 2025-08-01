@@ -30,17 +30,20 @@ $sg2 = $uri->getSegment(2);
 <div class="dlabnav">
     <div class="dlabnav-scroll">
         <ul class="metismenu" id="menu">
-            <li class="<?= (current_url() == base_url("superadmin/beranda") ? "mm-active" : "") ?>"><a href="<?= base_url("superadmin/beranda") ?>" aria-expanded="false">
+            <li class="<?= (current_url() == base_url("superadmin/beranda") ? "mm-active" : "") ?>"><a
+                    href="<?= base_url("superadmin/beranda") ?>" aria-expanded="false">
                     <i class="fas fa-home"></i>
                     <span class="nav-text">Dashboard</span>
                 </a>
             </li>
-            <li class="<?= (current_url() == base_url("superadmin/dinas") ? "mm-active" : "") ?>"><a href="<?= base_url("superadmin/dinas") ?>" aria-expanded="false">
+            <li class="<?= (current_url() == base_url("superadmin/dinas") ? "mm-active" : "") ?>"><a
+                    href="<?= base_url("superadmin/dinas") ?>" aria-expanded="false">
                     <i class="fas fa-user-tie"></i>
                     <span class="nav-text">Dinas</span>
                 </a>
             </li>
-            <li class="<?= ($sg2 == "pengolahan" || $sg2 == "pemasaran" || $sg2 == "pengangkutan" || $sg2 == "penyusutan" || $sg2 == "biayatidaklangsung" ? "mm-show" : "") ?>">
+            <li
+                class="<?= ($sg2 == "pengolahan" || $sg2 == "pemasaran" || $sg2 == "pengangkutan" || $sg2 == "penyusutan" || $sg2 == "biayatidaklangsung" ? "mm-show" : "") ?>">
                 <a class="has-arrow " href="javascript:void()" aria-expanded="false">
                     <i class="fas fa-th-list"></i>
                     <span class="nav-text">Kategori</span>

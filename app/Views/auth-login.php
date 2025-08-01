@@ -20,6 +20,7 @@
     <!-- FAVICONS ICON -->
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
     <link href="<?= base_url(); ?>assets/css/style.css ?>" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets__/vendors/sweetalert2/sweetalert2.min.css">
 
 </head>
 
@@ -39,11 +40,21 @@
                                     <form method="post" action="<?= base_url('login/cek') ?>">
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Username</strong></label>
-                                            <input type="text" name="username" class="form-control">
+                                            <input type="text" name="username" class="form-control <?= session('validation') && session('validation')->hasError('username') ? 'is-invalid' : '' ?>" value="<?= old('username') ?>">
+                                            <?php if (session('validation') && session('validation')->hasError('username')): ?>
+                                                <div class="invalid-feedback">
+                                                    <?= session('validation')->getError('username') ?>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Password</strong></label>
-                                            <input type="password" name="password" class="form-control">
+                                            <input type="password" name="password" class="form-control <?= session('validation') && session('validation')->hasError('password') ? 'is-invalid' : '' ?>">
+                                            <?php if (session('validation') && session('validation')->hasError('password')): ?>
+                                                <div class="invalid-feedback">
+                                                    <?= session('validation')->getError('password') ?>
+                                                </div>
+                                            <?php endif; ?>
                                         </div>
                                         <div class="row d-flex justify-content-between mt-4 mb-2">
                                             <div class="mb-3">
@@ -77,6 +88,31 @@
     <script src="./vendor/global/global.min.js"></script>
     <script src="./js/custom.min.js"></script>
     <script src="./js/dlabnav-init.js"></script>
+    <script src="<?php echo base_url(); ?>assets__/vendors/sweetalert2/sweetalert2.min.js"></script>
+
+    <?php if (session()->getFlashdata('error')): ?>
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                html: '<?= session()->getFlashdata('error'); ?>',
+                didOpen: () => {
+                    document.body.classList.remove('swal2-height-auto');
+                }
+            });
+        </script>
+    <?php endif; ?> <?php if (session()->getFlashdata('success')): ?>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil!',
+                html: '<?= session()->getFlashdata('success'); ?>',
+                didOpen: () => {
+                    document.body.classList.remove('swal2-height-auto');
+                }
+            });
+        </script>
+    <?php endif; ?>
 
 </body>
 

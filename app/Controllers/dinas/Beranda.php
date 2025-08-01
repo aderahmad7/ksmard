@@ -6,8 +6,10 @@ use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
 
+
 class Beranda extends BaseController
 {
+    
     public function index()
     {
         $session = session();
@@ -30,6 +32,7 @@ class Beranda extends BaseController
 
         $pemasaranKategoriModel = new \App\Models\Ref\KategoriPemasaran_m();
         $katPemasaran = $pemasaranKategoriModel->findAll();
+
 
         $data = [
             'title' => 'BERANDA',
@@ -62,8 +65,6 @@ class Beranda extends BaseController
             ->where('ksmard_t_indeks_k_pks.indkPeriodeBulan', $data_periode)
             ->where('ksmard_t_indeks_k_pks.indkIndeksK !=', null)
             ->findAll();
-
-        log_message('debug', print_r($data, true));
 
         if (!$data) {
             return $this->response->setJSON($data);
@@ -105,8 +106,6 @@ class Beranda extends BaseController
             'periode' => $indkKode
         ];
 
-        log_message('info', print_r($data, true));
-
         return view('dinas/perusahaan/index', $data);
     }
 
@@ -115,8 +114,6 @@ class Beranda extends BaseController
         $rules = [
             'periode' => ['label' => 'ID', 'rules' => 'required|is_natural']
         ];
-
-        log_message('info', print_r($this->request->getPost(), true));
 
         $validation = service('validation');
         $validation->setRules($rules);
@@ -288,8 +285,6 @@ class Beranda extends BaseController
 
         $statusList = $komentarModel->select('kmtStatus')->where('kmtIndkKode', $this->request->getPost("periode"))->findAll();
 
-        log_message('debug', print_r($statusList, true));
-
         if ($statusList) {
             $hasRejected = false;
             $hasPending = false;
@@ -339,15 +334,11 @@ class Beranda extends BaseController
     {
         $kode_komen = $this->request->getPost("kodeKomen");
 
-        log_message('info', print_r($this->request->getPost(), true));
-
         $komentarModel = new \App\Models\Komentar_m();
         $komentar = $komentarModel
             ->select('kmtKomen, kmtStatus,kmtKode')
             ->where('kmtKode', $kode_komen)
             ->first();
-
-        log_message('info', print_r($komentar, true));
 
         return $this->response->setJSON([
             'edit' => true,

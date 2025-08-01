@@ -5,25 +5,32 @@ namespace App\Controllers\Pks;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
+use App\Models\Pks\Periode_m;
+use App\Models\Pks\Penyusutan_m;
 
 class Penyusutan extends BaseController
 {
-    public function index()
-    {
-        $session = session();
+    public function __construct(){
+        $this->periodeModel = new Periode_m();
+        $this->model = new Penyusutan_m();
+        $this->session = session();
         helper('form');
         helper("datetime_helper");
         helper("dropdown_helper");
-        if (!$session->get('cekLogin')) {
+        helper("currency_helper");
+    }
+    public function index()
+    {
+        
+        if (!$this->session->get('cekLogin')) {
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }
 
-        $kode_pks = $session->get('kodePKS');
+        $kode_pks = $this->session->get('kodePKS');
 
-        $penyusutanModel = new \App\Models\Pks\Periode_m();
 
-        $periode = $penyusutanModel->where('indkPksKode', $kode_pks)->findAll();
+        $periode =  $this->periodeModel->where('indkPksKode', $kode_pks)->findAll();
         $periodeCb = [];
         foreach ($periode as $row => $val)
             $periodeCb[$val["indkKode"]] = bulan($val["indkPeriodeBulan"]) . " " . $val["indkPeriodeTahun"];
@@ -35,7 +42,7 @@ class Penyusutan extends BaseController
             $katPenyusutanCb[$val["katusutKode"]] = $val["katusutNama"];
 
         $data = [
-            'title' => 'BERANDA',
+            'title' => 'Biaya Penyusutan',
             'periode' => $periodeCb,
             'kategoriPenyusutan' => $katPenyusutanCb,
         ];
@@ -52,8 +59,12 @@ class Penyusutan extends BaseController
                                 usutUraian,
                                 katusutNama,
                                 usutTotal,
+                                usutKomentar,
+                                indkStatus,
                                 usutKode'
             )
+            ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_penyusutan_pks.usutIndkKode')
+                    
             ->join('ksmard_r_kat_penyusutan_pks', 'ksmard_r_kat_penyusutan_pks.katusutKode = ksmard_t_penyusutan_pks.usutKatusutKode');
 
         return DataTable::of($builder)
@@ -66,7 +77,25 @@ class Penyusutan extends BaseController
 
     public function simpan()
     {
-        helper("currency_helper");
+        $periodeData = $this->GetPeriode('usutIndkKode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
+        }
+        
+        $periodeData=$periodeData["data"];
+        if (in_array($periodeData['indkStatus'], $this->periodeNoInput)){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => true,
+                'pesan' => 'Gagal menyimpan!!, Periode sudah dikirim'
+            ]);
+            return;
+        }
         $rules = [
             'usutUraian' => ['label' => 'Uraian', 'rules' => 'required'],
             'usutKatusutKode' => ['label' => 'Kategori', 'rules' => 'required'],
@@ -86,14 +115,14 @@ class Penyusutan extends BaseController
             return;
         }
 
-        $penyusutanModel = new \App\Models\Pks\Penyusutan_m();
+   
 
         $post = $this->request->getPost();
         $kode = $post["kode"];
         unset($post["kode"]);
-        $model = $penyusutanModel->find($kode);
+        $model = $this->model->find($kode);
         if ($model) {
-            $exist = $penyusutanModel->where($post)->first();
+            $exist = $this->model->where($post)->first();
             if ($exist) {
                 if ($kode != $exist['usutKode']) {
                     return $this->response->setJSON([
@@ -105,7 +134,7 @@ class Penyusutan extends BaseController
                 }
             }
             $post["usutTotal"] = toDecimal($post["usutTotal"]);
-            $penyusutanModel->update($kode, $post);
+            $this->model->update($kode, $post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -116,7 +145,7 @@ class Penyusutan extends BaseController
 
             $post["usutTotal"] = toDecimal($post["usutTotal"]);
 
-            $penyusutanModel->save($post);
+            $this->model->save($post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -149,11 +178,11 @@ class Penyusutan extends BaseController
             ]);
             return;
         }
-        $penyusutanModel = new \App\Models\Pks\Penyusutan_m();
+       
 
         $post = $this->request->getPost();
         unset($post["kode"]);
-        $exist = $penyusutanModel->where($post)->first();
+        $exist = $this->model->where($post)->first();
         if ($exist) {
             return $this->response->setJSON([
                 'edit' => true,
@@ -176,8 +205,8 @@ class Penyusutan extends BaseController
 
         $id = $this->request->getPost("id");
 
-        $penyusutanModel = new \App\Models\Pks\Penyusutan_m();
-        $periode = $penyusutanModel->find($id);
+        
+        $periode = $this->model->find($id);
         if (!$periode) {
             return $this->response->setJSON([
                 'hapus' => false,
@@ -185,7 +214,7 @@ class Penyusutan extends BaseController
             ]);
         }
 
-        $periode = $penyusutanModel->delete($id);
+        $periode = $this->model->delete($id);
         if ($periode) {
             return $this->response->setJSON([
                 'hapus' => true,
@@ -194,31 +223,68 @@ class Penyusutan extends BaseController
         }
     }
 
-    public function pengguna()
+    public function periode()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $periodeData = $this->GetPeriode('periode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGGUNA'
-        ];
-        return view('perusahaan/pengembangan', $data);
+       $periodeData=$periodeData["data"];
+
+       
+         $input=false;
+        if (in_array($periodeData['indkStatus'], $this->periodeYesInput))
+            $input=true;
+       
+        return $this->response->setJSON([
+            'status' => true,
+            'input' =>$input,
+            'data' => $periodeData
+        ]);
+        return;
+        
+        
+        
     }
 
-    public function pengaturan()
+    public function rekap()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $rules = [
+            'periode' => ['label' => 'ID', 'rules' => 'required|is_natural']
+        ];
+
+        log_message('info', print_r($this->request->getPost("periode"), true));
+
+        $validation = service('validation');
+        $validation->setRules($rules);
+        if (!$validation->withRequest($this->request)->run()) {
+            return $this->response->setJSON([
+                'rekap' => false,
+                'pesan' => $validation->getErrors()
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGATURAN'
+        $periode = $this->request->getPost("periode");
+        
+        $tbsDiolahModel = new \App\Models\Pks\ProduksiDiolah_m();
+        $produksi = $tbsDiolahModel->getRekap($periode);
+        $rekap = $this->model->getRekap($periode);
+        $query = [
+            "rekap_usut_total"   => $rekap["total_penyusutan"],
+            "rekap_usut_perkg"   => safe_div($rekap["total_penyusutan"],$produksi["volume"]),
+            
         ];
-        return view('perusahaan/pengembangan', $data);
+        
+        return $this->response->setJSON([
+            'rekap' => true,
+            'data' => $query
+        ]);
     }
 }

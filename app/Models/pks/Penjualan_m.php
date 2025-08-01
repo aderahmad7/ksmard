@@ -15,8 +15,12 @@ class Penjualan_m extends Model
         'jualVolume',
         'jualHarga',
         'jualTotal',
-        'jualNoKontrak',
+        'jualNoDokumen',
         'jualPembeli',
+        'jualFile',
+        'jualFileTipe',
+        'jualTanggal',
+        'jualKomentar',
         'jualIndkKode',
     ];
 

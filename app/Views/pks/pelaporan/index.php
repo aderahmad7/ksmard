@@ -15,58 +15,62 @@
 <div class="page-content">
 	<div class="content-body">
 		<div class="container-fluid">
-			<div class="d-flex align-items-center justify-content-between mb-3">
-				<h4 class="card-title col-sm-6">Pelaporan Indeks K</h4>
-				<div class="d-flex align-items-center mb-3 col-4 col-lg-3" style="gap: 5px;">
-					<?php echo form_dropdown('indkKode', $periode, (isset($_SESSION['periode_set']) ? $_SESSION['periode_set'] : ''), 'id="indkKode" class="form-select   form-control wide"'); ?>
-					<!-- <button class="btn btn-primary">
-						<i class="fa fa-filter"></i>
-					</button> -->
-					<button onclick="getRekap()" class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i></button>
-					<button class="btn btn-primary" type="button" id="btn-send"><i class="fa fa-paper-plane" data-feather="paper-plane"></i></button>
+			<div class="d-flex align-items-right justify-content-between mb-3">
+				<div class="card-title">
+					<div class="input-group">
+						<?php echo form_dropdown('indkKode', $periode, $selected, 'id="indkKode" class="form-select   form-control wide"'); ?>
+					
+						<button onclick="getRekap()" class="btn btn-primary" type="button" id="btn-filter-periode"><i class="fa fa-filter" data-feather="filter"></i> Hitung Indeks K</button>
+					</div>
+				</div>
+				<div id="div-btn-send" style="gap: 5px;">
+					
+						
+					
 				</div>
 			</div>
 
 			<div class="row">
 
-				<div class="col-xl-3 col-md-6 mb-4">
-					<div class="card border border-primary ">
-						<div class="card-body p-3">
-							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-								TBS PABRIK</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800 tbs_pabrik"></div>
-						</div>
+				<div class="col-xl-3 col-md-6">
+					<div class="card ">
+						<div class="card-body">
+                                <div>
+									<span class="d-block fs-16">Harga TBS Pabrik</span>
+									<h4 class="fs-24 font-w700 tbs_pabrik">-</h4>
+								</div>
+                        </div>
+						
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6">
+					<div class="card ">
+						<div class="card-body">
+                                <div>
+									<span class="d-block fs-16">INDEKS K</span>
+									<h4 class="fs-24 font-w700 indeks_k">-</h4>
+								</div>
+                        </div>
 					</div>
 				</div>
 
 
-				<div class="col-xl-3 col-md-6 mb-4">
-					<div class="card border border-primary">
-						<div class="card-body p-3">
-							<div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-								INDEKS K</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800 indeks_k"></div>
-						</div>
-					</div>
-				</div>
-
+			
 
 
 
 				<div class="col-md-12 grid-margin stretch-card">
 					<div class="card">
 						<div class="card-body">
-							<table class="table table-bordered table-striped  align-middle text-center">
-								<thead class="table-primary">
+							<table class="table table-hover text-center">
+								<thead>
 									<tr>
 										<th rowspan="2" valign="middle">No</th>
 										<th rowspan="2" valign="middle">Uraian</th>
-										<th colspan="2">Minyak Sawit
-											(Rp)</th>
-										<th colspan="2">Inti Sawit
-											(Rp)</th>
-										<th rowspan="2" valign="middle">Tandan Buah
-											Segar</th>
+										<th colspan="2">Minyak Sawit (Rp)</th>
+										<th colspan="2">Inti Sawit (Rp)</th>
+										<th rowspan="2" valign="middle">TBS</th>
+										<th rowspan="2" valign="middle" class="kolom-revisi-header">AKSI</th>
 									</tr>
 									<tr>
 										<th>Ekspor</th>
@@ -84,6 +88,7 @@
 										<td id="fob-inti-ekspor"></td>
 										<td id="fob-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_1"></td>
 									</tr>
 									<tr>
 										<td>2</td>
@@ -93,6 +98,7 @@
 										<td id="pajak-inti-ekspor"></td>
 										<td id="pajak-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_2"></td>
 									</tr>
 									<tr>
 										<td>3</td>
@@ -102,6 +108,7 @@
 										<td id="pemasaran-inti-ekspor"></td>
 										<td id="pemasaran-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_3"></td>
 									</tr>
 									<tr>
 										<td>4</td>
@@ -111,6 +118,7 @@
 										<td id="fob-bersih-inti-ekspor"></td>
 										<td id="fob-bersih-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_4"></td>
 									</tr>
 									<tr>
 										<td>5</td>
@@ -121,6 +129,7 @@
 										<td id="angkut-inti-ekspor"></td>
 										<td id="angkut-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_5"></td>
 									</tr>
 									<tr>
 										<td>6</td>
@@ -131,6 +140,7 @@
 										<td id="harga_bersih-inti-ekspor"></td>
 										<td id="harga_bersih-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_6"></td>
 									</tr>
 									<tr>
 										<td>7</td>
@@ -140,6 +150,7 @@
 										<td id="rendemen-inti-ekspor"></td>
 										<td id="rendemen-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_7"></td>
 									</tr>
 									<tr>
 										<td>8</td>
@@ -149,6 +160,7 @@
 										<td id="harga_tbs-inti-ekspor"></td>
 										<td id="harga_tbs-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_8"></td>
 									</tr>
 									<tr>
 										<td>9</td>
@@ -159,6 +171,7 @@
 										<td id="vol_jual-inti-ekspor"></td>
 										<td id="vol_jual-inti-lokal"></td>
 										<td></td>
+										<td class="kolom-revisi-data" id="komentar_9"></td>
 									</tr>
 									<tr>
 										<td>10</td>
@@ -169,6 +182,7 @@
 										<td id="expabrik-inti-ekspor"></td>
 										<td id="expabrik-inti-lokal"></td>
 										<td id="expabrik-total"></td>
+										<td class="kolom-revisi-data" id="komentar_10"></td>
 									</tr>
 									<tr>
 										<td>11</td>
@@ -178,6 +192,7 @@
 										<td></td>
 										<td></td>
 										<td id="pengolahan"></td>
+										<td class="kolom-revisi-data" id="komentar_11"></td>
 									</tr>
 									<tr>
 										<td>12</td>
@@ -187,6 +202,7 @@
 										<td></td>
 										<td></td>
 										<td id="penyusutan"></td>
+										<td class="kolom-revisi-data" id="komentar_12"></td>
 									</tr>
 									<tr>
 										<td>13</td>
@@ -197,6 +213,7 @@
 										<td></td>
 										<td></td>
 										<td id="harga_timbangan">0</td>
+										<td class="kolom-revisi-data" id="komentar_13"></td>
 									</tr>
 									<tr>
 										<td>14</td>
@@ -207,6 +224,7 @@
 										<td></td>
 										<td></td>
 										<td id="biaya_tl">0</td>
+										<td class="kolom-revisi-data" id="komentar_14"></td>
 									</tr>
 									<tr>
 										<td>15</td>
@@ -216,6 +234,7 @@
 										<td></td>
 										<td></td>
 										<td id="tbs_pabrik">0</td>
+										<td class="kolom-revisi-data" id="komentar_15"></td>
 									</tr>
 								</tbody>
 							</table>
@@ -223,6 +242,25 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modal-komentar">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">Komentar</div>
+				<div class="modal-body">
+					Komentar :
+					<div id="divKomentar">
+					<!-- Preview file akan ditampilkan di sini -->
+					</div>
+				</div>
+				<div class="modal-footer">
+					
+					<button id="btn-batal" data-bs-dismiss="modal" class="btn">Batal</button>
+				</div>
+			</div>
+			
+			
 		</div>
 	</div>
 </div>
@@ -309,6 +347,33 @@
 					$(".tbs_pabrik").html(boldIfValue(res.data.harga_tbs_pabrik, formatRupiah(res.data.harga_tbs_pabrik, 2)));
 					$(".indeks_k").html(boldIfValue(res.data.indeks_k, formatRupiahV3(res.data.indeks_k, 2) + "%"));
 					//msg("success", data.pesan);
+					if (res.periode.indkStatus=="dikirim" || res.periode.indkStatus=="divalidasi"){
+						if (res.periode.indkStatus=="dikirim")
+							$("#div-btn-send").html('<div class="alert alert-light solid alert-square"><i class="fa fa-paper-plane" data-feather="paper-plane"> Sedang Dikirim</div>');
+						else
+							$("#div-btn-send").html('<div class="alert alert-success solid fade show"><i class="fa fa-check" data-feather="check"></i> Divalidasi Dinas</div>');
+						$("#div-btn-send").prop("disabled",true);
+					} else {
+						if (res.periode.indkStatus=="draft")
+							$("#div-btn-send").html('<button class="btn btn-primary float-right p-3" type="button" id="btn-send" onclick="send()"><i class="fa fa-paper-plane" data-feather="paper-plane"></i> Kirim Ke Dinas</button>');
+						else	
+							$("#div-btn-send").html('<button class="btn btn-primary float-right p-3" type="button" id="btn-send" onclick="send()"><i class="fa fa-paper-plane" data-feather="paper-plane"></i> Kirim Ke Dinas (Revisi)</button>');
+					}
+
+					//komentar
+					$(".kolom-revisi-header").hide();
+					$(".kolom-revisi-data").hide();
+					$(".kolom-revisi-data").html('');
+					if (res.periode.indkStatus=="revisi"){
+						$(".kolom-revisi-header").show();
+						$(".kolom-revisi-data").show();
+						res.komentar.forEach(function(val, index) {
+							if (val.kmtStatus=="ditolak"){
+								var komen = '<a data-id="' + val.kmtLapKode + '" style="margin :0px 0px 0px 0px ;" data-bs-backdrop="static" data-bs-toggle="modal" data-bs-target="#modal-komentar" onclick="return setModalKomentar($(this),\'' + val.kmtKomen + '\');" href="#" title="Komentar" class="btn btn-primary shadow btn-xs sharp"><i class="fa fa-comment"></i></a> ';
+								$("#komentar_"+val.kmtLapKode).html(komen);
+							}
+						});
+					}
 
 					// Tampilkan SweetAlert2
 					Swal.fire({
@@ -343,23 +408,18 @@
 						confirmButtonText: 'Tutup'
 					});
 
-					$.ajax({
-						url: "<?= base_url('pks/pelaporan/simpan') ?>",
-						data: {
-							"indeks_k": res.data.indeks_k,
-							'periode': $('#indkKode').val(),
-						},
-						type: "POST",
-						dataType: 'JSON',
-					})
+				
 				} else {
 					//msg("error", data.pesan);
 				}
 			},
 		});
 	};
+	function setModalKomentar(dom, x) {
+			$("#divKomentar").html(x);
+	}
 
-	document.getElementById("btn-send").addEventListener("click", function() {
+	function send() {
 		Swal.fire({
 			title: 'Apakah Anda yakin?',
 			text: "Data akan dikirim dan tidak dapat diubah!",
@@ -373,14 +433,14 @@
 				$.ajax({
 					url: "<?= base_url('pks/pelaporan/kirim') ?>",
 					data: {
-						'indeks_k': $('#indkKode').val(),
-						'indeks_k_percentage': $('.indeks_k').text().replace('%', '').trim(),
+						'periode': $('#indkKode').val()
 					},
 					type: "POST",
 					dataType: 'JSON',
 					success: function(res) {
 						if (res.kirim) {
 							console.log(res);
+							$("#div-btn-send").html('<div class="alert alert-light solid alert-square"><i class="fa fa-paper-plane" data-feather="paper-plane"> Sedang Dikirim</div>');
 							Swal.fire(
 								'Terkirim!',
 								'Data Anda telah berhasil dikirim.',
@@ -407,7 +467,7 @@
 				);
 			}
 		});
-	});
+	};
 
 	// // Fungsi untuk format angka menjadi format Rupiah
 	function formatRupiahV3(angka, frag = null) {

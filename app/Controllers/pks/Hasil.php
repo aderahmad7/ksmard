@@ -5,21 +5,29 @@ namespace App\Controllers\Pks;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
+use App\Models\Pks\Periode_m;
+use App\Models\Pks\ProduksiHasil_m;
 
 class Hasil extends BaseController
 {
-    public function index()
-    {
-        $session = session();
+    public function __construct(){
+        $this->periodeModel = new Periode_m();
+        $this->model = new ProduksiHasil_m();
+        $this->session = session();
         helper('form');
         helper("datetime_helper");
         helper("dropdown_helper");
+        helper("currency_helper");
+    }
+    public function index()
+    {
+       
         if (!$session->get('cekLogin')) {
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }
-        $produksiModel = new \App\Models\Pks\Periode_m();
-        $periode = $produksiModel->where('indkPksKode', 'ABS')->findAll();
+       
+        $periode = $this->session->where('indkPksKode', 'ABS')->findAll();
         $periodeCb = [];
         foreach ($periode as $row=>$val)
             $periodeCb[$val["indkKode"]]=bulan($val["indkPeriodeBulan"])." ".$val["indkPeriodeTahun"];
@@ -38,8 +46,10 @@ class Hasil extends BaseController
         $builder = $db->table('ksmard_t_produksi_hasil_pks')
                     ->select('  hasilKode,
                                 hasilJenisHasil,
-                                hasilVolume'
-                                );
+                                hasilVolume,hasilKomentar, indkStatus'
+                                )
+                    ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_produksi_hasil_pks.hasilIndkKode');
+            
         
         return DataTable::of($builder)
                 ->edit('hasilJenisHasil', function($row, $meta){
@@ -56,6 +66,26 @@ class Hasil extends BaseController
     public function simpan()
     {
         helper("currency_helper");
+        $periodeData = $this->GetPeriode('hasilIndkKode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
+        }
+        
+        $periodeData=$periodeData["data"];
+
+        if (in_array($periodeData['indkStatus'], $this->periodeNoInput)){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => true,
+                'pesan' => 'Gagal menyimpan!!, Periode sudah dikirim'
+            ]);
+            return;
+        }
         $rules = [
             'hasilJenisHasil' => ['label' => 'Jenis Hasil', 'rules' => 'required'],
             'hasilVolume' => ['label' => 'Volume', 'rules' => 'required']
@@ -74,14 +104,14 @@ class Hasil extends BaseController
             return;
         }
 
-        $produksiModel = new \App\Models\Pks\ProduksiHasil_m();
+        
 
         $post = $this->request->getPost();
         $kode=$post["kodehasil"];
         unset($post["kodehasil"]);
-        $model = $produksiModel->find($kode);
+        $model = $this->model->find($kode);
         if ($model){
-            $exist = $produksiModel->where($post)->first();
+            $exist = $this->model->where($post)->first();
             if ($exist){
                 if ($kode!=$exist['hasilKode']){
                     return $this->response->setJSON([
@@ -94,7 +124,7 @@ class Hasil extends BaseController
             }
             $post["hasilVolume"] = toDecimal($post["hasilVolume"]);
             
-            $produksiModel->update($kode, $post);
+            $this->model->update($kode, $post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -105,7 +135,7 @@ class Hasil extends BaseController
             
             $post["hasilVolume"] = toDecimal($post["hasilVolume"]);
             
-            $produksiModel->save($post);
+            $this->model->save($post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -142,7 +172,7 @@ class Hasil extends BaseController
 
         $post = $this->request->getPost();
         unset($post["kode"]);
-        $exist = $produksiModel->where($post)->first();
+        $exist = $this->model->where($post)->first();
         if ($exist){
             return $this->response->setJSON([
                 'edit' => true,
@@ -166,9 +196,8 @@ class Hasil extends BaseController
         }
        
         $id = $this->request->getPost("id");
-        
-        $produksiModel = new \App\Models\Pks\ProduksiHasil_m();
-        $periode = $produksiModel->find($id);
+    
+        $periode = $this->model->find($id);
         if (!$periode){
             return $this->response->setJSON([
                 'hapus' => false,
@@ -176,7 +205,7 @@ class Hasil extends BaseController
             ]);
         }
 
-        $periode = $produksiModel->delete($id);
+        $periode = $this->model->delete($id);
         if ($periode){
             return $this->response->setJSON([
                 'hapus' => true,
@@ -186,31 +215,33 @@ class Hasil extends BaseController
     
     }
 
-    public function pengguna()
+    public function periode()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $periodeData = $this->GetPeriode('periode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGGUNA'
-        ];
-        return view('perusahaan/pengembangan', $data);
-    }
+       $periodeData=$periodeData["data"];
 
-    public function pengaturan()
-    {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
-        }
-
-        $data = [
-            'title' => 'PENGATURAN'
-        ];
-        return view('perusahaan/pengembangan', $data);
+       
+         $input=false;
+        if (in_array($periodeData['indkStatus'], $this->periodeYesInput))
+            $input=true;
+       
+        return $this->response->setJSON([
+            'status' => true,
+            'input' =>$input,
+            'data' => $periodeData
+        ]);
+        return;
+        
+        
+        
     }
 }

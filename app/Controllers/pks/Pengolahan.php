@@ -5,25 +5,33 @@ namespace App\Controllers\Pks;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
+use App\Models\Pks\Periode_m;
+use App\Models\Pks\Pengolahan_m;
 
 class Pengolahan extends BaseController
 {
-    public function index()
-    {
-        $session = session();
+    public function __construct(){
+        $this->periodeModel = new Periode_m();
+        $this->model = new Pengolahan_m();
+        $this->session = session();
         helper('form');
         helper("datetime_helper");
         helper("dropdown_helper");
-        if (!$session->get('cekLogin')) {
+        helper("currency_helper");
+    }
+    public function index()
+    {
+       
+        if (!$this->session->get('cekLogin')) {
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }
 
-        $kode_pks = $session->get('kodePKS');
+        $kode_pks = $this->session->get('kodePKS');
         
-        $pengolahanModel = new \App\Models\Pks\Periode_m();
         
-        $periode = $pengolahanModel->where('indkPksKode', $kode_pks)->findAll();
+        
+        $periode = $this->periodeModel->where('indkPksKode', $kode_pks)->findAll();
         $periodeCb = [];
         foreach ($periode as $row=>$val)
             $periodeCb[$val["indkKode"]]=bulan($val["indkPeriodeBulan"])." ".$val["indkPeriodeTahun"];
@@ -35,7 +43,7 @@ class Pengolahan extends BaseController
             $katPengolahanCb[$val["katolahNama"]][$val["katolahKode"]]=$val["katolahSubNama"];
 
         $data = [
-            'title' => 'BERANDA',
+            'title' => 'Biaya Pengolahan',
             'periode'=>$periodeCb,
             'kategoriPengolahan'=>$katPengolahanCb,
         ];
@@ -52,8 +60,11 @@ class Pengolahan extends BaseController
                                 katolahNama,
                                 katolahSubNama,
                                 olahTotal,
+                                olahKomentar,
+                                indkStatus,
                                 olahKode'
                                 )
+                    ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_pengolahan_pks.olahIndkKode')
                     ->join('ksmard_r_kat_pengolahan_pks', 'ksmard_r_kat_pengolahan_pks.katolahKode = ksmard_t_pengolahan_pks.olahKatolahKode');
                                
         return DataTable::of($builder)
@@ -67,7 +78,26 @@ class Pengolahan extends BaseController
 
     public function simpan()
     {
-        helper("currency_helper");
+        $periodeData = $this->GetPeriode('olahIndkKode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
+        }
+        
+        $periodeData=$periodeData["data"];
+
+        if (in_array($periodeData['indkStatus'], $this->periodeNoInput)){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => true,
+                'pesan' => 'Gagal menyimpan!!, Periode sudah dikirim'
+            ]);
+            return;
+        }
         $rules = [
             'olahUraian' => ['label' => 'Uraian', 'rules' => 'required'],
             'olahKatolahKode' => ['label' => 'Kategori', 'rules' => 'required'],
@@ -87,14 +117,14 @@ class Pengolahan extends BaseController
             return;
         }
 
-        $pengolahanModel = new \App\Models\Pks\Pengolahan_m();
+        
 
         $post = $this->request->getPost();
         $kode=$post["kode"];
         unset($post["kode"]);
-        $model = $pengolahanModel->find($kode);
+        $model = $this->model->find($kode);
         if ($model){
-            $exist = $pengolahanModel->where($post)->first();
+            $exist = $this->model->where($post)->first();
             if ($exist){
                 if ($kode!=$exist['olahKode']){
                     return $this->response->setJSON([
@@ -106,7 +136,7 @@ class Pengolahan extends BaseController
                 }
             }
             $post["olahTotal"] = toDecimal($post["olahTotal"]);
-            $pengolahanModel->update($kode, $post);
+            $this->model->update($kode, $post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -117,7 +147,7 @@ class Pengolahan extends BaseController
             
             $post["olahTotal"] = toDecimal($post["olahTotal"]);
             
-            $pengolahanModel->save($post);
+            $this->model->save($post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -151,11 +181,10 @@ class Pengolahan extends BaseController
             ]);
             return;
         }
-        $pengolahanModel = new \App\Models\Pks\Pengolahan_m();
 
         $post = $this->request->getPost();
         unset($post["kode"]);
-        $exist = $pengolahanModel->where($post)->first();
+        $exist =$this->model->where($post)->first();
         if ($exist){
             return $this->response->setJSON([
                 'edit' => true,
@@ -179,9 +208,8 @@ class Pengolahan extends BaseController
         }
        
         $id = $this->request->getPost("id");
-        
-        $pengolahanModel = new \App\Models\Pks\Pengolahan_m();
-        $periode = $pengolahanModel->find($id);
+        ;
+        $periode = $this->model->find($id);
         if (!$periode){
             return $this->response->setJSON([
                 'hapus' => false,
@@ -189,7 +217,7 @@ class Pengolahan extends BaseController
             ]);
         }
 
-        $periode = $pengolahanModel->delete($id);
+        $periode = $this->model->delete($id);
         if ($periode){
             return $this->response->setJSON([
                 'hapus' => true,
@@ -199,31 +227,68 @@ class Pengolahan extends BaseController
     
     }
 
-    public function pengguna()
+    public function periode()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $periodeData = $this->GetPeriode('periode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGGUNA'
-        ];
-        return view('perusahaan/pengembangan', $data);
+       $periodeData=$periodeData["data"];
+
+       
+        $input=false;
+        if (in_array($periodeData['indkStatus'], $this->periodeYesInput))
+            $input=true;
+       
+        return $this->response->setJSON([
+            'status' => true,
+            'input' =>$input,
+            'data' => $periodeData
+        ]);
+        return;
+        
+        
+        
     }
 
-    public function pengaturan()
+    public function rekap()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $rules = [
+            'periode' => ['label' => 'ID', 'rules' => 'required|is_natural']
+        ];
+
+        log_message('info', print_r($this->request->getPost("periode"), true));
+
+        $validation = service('validation');
+        $validation->setRules($rules);
+        if (!$validation->withRequest($this->request)->run()) {
+            return $this->response->setJSON([
+                'rekap' => false,
+                'pesan' => $validation->getErrors()
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGATURAN'
+        $periode = $this->request->getPost("periode");
+        
+        $tbsDiolahModel = new \App\Models\Pks\ProduksiDiolah_m();
+        $produksi = $tbsDiolahModel->getRekap($periode);
+        $rekap = $this->model->getRekap($periode);
+        $query = [
+            "rekap_olah_total"   => $rekap["total_pengolahan"],
+            "rekap_olah_perkg"   => safe_div($rekap["total_pengolahan"],$produksi["volume"]),
+            
         ];
-        return view('perusahaan/pengembangan', $data);
+        
+        return $this->response->setJSON([
+            'rekap' => true,
+            'data' => $query
+        ]);
     }
 }

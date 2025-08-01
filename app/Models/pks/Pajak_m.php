@@ -15,6 +15,7 @@ class Pajak_m extends Model
         'pjkTotal',
         'pjkVolume',
         'pjkIndkKode',
+        'pjkKomentar',
     ];
 
     public function getRekap($periode)

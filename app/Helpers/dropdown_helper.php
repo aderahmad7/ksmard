@@ -39,3 +39,16 @@ if (!function_exists('getKategoriProduksi')) {
     }
 }
 
+if (!function_exists('getTipeFileJual')) {
+    function getTipeFileJual()
+    {
+        $tbs = array(
+            
+            "EKSTERNAL" => 'EKSTERNAL',"INTERNAL" => 'INTERNAL',
+            
+        );
+
+        return $tbs;
+    }
+}
+

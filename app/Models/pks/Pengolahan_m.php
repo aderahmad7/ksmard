@@ -13,6 +13,7 @@ class Pengolahan_m extends Model
         'olahKatolahKode',
         'olahTotal',
         'olahIndkKode',
+        'olahKomentar',
     ];
 
     public function getRekap($periode)

@@ -33,8 +33,6 @@ class Dinas extends BaseController
             $options[$value] = $nama; // Tampilkan hanya nama provinsi
         }
 
-        log_message('info', print_r($options, true));
-
         $data = [
             'title' => 'DINAS',
             'provinsi' => $options
@@ -65,11 +63,20 @@ class Dinas extends BaseController
 
     public function simpan()
     {
+        $kode = $this->request->getPost('kode');
+        $accountModel = new \App\Models\User_m();
+
+        $model = $accountModel->find($kode);
+
         $rules = [
             'accUsername' => ['label' => 'Username', 'rules' => 'required'],
             'accNama' => ['label' => 'Nama', 'rules' => 'required'],
-            'accPassword' => ['label' => 'Password', 'rules' => 'required']
         ];
+
+        if (!$model) {
+            $rules['accPassword'] = ['label' => 'Password', 'rules' => 'required'];
+        }
+
         $validation = service('validation');
         $validation->setRules($rules);
         if (!$validation->withRequest($this->request)->run()) {
@@ -82,24 +89,21 @@ class Dinas extends BaseController
         }
 
 
-        $accountModel = new \App\Models\User_m();
         $roleModel = new \App\Models\Superadmin\Role_m();
         $dinasModel = new \App\Models\Superadmin\Dinas_m();
 
         $post = $this->request->getPost();
 
-        log_message('debug', json_encode($post));
         $dinInfo = json_decode($post['dinKode'], true);
 
-        $kode = $post["kode"];
         $kodedinas = $post["kodedinas"];
 
         unset($post["kode"]);
         unset($post["dinKode"]);
         unset($post["kodedinas"]);
-        $model = $accountModel->find($kode);
-        log_message('debug', json_encode($model));
         if ($model) {
+            $post["accPassword"] = $model["accPassword"];
+            
             $exist = $accountModel->where($post)->first();
             if ($exist) {
                 if ($kode != $exist['accUsername']) {
@@ -144,7 +148,6 @@ class Dinas extends BaseController
                 'pesan' => '<b>Berhasil</b> mengubah data!'
             ]);
         } else {
-            log_message('debug', 'masuk else');
             $db = \Config\Database::connect();
 
             $db->transStart();
@@ -168,7 +171,7 @@ class Dinas extends BaseController
 
             $accountModel->insert([
                 'accUsername' => $post["accUsername"],
-                'accPassword' => $post["accPassword"],
+                'accPassword' => password_hash($post["accPassword"], PASSWORD_DEFAULT),
                 'accNama' => $post["accNama"],
             ]);
 

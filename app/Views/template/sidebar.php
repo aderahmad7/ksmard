@@ -12,6 +12,7 @@ $sg2 = $uri->getSegment(2);
 
     <div class="brand-title">
       <h2 class="">K-Smard</h2>
+      <span class="brand-sub-title">GRKS BPDPKS 2025</span>
     </div>
   </a>
   <div class="nav-control">

@@ -5,25 +5,31 @@ namespace App\Controllers\Pks;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
+use App\Models\Pks\Periode_m;
+use App\Models\Pks\Pemasaran_m;
 
 class Pemasaran extends BaseController
 {
-    public function index()
-    {
-        $session = session();
+    public function __construct(){
+        $this->periodeModel = new Periode_m();
+        $this->model = new Pemasaran_m();
+        $this->session = session();
         helper('form');
         helper("datetime_helper");
         helper("dropdown_helper");
-        if (!$session->get('cekLogin')) {
+        helper("currency_helper");
+    }
+    public function index()
+    {
+       
+        if (!$this->session->get('cekLogin')) {
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }
 
-        $kode_pks = $session->get('kodePKS');
+        $kode_pks = $this->session->get('kodePKS');
         
-        $pemasaranModel = new \App\Models\Pks\Periode_m();
-        
-        $periode = $pemasaranModel->where('indkPksKode', $kode_pks)->findAll();
+        $periode = $this->periodeModel->where('indkPksKode', $kode_pks)->findAll();
         $periodeCb = [];
         foreach ($periode as $row=>$val)
             $periodeCb[$val["indkKode"]]=bulan($val["indkPeriodeBulan"])." ".$val["indkPeriodeTahun"];
@@ -35,7 +41,7 @@ class Pemasaran extends BaseController
             $katPemasaranCb[$val["katpsrKode"]]=$val["katpsrNama"];
 
         $data = [
-            'title' => 'BERANDA',
+            'title' => 'Biaya Pemasaran',
             'periode'=>$periodeCb,
             'kategoriPemasaran'=>$katPemasaranCb,
         ];
@@ -45,8 +51,6 @@ class Pemasaran extends BaseController
     public function grid($menu=null)
     {
         $db = db_connect();
-        helper("datetime_helper");
-        helper("dropdown_helper");
         $builder = $db->table('ksmard_t_pemasaran_pks')
                     ->select('  psrKode,
                                 psrUraian,
@@ -55,8 +59,10 @@ class Pemasaran extends BaseController
                                 psrIsEkspor,
                                 psrTotal,
                                 psrVolume,
-                                psrKode'
+                                psrKomentar,
+                                indkStatus'
                                 )
+                    ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_pemasaran_pks.psrIndkKode')
                     ->join('ksmard_r_kat_pemasaran_pks', 'ksmard_r_kat_pemasaran_pks.katpsrKode = ksmard_t_pemasaran_pks.psrKatpsrKode');
                              
         return DataTable::of($builder)
@@ -73,7 +79,26 @@ class Pemasaran extends BaseController
 
     public function simpan()
     {
-        helper("currency_helper");
+        $periodeData = $this->GetPeriode('psrIndkKode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
+        }
+        
+        $periodeData=$periodeData["data"];
+
+        if (in_array($periodeData['indkStatus'], $this->periodeNoInput)){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => true,
+                'pesan' => 'Gagal menyimpan!!, Periode sudah dikirim'
+            ]);
+            return;
+        }
         $rules = [
             'psrUraian' => ['label' => 'Uraian', 'rules' => 'required'],
             'psrKatpsrKode' => ['label' => 'Kategori', 'rules' => 'required'],
@@ -96,14 +121,14 @@ class Pemasaran extends BaseController
             return;
         }
 
-        $pemasaranModel = new \App\Models\Pks\Pemasaran_m();
+        
 
         $post = $this->request->getPost();
         $kode=$post["kode"];
         unset($post["kode"]);
-        $model = $pemasaranModel->find($kode);
+        $model = $this->model->find($kode);
         if ($model){
-            $exist = $pemasaranModel->where($post)->first();
+            $exist = $this->model->where($post)->first();
             if ($exist){
                 if ($kode!=$exist['psrKode']){
                     return $this->response->setJSON([
@@ -116,7 +141,7 @@ class Pemasaran extends BaseController
             }
             $post["psrTotal"] = toDecimal($post["psrTotal"]);
             $post["psrVolume"] = toDecimal($post["psrVolume"]);
-            $pemasaranModel->update($kode, $post);
+            $this->model->update($kode, $post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -128,7 +153,7 @@ class Pemasaran extends BaseController
             $post["psrTotal"] = toDecimal($post["psrTotal"]);
             $post["psrVolume"] = toDecimal($post["psrVolume"]);
             
-            $pemasaranModel->save($post);
+            $this->model->save($post);
            
             return $this->response->setJSON([
                 'simpan' => true,
@@ -163,11 +188,10 @@ class Pemasaran extends BaseController
             ]);
             return;
         }
-        $pemasaranModel = new \App\Models\Pks\Pemasaran_m();
-
+        
         $post = $this->request->getPost();
         unset($post["kode"]);
-        $exist = $pemasaranModel->where($post)->first();
+        $exist = $this->model->where($post)->first();
         if ($exist){
             return $this->response->setJSON([
                 'edit' => true,
@@ -192,8 +216,7 @@ class Pemasaran extends BaseController
        
         $id = $this->request->getPost("id");
         
-        $pemasaranModel = new \App\Models\Pks\Pemasaran_m();
-        $periode = $pemasaranModel->find($id);
+        $periode = $this->model->find($id);
         if (!$periode){
             return $this->response->setJSON([
                 'hapus' => false,
@@ -211,31 +234,73 @@ class Pemasaran extends BaseController
     
     }
 
-    public function pengguna()
+    public function periode()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $periodeData = $this->GetPeriode('periode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGGUNA'
-        ];
-        return view('perusahaan/pengembangan', $data);
+       $periodeData=$periodeData["data"];
+
+       
+        $input=false;
+        if (in_array($periodeData['indkStatus'], $this->periodeYesInput))
+            $input=true;
+       
+        return $this->response->setJSON([
+            'status' => true,
+            'input' =>$input,
+            'data' => $periodeData
+        ]);
+        return;
+        
+        
+        
     }
 
-    public function pengaturan()
+    public function rekap()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $rules = [
+            'periode' => ['label' => 'ID', 'rules' => 'required|is_natural']
+        ];
+
+        log_message('info', print_r($this->request->getPost("periode"), true));
+
+        $validation = service('validation');
+        $validation->setRules($rules);
+        if (!$validation->withRequest($this->request)->run()) {
+            return $this->response->setJSON([
+                'rekap' => false,
+                'pesan' => $validation->getErrors()
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGATURAN'
+       
+        $rekap = $this->model->getRekap($this->request->getPost("periode"));
+        $query = [
+            "cpo_ekspor"   => $rekap["cpo_ekspor"],
+            "cpo_lokal"   => $rekap["cpo_lokal"],
+            "inti_ekspor"   => $rekap["cpo_ekspor"],
+            "inti_lokal"   => $rekap["inti_lokal"],
+            "cpo_ekspor_total"   => $rekap["cpo_ekspor_total"],
+            "cpo_lokal_total"   => $rekap["cpo_lokal_total"],
+            "inti_ekspor_total"   => $rekap["cpo_ekspor_total"],
+            "inti_lokal_total"   => $rekap["inti_lokal_total"],
+            
         ];
-        return view('perusahaan/pengembangan', $data);
+        
+        return $this->response->setJSON([
+            'rekap' => true,
+            'data' => $query
+        ]);
     }
+
+    
 }

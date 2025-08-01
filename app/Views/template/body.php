@@ -15,7 +15,7 @@
   <meta name="format-detection" content="telephone=no">
 
   <!-- PAGE TITLE HERE -->
-  <title>Workload Project Management</title>
+  <title>K-smard</title>
 
   <!-- FAVICONS ICON -->
   <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
@@ -60,7 +60,7 @@
           <div class="collapse navbar-collapse justify-content-between">
             <div class="header-left">
               <div class="dashboard_bar">
-                Dashboard
+                <?= $title; ?>
               </div>
             </div>
             <ul class="navbar-nav header-right">
@@ -68,25 +68,25 @@
                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                   <img src="<?= base_url(); ?>assets/images/user.jpg" width="20" alt="" />
                   <div class="header-info ms-3">
-                    <span class="fs-18 font-w500 mb-2">Franklin Jr.</span>
+                    <span class="fs-18 font-w500 mb-2"><?= session()->get('nama'); ?></span>
                     <small class="fs-12 font-w400">demo@gmail.com</small>
                   </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end">
-                  <a href="#" class="dropdown-item ai-icon">
+                  <a href="<?= base_url('profile') ?>" class="dropdown-item ai-icon">
                     <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                       <circle cx="12" cy="7" r="4"></circle>
                     </svg>
                     <span class="ms-2">Profile </span>
                   </a>
-                  <a href="#" class="dropdown-item ai-icon">
-                    <svg id="icon-inbox" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
+                  <button onclick="return setModalUbahPassword()" data-bs-toggle="modal" data-bs-target="#modal-ubah-password" class="dropdown-item ai-icon">
+                    <svg id="icon-change-password" xmlns="http://www.w3.org/2000/svg" class="text-success" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                     </svg>
-                    <span class="ms-2">Inbox </span>
-                  </a>
+                    <span class="ms-2">Ubah Password </span>
+                  </button>
                   <a href="<?= site_url('logout'); ?>" class="dropdown-item ai-icon">
                     <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
@@ -106,16 +106,16 @@
             Header end ti-comment-alt
         ***********************************-->
 
-    <?php 
-      $role = session()->get('role');
+    <?php
+    $role = session()->get('role');
 
-      if ($role == 'superadmin') {
-        echo include('sidebar_superadmin.php');
-      } elseif ($role == 'dinas') {
-        echo include('sidebar_dinas.php');
-      } else {
-        echo include('sidebar.php');
-      }
+    if ($role == 'superadmin') {
+      echo include('sidebar_superadmin.php');
+    } elseif ($role == 'dinas') {
+      echo include('sidebar_dinas.php');
+    } else {
+      echo include('sidebar.php');
+    }
     ?>
 
     <!--**********************************
@@ -125,6 +125,42 @@
     <!--**********************************
             Content body end
         ***********************************-->
+
+    <!-- Modal ubah password start -->
+    <div class="modal fade" id="modal-ubah-password">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Ubah Password</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <form action="<?= current_url(); ?>" method="post" id="form-ubah-password" class="form-horizontal col-lg-12 col-md-12 col-xs-12">
+              <div class="form-group col-lg-12 col-md-6 mb-3">
+                <small class="fw-semibold">Password Baru</small>
+                <span class="help"></span>
+                <div class="controls">
+                  <input type="text" name="accPassword" id="accPassword" class="form-control">
+                </div>
+              </div>
+              <div class="form-group col-lg-12 col-md-6 mb-3">
+                <small class="fw-semibold">Konfirmasi Password Baru</small>
+                <span class="help"></span>
+                <div class="controls">
+                  <input type="text" name="accPasswordKonfirmasi" id="accPasswordKonfirmasi" class="form-control">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" form="form-ubah-password" id="btn-simpan" class="btn btn-primary simpan-password">Simpan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal ubah password end -->
+
 
 
 
@@ -161,12 +197,10 @@
   <!-- Required vendors -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="<?= base_url() ?>assets/vendor/global/global.min.js ?>"></script>
-  <script src="<?= base_url() ?>assets/vendor/chart.js/Chart.bundle.min.js"></script>
 
   <script src="<?= base_url() ?>assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
 
   <script src="<?= base_url() ?>assets/vendor/apexchart/apexchart.js"></script>
-  <script src="<?= base_url() ?>assets/vendor/chart.js/Chart.bundle.min.js"></script>
 
   <script src="<?= base_url() ?>assets/js/plugins-init/chartjs-init.js"></script>
 
@@ -231,6 +265,48 @@
       requestAnimationFrame(currencySlide);
     })();
     // END - JS SLIDING APP NAME //
+  </script>
+  <script>
+    function setModalUbahPassword() {
+      $("#form-ubah-password input").val('');
+      $("#modal-ubah-password").modal('show');
+      $("#modal-ubah-password .modal-body").show();
+      $("#btn-simpan").show();
+      $(".error").hide();
+      $("#modal-ubah-password #modal-title").html("Ubah Password");
+    }
+
+    $(document).delegate('.simpan-password', 'click', function(e) {
+      e.preventDefault();
+      var data = $("#form-ubah-password").serializeArray();
+      $(".form-control").removeClass("invalid")
+      $.ajax({
+        url: "<?= base_url('profile/ubah_password') ?>",
+        type: "POST",
+        dataType: "JSON",
+        data: data,
+        success: function(data) {
+          console.log(data)
+          if (data.simpan) {
+            $("#modal-ubah-password").modal("hide");
+            msg("success", data.pesan);
+          } else {
+            if (!data.validasi) {
+              console.log('masuk validasi')
+              $("#pesan-error").show();
+              $.each(data.pesan, function(index, value) {
+                $('#' + index).after('<div class="error" style="color:red">' + value + '</div>');
+                $('#' + index).addClass('invalid');
+                console.log('My array has at position ' + index + ', this value: ' + value);
+              });
+            } else {
+              $("#modal-form").modal("hide");
+              msg("error", data.pesan);
+            }
+          }
+        }
+      })
+    })
   </script>
 
 

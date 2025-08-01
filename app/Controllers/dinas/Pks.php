@@ -17,8 +17,6 @@ class Pks extends BaseController
             return redirect()->to('/login');
         }
 
-        log_message('info', print_r($session->get('kodeDinas'), true));
-
         $data = [
             'title' => 'BERANDA'
         ];
@@ -50,12 +48,20 @@ class Pks extends BaseController
 
     public function simpan()
     {
+        $accountModel = new \App\Models\User_m();
+        $kode = $this->request->getPost('kode');
+        $model = $accountModel->find($kode);
+
         $rules = [
             'pks' => ['label' => 'Kode', 'rules' => 'required'],
             'accUsername' => ['label' => 'Username', 'rules' => 'required'],
             'accNama' => ['label' => 'Nama', 'rules' => 'required'],
-            'accPassword' => ['label' => 'Password', 'rules' => 'required']
         ];
+
+        if (!$model) {
+            $rules['accPassword'] = ['label' => 'Password', 'rules' => 'required'];
+        }
+
         $validation = service('validation');
         $validation->setRules($rules);
         if (!$validation->withRequest($this->request)->run()) {
@@ -67,8 +73,6 @@ class Pks extends BaseController
             return;
         }
 
-
-        $accountModel = new \App\Models\User_m();
         $roleModel = new \App\Models\Superadmin\Role_m();
         $pksModel = new \App\Models\Dinas\Pks_m();
 
@@ -77,14 +81,14 @@ class Pks extends BaseController
         $session = session();
         $kodedinas = $session->get('kodeDinas');
 
-        $kode = $post["kode"];
         $kodepks = $post["pksKode"];
         $kodepksinput = $post["pks"];
         unset($post["kode"]);
         unset($post["pksKode"]);
         unset($post["pks"]);
-        $model = $accountModel->find($kode);
         if ($model) {
+            $post["accPassword"] = $model["accPassword"];
+
             $exist = $accountModel->where($post)->first();
             if ($exist) {
                 if ($kode != $exist['accUsername']) {
@@ -129,7 +133,6 @@ class Pks extends BaseController
                 'pesan' => '<b>Berhasil</b> mengubah data!'
             ]);
         } else {
-            log_message('debug', 'masuk else');
             $db = \Config\Database::connect();
 
             $db->transStart();
@@ -153,7 +156,7 @@ class Pks extends BaseController
 
             $accountModel->insert([
                 'accUsername' => $post["accUsername"],
-                'accPassword' => $post["accPassword"],
+                'accPassword' => password_hash($post["accPassword"], PASSWORD_DEFAULT),
                 'accNama' => $post["accNama"],
             ]);
 

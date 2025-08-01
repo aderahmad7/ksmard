@@ -50,9 +50,91 @@ abstract class BaseController extends Controller
     {
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
-
+        $this->periodeNoInput=["dikirim","divalidasi"];
+        $this->periodeYesInput=["draft","revisi"];
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
     }
+
+    public function DoUpload($fieldName = 'userfile')
+    {
+        $validationRule = [
+            $fieldName => [
+                'label' => 'Image File',
+                'rules' => [
+                    'uploaded[' . $fieldName . ']',
+                    //'is_image[' . $fieldName . ']',
+                    'mime_in[' . $fieldName . ',image/jpg,image/jpeg,image/gif,image/png,image/webp,application/pdf]',
+                    'max_size[' . $fieldName . ',2000]'         // dalam KB
+                ],
+            ],
+        ];
+
+        if (! $this->validate($validationRule)) {
+            // Mengembalikan error validasi
+            return [
+                'status' => false,
+                'error'  => $this->validator->getErrors()[$fieldName] ?? 'File validation failed.'
+            ];
+        }
+
+        $img = $this->request->getFile($fieldName);
+
+        if ($img && ! $img->hasMoved()) {
+            // Simpan ke folder writable/uploads/ dengan nama acak
+            $newName = $img->getRandomName();
+            $img->move('uploads', $newName);
+
+            return [
+                'status' => true,
+                'filename' => $newName
+            ];
+        }
+
+        // Jika file sudah dipindahkan atau tidak ditemukan
+        return [
+            'status' => false,
+            'error' => 'File gagal dipindahkan atau tidak ditemukan.'
+        ];
+    }
+
+    public function GetPeriode($filename)
+    {
+        $validationRule = [
+            $filename => [
+                'label' => 'Periode',
+                'rules' => 'required|integer',
+                'errors' => [
+                    'required' => 'Kolom {field} wajib diisi.',
+                    'integer' => '{field} harus berupa angka bulat.',
+                ]
+            ],
+        ];
+
+        if (! $this->validate($validationRule)) {
+            // Mengembalikan error validasi
+            return [
+                'status' => false,
+                'error'  => 'Periode tidak ditemukan.'
+            ];
+        }
+
+        $periode = new \App\Models\Pks\Periode_m();
+        $periodeData = $periode->find($this->request->getPost($filename));
+        if ($periodeData){
+            return [
+                'status' => true,
+                'data' => $periodeData
+            ];
+        } else {
+            return [
+                'status' => false,
+                'error'  => 'Periode tidak ditemukan.'
+            ];
+        }
+        
+    }
+
+
 }

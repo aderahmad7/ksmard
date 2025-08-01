@@ -5,25 +5,32 @@ namespace App\Controllers\Pks;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use \Hermawan\DataTables\DataTable;
+use App\Models\Pks\Periode_m;
+use App\Models\Pks\BiayaTL_m;
 
 class BiayaTidakLangsung extends BaseController
 {
-    public function index()
-    {
-        $session = session();
+    public function __construct(){
+        $this->periodeModel = new Periode_m();
+        $this->model = new BiayaTL_m();
+        $this->session = session();
         helper('form');
         helper("datetime_helper");
         helper("dropdown_helper");
-        if (!$session->get('cekLogin')) {
+        helper("currency_helper");
+    }
+    public function index()
+    {
+        
+        if (!$this->session->get('cekLogin')) {
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }
 
-        $kode_pks = $session->get('kodePKS');
+        $kode_pks = $this->session->get('kodePKS');
         
-        $biayaTLModel = new \App\Models\Pks\Periode_m();
 
-        $periode = $biayaTLModel->where('indkPksKode', $kode_pks)->findAll();
+        $periode = $this->periodeModel->where('indkPksKode', $kode_pks)->findAll();
         $periodeCb = [];
         foreach ($periode as $row => $val)
             $periodeCb[$val["indkKode"]] = bulan($val["indkPeriodeBulan"]) . " " . $val["indkPeriodeTahun"];
@@ -35,7 +42,7 @@ class BiayaTidakLangsung extends BaseController
             $katBiayatlCb[$val["katbiayKode"]] = $val["katbiayNama"];
 
         $data = [
-            'title' => 'BERANDA',
+            'title' => 'Biaya Op. Tidak Langsung',
             'periode' => $periodeCb,
             'kategoriBiayaTL' => $katBiayatlCb,
         ];
@@ -53,8 +60,11 @@ class BiayaTidakLangsung extends BaseController
                 katbiayNama,
                 biaytlVolume,
                 biaytlTotal,
+                biaytlKomentar,
+                indkStatus,
                 biaytlKode'
             )
+            ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_biaya_tl_pks.biaytlIndkKode')
             ->join('ksmard_r_kat_biayatl_pks', 'ksmard_r_kat_biayatl_pks.katbiayKode = ksmard_t_biaya_tl_pks.biaytlKatbiayKode');
 
         return DataTable::of($builder)
@@ -66,7 +76,26 @@ class BiayaTidakLangsung extends BaseController
 
     public function simpan()
     {
-        helper("currency_helper");
+        $periodeData = $this->GetPeriode('biaytlIndkKode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
+        }
+        
+        $periodeData=$periodeData["data"];
+
+        if (in_array($periodeData['indkStatus'], $this->periodeNoInput)){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => true,
+                'pesan' => 'Gagal menyimpan!!, Periode sudah dikirim'
+            ]);
+            return;
+        }
         $rules = [
             'biaytlUraian' => ['label' => 'Uraian', 'rules' => 'required'],
             'biaytlKatbiayKode' => ['label' => 'Kategori', 'rules' => 'required'],
@@ -87,14 +116,14 @@ class BiayaTidakLangsung extends BaseController
             return;
         }
 
-        $biayaTLModel = new \App\Models\Pks\BiayaTL_m();
+        
 
         $post = $this->request->getPost();
         $kode = $post["kode"];
         unset($post["kode"]);
-        $model = $biayaTLModel->find($kode);
+        $model = $this->model->find($kode);
         if ($model) {
-            $exist = $biayaTLModel->where($post)->first();
+            $exist = $this->model->where($post)->first();
             if ($exist) {
                 if ($kode != $exist['biaytlKode']) {
                     return $this->response->setJSON([
@@ -108,7 +137,7 @@ class BiayaTidakLangsung extends BaseController
             $post["biaytlTotal"] = toDecimal($post["biaytlTotal"]);
             $post["biaytlVolume"] = toDecimal($post["biaytlVolume"]);
 
-            $biayaTLModel->update($kode, $post);
+            $this->model->update($kode, $post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -120,7 +149,7 @@ class BiayaTidakLangsung extends BaseController
             $post["biaytlTotal"] = toDecimal($post["biaytlTotal"]);
             $post["biaytlVolume"] = toDecimal($post["biaytlVolume"]);
 
-            $biayaTLModel->save($post);
+            $this->model->save($post);
             return $this->response->setJSON([
                 'simpan' => true,
                 'validasi' => true,
@@ -153,11 +182,11 @@ class BiayaTidakLangsung extends BaseController
             ]);
             return;
         }
-        $biayaTLModel = new \App\Models\Pks\BiayaTL_m();
+        ;
 
         $post = $this->request->getPost();
         unset($post["kode"]);
-        $exist = $biayaTLModel->where($post)->first();
+        $exist = $this->model->where($post)->first();
         if ($exist) {
             return $this->response->setJSON([
                 'edit' => true,
@@ -180,8 +209,8 @@ class BiayaTidakLangsung extends BaseController
 
         $id = $this->request->getPost("id");
 
-        $biayaTLModel = new \App\Models\Pks\BiayaTL_m();
-        $periode = $biayaTLModel->find($id);
+        
+        $periode = $this->model->find($id);
         if (!$periode) {
             return $this->response->setJSON([
                 'hapus' => false,
@@ -189,7 +218,7 @@ class BiayaTidakLangsung extends BaseController
             ]);
         }
 
-        $periode = $biayaTLModel->delete($id);
+        $periode = $this->model->delete($id);
         if ($periode) {
             return $this->response->setJSON([
                 'hapus' => true,
@@ -198,31 +227,67 @@ class BiayaTidakLangsung extends BaseController
         }
     }
 
-    public function pengguna()
+    public function periode()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $periodeData = $this->GetPeriode('periode');
+        if (!$periodeData['status']){
+            return $this->response->setJSON([
+                'simpan' => false,
+                'validasi' => false,
+                'pesan' => $periodeData['error']
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGGUNA'
-        ];
-        return view('perusahaan/pengembangan', $data);
+       $periodeData=$periodeData["data"];
+
+       
+        $input=false;
+        if (in_array($periodeData['indkStatus'], $this->periodeYesInput))
+            $input=true;
+       
+        return $this->response->setJSON([
+            'status' => true,
+            'input' =>$input,
+            'data' => $periodeData
+        ]);
+        return;
+        
+        
+        
     }
 
-    public function pengaturan()
+    public function rekap()
     {
-        $session = session();
-        if (!$session->get('cekLogin')) {
-            // If not logged in, redirect to login page
-            return redirect()->to('/login');
+        $rules = [
+            'periode' => ['label' => 'ID', 'rules' => 'required|is_natural']
+        ];
+
+        log_message('info', print_r($this->request->getPost("periode"), true));
+
+        $validation = service('validation');
+        $validation->setRules($rules);
+        if (!$validation->withRequest($this->request)->run()) {
+            return $this->response->setJSON([
+                'rekap' => false,
+                'pesan' => $validation->getErrors()
+            ]);
+            return;
         }
 
-        $data = [
-            'title' => 'PENGATURAN'
+        $periode = $this->request->getPost("periode");
+        
+        
+        $rekap = $this->model->getRekap($periode);
+        $query = [
+            "rekap_biayatl_total"   => $rekap["total_biaya_tl"],
+            "rekap_biayatl_perkg"   => safe_div($rekap["total_biaya_tl"],$rekap["total_vol_tl"]),
+            
         ];
-        return view('perusahaan/pengembangan', $data);
+        
+        return $this->response->setJSON([
+            'rekap' => true,
+            'data' => $query
+        ]);
     }
 }

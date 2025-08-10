@@ -214,7 +214,7 @@ class Pajak extends BaseController
             ]);
         }
 
-        $hapus = $this->model->delete($id);
+        $perhapusiode = $this->model->delete($id);
         if ($perhapusiode){
             return $this->response->setJSON([
                 'hapus' => true,

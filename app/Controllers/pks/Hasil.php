@@ -21,8 +21,8 @@ class Hasil extends BaseController
     }
     public function index()
     {
-       
-        if (!$session->get('cekLogin')) {
+
+        if (!$this->session->get('cekLogin')) {
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }

@@ -49,6 +49,8 @@ $sg2 = $uri->getSegment(2);
                     <span class="nav-text">Kategori</span>
                 </a>
                 <ul aria-expanded="false">
+                    <li class="<?= (current_url() == base_url("superadmin/provinsi") ? "mm-active" : "") ?>"><a
+                            href="<?= base_url("superadmin/provinsi") ?>">Provinsi</a></li>
                     <li class="<?= (current_url() == base_url("superadmin/dinassetting") ? "mm-active" : "") ?>"><a
                             href="<?= base_url("superadmin/dinassetting") ?>">Persentase Dinas</a></li>
                     <li class="<?= (current_url() == base_url("superadmin/produksi") ? "mm-active" : "") ?>"><a

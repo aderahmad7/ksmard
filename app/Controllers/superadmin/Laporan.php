@@ -26,7 +26,7 @@ class Laporan extends BaseController
 
     public function grid($menu = null)
     {
-        $db = db_connect();
+        $db = db_connect();  
         helper("datetime_helper");
         $builder = $db->table('ksmard_r_kat_laporan')
             ->select('katlapKode, katlapNama');

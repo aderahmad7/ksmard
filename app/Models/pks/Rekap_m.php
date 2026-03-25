@@ -42,6 +42,32 @@ class Rekap_m extends Model
         return $builder->getResultArray(); // gunakan getResultArray agar hasilnya array per row
     }
 
+    public function getDataRekap($periode)
+    {
+        return $this->table($this->table)
+            ->select('*')
+            ->join('ksmard_r_kat_laporan', 'ksmard_r_kat_laporan.katlapKode = ksmard_t_rekap.rekapLapKode')
+            ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_rekap.rekapIndkKode')
+            ->join('ksmard_t_komentar', 'ksmard_t_komentar.kmtLapKode = ksmard_r_kat_laporan.katlapKode and ksmard_t_komentar.kmtIndkKode = ksmard_t_rekap.rekapIndkKode','left')
+            ->where('ksmard_t_indeks_k_pks.indkKode', $periode)
+            ->get()
+            ->getResultArray();
+    }
+    public function getDataFob($dinas,$bulan,$tahun)
+    {
+        return $this->table($this->table)
+            ->select('ksmard_t_indeks_k_pks.indkPksKode, ksmard_t_rekap.*')
+            ->join('ksmard_r_kat_laporan', 'ksmard_r_kat_laporan.katlapKode = ksmard_t_rekap.rekapLapKode')
+            ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_rekap.rekapIndkKode')
+            ->join('ksmard_t_komentar', 'ksmard_t_komentar.kmtLapKode = ksmard_r_kat_laporan.katlapKode and ksmard_t_komentar.kmtIndkKode = ksmard_t_rekap.rekapIndkKode','left')
+            ->where('ksmard_t_indeks_k_pks.indkDinasKode', $dinas)
+            ->where('ksmard_t_indeks_k_pks.indkPeriodeBulan', $bulan)
+            ->where('ksmard_t_indeks_k_pks.indkPeriodeTahun', $tahun)
+            ->where('ksmard_r_kat_laporan.katlapKode', 1)
+            ->get()
+            ->getResultArray();
+    }
+
 
     
 }

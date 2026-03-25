@@ -22,13 +22,13 @@ class TbsDiolah extends BaseController
     }
     public function index()
     {
-        
-        if (!$session->get('cekLogin')) {
+
+        if (!$this->session->get('cekLogin')) {
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }
-        $kode_pks = $session->get('kodePKS');
-        
+        $kode_pks = $this->session->get('kodePKS');
+
         $periode = $this->periodeModel->where('indkPksKode', $kode_pks)->findAll();
         $periodeCb = [];
         foreach ($periode as $row => $val)

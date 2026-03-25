@@ -224,7 +224,7 @@ class Pemasaran extends BaseController
             ]);
         }
 
-        $periode = $pemasaranModel->delete($id);
+        $periode = $this->model->delete($id);
         if ($periode){
             return $this->response->setJSON([
                 'hapus' => true,

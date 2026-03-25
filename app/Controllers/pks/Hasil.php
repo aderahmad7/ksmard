@@ -26,8 +26,8 @@ class Hasil extends BaseController
             // If not logged in, redirect to login page
             return redirect()->to('/login');
         }
-       
-        $periode = $this->session->where('indkPksKode', 'ABS')->findAll();
+
+        $periode = $this->periodeModel->where('indkPksKode', 'ABS')->findAll();
         $periodeCb = [];
         foreach ($periode as $row=>$val)
             $periodeCb[$val["indkKode"]]=bulan($val["indkPeriodeBulan"])." ".$val["indkPeriodeTahun"];

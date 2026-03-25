@@ -121,5 +121,58 @@ class Penjualan_m extends Model
             ->get()
             ->getRowArray();
     }
+
+    public function getSummary($dinas, $bulan, $tahun)
+    {
+        return $this->table($this->table)
+            ->select('indkPksKode,SUM(CASE 
+                        WHEN jualTbsKode = "cpo" and jualIsEkspor=1 
+                        THEN jualTotal
+                        ELSE 0 
+                      END) AS cpo_ekspor,
+                      SUM(CASE 
+                        WHEN jualTbsKode = "cpo" and jualIsEkspor=1 
+                        THEN jualVolume
+                        ELSE 0 
+                      END) AS cpo_ekspor_vol,
+                      SUM(CASE 
+                        WHEN jualTbsKode = "cpo" and jualIsEkspor=0 
+                        THEN jualTotal
+                        ELSE 0 
+                      END) AS cpo_lokal,
+                      SUM(CASE 
+                        WHEN jualTbsKode = "cpo" and jualIsEkspor=0
+                        THEN jualVolume
+                        ELSE 0 
+                      END) AS cpo_lokal_vol,
+                      SUM(CASE 
+                        WHEN jualTbsKode = "inti" and jualIsEkspor=1 
+                        THEN jualTotal
+                        ELSE 0 
+                      END) AS inti_ekspor,
+                      SUM(CASE 
+                        WHEN jualTbsKode = "inti" and jualIsEkspor=1 
+                        THEN jualVolume
+                        ELSE 0 
+                      END) AS inti_ekspor_vol,
+                      SUM(CASE 
+                        WHEN jualTbsKode = "inti" and jualIsEkspor=0 
+                        THEN jualTotal
+                        ELSE 0 
+                      END) AS inti_lokal,
+                      SUM(CASE 
+                        WHEN jualTbsKode = "inti" and jualIsEkspor=0 
+                        THEN jualVolume
+                        ELSE 0 
+                      END) AS inti_lokal_vol')
+            ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_penjualan_pks.jualIndkKode')
+            ->where('ksmard_t_indeks_k_pks.indkDinasKode', $dinas)
+            ->where('ksmard_t_indeks_k_pks.indkPeriodeBulan', $bulan)
+            ->where('ksmard_t_indeks_k_pks.indkPeriodeTahun', $tahun)
+            ->where('ksmard_t_indeks_k_pks.indkStatus', 'divalidasi')
+            ->groupBy('indkPksKode')
+            ->get()
+            ->getResultArray();
+    }
 }
 ?>

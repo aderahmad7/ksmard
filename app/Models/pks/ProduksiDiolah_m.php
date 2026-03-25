@@ -19,4 +19,17 @@ class ProduksiDiolah_m extends Model
             ->get()
             ->getRowArray();
     }
+    public function getDataDiolah($dinas,$bulan,$tahun)
+    {
+        return $this->table($this->table)
+            ->select('ksmard_t_indeks_k_pks.indkPksKode, SUM(olahVolume) AS volume')
+            ->join('ksmard_t_indeks_k_pks', 'ksmard_t_indeks_k_pks.indkKode = ksmard_t_produksi_diolah_pks.olahIndkKode')
+            ->where('ksmard_t_indeks_k_pks.indkDinasKode', $dinas)
+            ->where('ksmard_t_indeks_k_pks.indkPeriodeBulan', $bulan)
+            ->where('ksmard_t_indeks_k_pks.indkPeriodeTahun', $tahun)
+            ->where('ksmard_t_indeks_k_pks.indkStatus', 'divalidasi')
+            ->groupBy('ksmard_t_indeks_k_pks.indkPksKode')
+            ->get()
+            ->getResultArray();
+    }
 }
